@@ -1,0 +1,34 @@
+name: Nettoyer les branches de la routine
+
+# La routine cloud pousse parfois sa branche claude/* en plus de main.
+# On supprime chaque branche claude/* dont tous les commits sont déjà dans main.
+# Une branche non fusionnée est gardée : publish.yml s'en occupe.
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Supprimer les branches claude/* fusionnées
+        run: |
+          git fetch origin '+refs/heads/claude/*:refs/remotes/origin/claude/*' || true
+          for ref in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/claude/); do
+            branch="${ref#origin/}"
+            if git merge-base --is-ancestor "$ref" origin/main; then
+              echo "Suppression de $branch (déjà dans main)"
+              git push origin --delete "$branch"
+            else
+              echo "Conservation de $branch (commits absents de main)"
+            fi
+          done
