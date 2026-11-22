@@ -118,7 +118,7 @@ def render(template: str, cfg: dict, editions: list[dict], idx: int, is_index: b
         },
     }
     page = template.replace("__DATA__", to_script_json(data))
-    return page.replace("__TITRE__", f"Veille n° {ed['numero']} · {ed['date']}")
+    return page.replace("__TITRE__", f"Le Petit Compilé · n° {ed['numero']} · {ed['date']}")
 
 
 def main() -> int:
