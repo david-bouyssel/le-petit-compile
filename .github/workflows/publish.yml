@@ -1,0 +1,59 @@
+name: Publier la veille
+
+on:
+  push:
+    branches: [main, "claude/**"]
+    paths: ["data/editions/**", "scripts/**", "templates/**", "config/**", ".github/workflows/publish.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: publish-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  # La routine cloud peut n'avoir le droit de pousser que sur une branche claude/*.
+  # On fusionne alors cette branche dans main, puis on relance ce workflow sur main :
+  # l'environnement github-pages n'accepte que les déploiements depuis main.
+  merge:
+    if: github.ref_name != 'main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fusionner dans main
+        env:
+          BRANCH: ${{ github.ref_name }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout main
+          git merge --ff-only "origin/$BRANCH" || git merge --no-edit "origin/$BRANCH"
+          git push origin main
+          git push origin --delete "$BRANCH"
+          gh workflow run publish.yml --ref main
+
+  publish:
+    if: github.ref_name == 'main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Générer le site
+        run: python3 scripts/build.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deploy
+        uses: actions/deploy-pages@v4

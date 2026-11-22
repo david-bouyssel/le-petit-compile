@@ -1,0 +1,116 @@
+{
+  "timezone": "Europe/Paris",
+  "window_hours": 30,
+  "max_per_feed": 15,
+  "archive_editions": 14,
+  "rubriques": [
+    {
+      "id": "secu",
+      "nom": "Sécurité",
+      "couleur": "#e5484d",
+      "cible": "4 à 6",
+      "feeds": [
+        {"name": "The Hacker News", "url": "https://feeds.feedburner.com/TheHackersNews"},
+        {"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/"},
+        {"name": "CERT-FR", "url": "https://www.cert.ssi.gouv.fr/alerte/feed/"},
+        {"name": "Zataz", "url": "https://www.zataz.com/feed/"}
+      ]
+    },
+    {
+      "id": "ia",
+      "nom": "IA et LLM",
+      "couleur": "#8e4ec6",
+      "cible": "4 à 6",
+      "feeds": [
+        {"name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/"},
+        {"name": "The Decoder", "url": "https://the-decoder.com/feed/"},
+        {"name": "Hugging Face Blog", "url": "https://huggingface.co/blog/feed.xml"},
+        {"name": "ActuIA", "url": "https://www.actuia.com/feed/"}
+      ]
+    },
+    {
+      "id": "dev",
+      "nom": "Dev et programmation",
+      "couleur": "#3e63dd",
+      "cible": "4 à 6",
+      "feeds": [
+        {"name": "Lobsters", "url": "https://lobste.rs/rss"},
+        {"name": "Journal du Hacker", "url": "https://www.journalduhacker.net/rss"},
+        {"name": "Developpez.com", "url": "https://www.developpez.com/index/rss"}
+      ]
+    },
+    {
+      "id": "linux",
+      "nom": "Linux et open source",
+      "couleur": "#e2a336",
+      "cible": "2 à 4",
+      "feeds": [
+        {"name": "LinuxFr", "url": "https://linuxfr.org/news.atom"},
+        {"name": "Linuxiac", "url": "https://linuxiac.com/feed/"},
+        {"name": "Phoronix", "url": "https://www.phoronix.com/rss.php"},
+        {"name": "OMG! Ubuntu", "url": "https://www.omgubuntu.co.uk/feed"}
+      ]
+    },
+    {
+      "id": "decouvertes",
+      "nom": "Découvertes technologiques",
+      "couleur": "#12a594",
+      "cible": "3 à 5",
+      "feeds": [
+        {"name": "Numerama", "url": "https://www.numerama.com/feed/"},
+        {"name": "Korben", "url": "https://korben.info/feed"},
+        {"name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index"},
+        {"name": "The Verge", "url": "https://www.theverge.com/rss/index.xml"},
+        {"name": "Frandroid", "url": "https://www.frandroid.com/feed"}
+      ]
+    },
+    {
+      "id": "jeux",
+      "nom": "Jeux vidéo",
+      "couleur": "#d6409f",
+      "cible": "3 à 5",
+      "feeds": [
+        {"name": "Gematsu", "url": "https://www.gematsu.com/feed"},
+        {"name": "Eurogamer", "url": "https://www.eurogamer.net/feed"},
+        {"name": "Rock Paper Shotgun", "url": "https://www.rockpapershotgun.com/feed"},
+        {"name": "Gamekult", "url": "https://www.gamekult.com/feed.xml"}
+      ]
+    },
+    {
+      "id": "retro",
+      "nom": "Rétro gaming et émulation",
+      "couleur": "#f76b15",
+      "cible": "2 à 4",
+      "feeds": [
+        {"name": "Time Extension", "url": "https://www.timeextension.com/feeds/latest"},
+        {"name": "RetroRGB", "url": "https://www.retrorgb.com/feed"},
+        {"name": "Retro Dodo", "url": "https://retrododo.com/feed/"},
+        {"name": "Libretro", "url": "https://www.libretro.com/index.php/feed/"}
+      ]
+    },
+    {
+      "id": "science",
+      "nom": "Science et espace",
+      "couleur": "#0090ff",
+      "cible": "2 à 4",
+      "feeds": [
+        {"name": "Futura", "url": "https://www.futura-sciences.com/rss/actualites.xml"},
+        {"name": "Space.com", "url": "https://www.space.com/feeds/all"},
+        {"name": "Sciences et Avenir", "url": "https://www.sciencesetavenir.fr/rss.xml"}
+      ]
+    },
+    {
+      "id": "tutos",
+      "nom": "Tutos et outils",
+      "couleur": "#46a758",
+      "cible": "3 à 6",
+      "feeds": [
+        {"name": "Show HN", "url": "https://hnrss.org/show?points=50"},
+        {"name": "Hacker News (tutos)", "url": "https://hnrss.org/newest?q=tutorial&points=30"}
+      ]
+    }
+  ],
+  "hacker_news": {
+    "front_page": "https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=60"
+  }
+}
