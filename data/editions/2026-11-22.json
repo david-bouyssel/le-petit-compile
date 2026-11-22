@@ -1,0 +1,473 @@
+{
+  "date": "2026-11-22",
+  "genere": "2026-11-22T19:29:34+01:00",
+  "une": {
+    "rubrique": "dev",
+    "source": "Hacker News",
+    "titre": "Les communautés Lean et Mathlib certifient la preuve de l'hypothèse de Riemann de Levent Alpöge",
+    "resume": "Le 20 novembre 2026, Levent Alpöge a publié une preuve de l'hypothèse de Riemann sous la forme d'une bibliothèque Lean de 17 millions de lignes de code. Les communautés Lean et Mathlib affirment avoir pleine confiance dans sa justesse : des dizaines de personnes ont compilé la bibliothèque sans erreur et obtenu le même fichier d'export brut de la preuve. Deux outils indépendants (comparator et con-leche --compare) confirment que le théorème prouvé correspond exactement à l'énoncé RiemannHypothesis de Mathlib. L'export a été vérifié par plusieurs vérificateurs, dont le noyau officiel de Lean, con-leche et con-ron, ces deux derniers étant accompagnés d'une preuve formelle, relative à la théorie des ensembles, qu'ils ne peuvent pas accepter une preuve fausse. Selon The Decoder, Terence Tao avait prédit que ce résultat n'arriverait pas avant 2050 environ.",
+    "pourquoi": "Un problème ouvert majeur des mathématiques, vérifié par machine, qui montre ce que les assistants de preuve peuvent désormais certifier.",
+    "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
+    "date": "2026-11-21T14:36:45+00:00",
+    "suite": false,
+    "hn": {
+      "url": "https://news.ycombinator.com/item?id=50589618",
+      "points": 1180,
+      "comments": 972
+    }
+  },
+  "items": [
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "OpenRouter retire trois fournisseurs après des mois de vol de prompts chez des hébergeurs d'IA",
+      "resume": "Selon Dragos, des attaquants ont volé pendant des mois des données à l'intérieur de trois fournisseurs d'inférence IA, sans que ceux-ci s'en aperçoivent. Certaines requêtes volées étaient marquées Zero Data Retention. OpenRouter a retiré les trois fournisseurs, exclu 125 endpoints de l'éligibilité ZDR et prévenu les clients concernés, en précisant que sa propre plateforme n'a pas été compromise. La recherche reposait sur environ deux millions de prompts piégés par des canary tokens entre juillet et novembre ; le plus ancien incident remonte à mi-juillet.",
+      "pourquoi": "À savoir avant d'envoyer secrets ou clés d'API dans un prompt : l'option « zéro rétention » ne protège pas contre un attaquant déjà dans l'infrastructure.",
+      "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
+      "date": "2026-11-22T05:06:55+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "Ghostscript : une évasion de sandbox menant à de l'exécution de code via des fichiers envoyés (CVE-2026-125396)",
+      "resume": "Un défaut désormais corrigé de Ghostscript permet à un fichier piégé de sortir du bac à sable -dSAFER et d'exécuter des commandes sur le serveur. Il s'agit d'un use-after-free dans le chargement des polices, corrigé le 8 septembre. pwn.ai l'a démontré dans une dizaine d'applications : impression anonyme sur Debian 13, pièce jointe traitée par Roundcube, formulaires publics des extensions WordPress Forminator et Essential Addons for Elementor. Aucune exploitation n'a été signalée.",
+      "pourquoi": "À vérifier si vos serveurs convertissent des fichiers envoyés par ImageMagick, Pillow ou libvips : mettez Ghostscript à jour.",
+      "url": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
+      "date": "2026-11-22T05:03:41+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "Rackspace Spot : une intrusion expose des secrets Kubernetes de clients",
+      "resume": "Rackspace avertit ses clients que des pirates ont compromis sa plateforme cloud Rackspace Spot avec des identifiants volés. Ils ont pu déployer des charges de travail non autorisées et accéder aux secrets Kubernetes des clusters clients.",
+      "pourquoi": "Les clients de Rackspace Spot doivent faire tourner leurs secrets Kubernetes.",
+      "url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
+      "date": "2026-11-21T22:59:58+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "Microsoft Entra Connect Health : une faille exploitée pour voler des données de tenants",
+      "resume": "Microsoft prévient qu'elle a subi une intrusion : des attaquants ont exploité une vulnérabilité de son service Entra Connect Health pour accéder aux adresses e-mail des administrateurs et à des informations de configuration de tenants.",
+      "pourquoi": "Les administrateurs Entra doivent s'attendre à du hameçonnage ciblé exploitant ces adresses.",
+      "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
+      "date": "2026-11-21T18:01:58+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "Cleverbridge : des pirates ont volé numéros de cartes bancaires et CVV",
+      "resume": "La plateforme e-commerce Cleverbridge annonce que des pirates ont pénétré ses systèmes et dérobé des informations de paiement, dont des numéros de carte et les codes CVV.",
+      "pourquoi": "À surveiller sur vos relevés si vous avez acheté un logiciel via un marchand passant par cette plateforme.",
+      "url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/",
+      "date": "2026-11-22T15:43:04+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "Le botnet BADBOX revient avec 40 milliards de requêtes publicitaires par jour",
+      "resume": "Le malware BADBOX, présent dans de nombreux boîtiers Android TV génériques, est revenu à des opérations de fraude publicitaire à grande échelle après les perturbations de l'an dernier, avec un niveau record de 40 milliards de requêtes publicitaires par jour.",
+      "pourquoi": "Un rappel de se méfier des boîtiers Android TV bon marché sans marque.",
+      "url": "https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/",
+      "date": "2026-11-21T15:17:27+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "Signal bloque les captures d'écran sur iOS 27 et l'accès des assistants IA sur Android",
+      "resume": "Signal annonce de nouvelles protections : blocage des captures d'écran sur iOS 27 et, sur les appareils Android compatibles, empêchement des assistants IA de capturer les conversations. Le titre cite Siri et Gemini.",
+      "pourquoi": "Utile si vous craignez que l'assistant de votre téléphone lise vos messages chiffrés.",
+      "url": "https://www.bleepingcomputer.com/news/security/signal-to-block-siri-gemini-ai-from-capturing-chats-on-ios-android/",
+      "date": "2026-11-22T15:15:25+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "Les agents de code IA réussissent les tests isolés mais terminent moins d'une tâche sur dix en situation de travail simulée",
+      "resume": "Un nouveau test place des agents de code dans un poste de développeur simulé, avec collègues, tableaux de projet et passations incomplètes, où ils doivent poursuivre seuls le développement et clore des tickets. Même Opus 5.5 et Astra résolvent entièrement moins d'une tâche sur dix. Les modèles finissent vite les missions claires et isolées, mais perdent le fil en autonomie.",
+      "pourquoi": "Un contrepoint utile aux scores de benchmarks isolés quand on confie des tickets réels à un agent.",
+      "url": "https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace/",
+      "date": "2026-11-22T15:15:48+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "Perplexity lance une Monitor API de veille web planifiée",
+      "resume": "Perplexity lance une Monitor API qui effectue des recherches web à intervalles planifiés et alerte les agents par webhook uniquement quand un changement pertinent survient. Son propre modèle de décision filtre les résultats sans importance. L'API s'inscrit dans une stratégie d'outils pour développeurs.",
+      "pourquoi": "Pratique pour déclencher un agent sur un changement plutôt que d'interroger le web en boucle.",
+      "url": "https://the-decoder.com/perplexitys-new-monitor-api-turns-web-search-from-a-one-off-query-into-a-nonstop-watchdog/",
+      "date": "2026-11-22T14:20:28+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "METR : l'IA progresse plus vite que les experts ne peuvent tester sa sécurité",
+      "resume": "METR indique que des modèles de pointe comme Opus 5.5 et GPT-6 Astra progressent rapidement sur les tâches de recherche mais deviennent plus difficiles à mesurer. Les données actuelles ne permettent pas d'exclure une accélération dangereuse du développement de l'IA, tout en précisant que les tests courants pourraient surestimer les capacités réelles des modèles.",
+      "pourquoi": "Montre les limites actuelles de l'évaluation des modèles avancés.",
+      "url": "https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns/",
+      "date": "2026-11-22T13:00:43+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "Des chercheurs de Nvidia jugent les très grandes fenêtres de contexte sans avenir",
+      "resume": "Des chercheurs de Nvidia estiment que les modèles n'ont souvent pas besoin de toute leur fenêtre de contexte, lente, coûteuse et sujette aux erreurs. Dans leurs tests, des résumés périodiques et une recherche ciblée par mots-clés égalaient généralement le contexte complet pour une fraction du coût. Ils proposent aussi une classe de modèles travaillant avec de courtes notes.",
+      "pourquoi": "Piste concrète pour réduire le coût des applications à base de LLM.",
+      "url": "https://the-decoder.com/nvidia-researchers-argue-huge-ai-context-windows-are-a-dead-end/",
+      "date": "2026-11-21T16:23:45+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "GPT-6.2 Astra et Sol répondent plus directement mais sont moins transparents que Claude",
+      "resume": "Les modèles GPT-6.2 Astra et Sol d'OpenAI donnent des réponses beaucoup plus courtes et directes que leurs prédécesseurs, mais admettent moins volontiers leur incertitude. Les modèles Claude d'Anthropic obtiennent un score de transparence nettement supérieur.",
+      "pourquoi": "À garder en tête pour choisir un modèle quand l'aveu d'incertitude compte.",
+      "url": "https://the-decoder.com/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than-claude/",
+      "date": "2026-11-22T09:41:37+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "dev",
+      "source": "Lobsters",
+      "titre": "C++26 de nouveau finalisé techniquement, après les commentaires sur les contrats",
+      "resume": "Le comité ISO C++ a de nouveau terminé le travail technique sur C++26 à Búzios (Brésil). Le vote d'approbation (DIS) n'avait pas été unanime, surtout à cause des contrats (pre, post, contract_assert) ; le comité a adopté une extension des contrats et fourni un historique détaillé. Le document mis à jour doit repartir pour un second vote. Pour C++29 ont été adoptés break label, continue label, std::ranges::any_view et views::slice.",
+      "pourquoi": "Le calendrier de publication de C++26 reste suspendu à un second vote.",
+      "url": "https://herbsutter.com/2026/11/21/c26-is-done-again-trip-report-november-2026-iso-c-standards-meeting-buzios-brazil/",
+      "date": "2026-11-21T13:57:53+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "dev",
+      "source": "Lobsters",
+      "titre": "Un écran qui bridait un débit descendant de 75 % : la cause était la perte de trames de l'adaptateur Ethernet",
+      "resume": "L'auteur, avec une ligne de 2,5 Gbit/s, ne mesurait que 600 Mbit/s en réception via son Studio Display XDR, alors que l'envoi restait à 2,4 Gbit/s. Branché directement sur le Mac, l'adaptateur Realtek RTL8156B atteignait 2,3 Gbit/s. Le pilote Realtek a porté le débit à 1,1 Gbit/s et le contrôle de flux à environ 2 Gbit/s. Derrière l'écran, des trames sont perdues au-delà d'environ 168 000 par seconde.",
+      "pourquoi": "Une démarche de diagnostic réutilisable si votre débit est inexplicablement bas.",
+      "url": "https://blog.tymscar.com/posts/studiodisplayethernet/",
+      "date": "2026-11-21T15:03:28+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50587875",
+        "points": 666,
+        "comments": 309
+      }
+    },
+    {
+      "rubrique": "dev",
+      "source": "Journal du Hacker",
+      "titre": "Debian 13.8 publiée",
+      "resume": "Le projet Debian publie la huitième mise à jour de Debian 13 « Trixie », qui corrige surtout des problèmes de sécurité et quelques problèmes importants. Ce n'est pas une nouvelle version : il n'est pas nécessaire de jeter les anciens médias, et les paquets peuvent être mis à niveau via un miroir à jour.",
+      "pourquoi": "Un simple apt upgrade suffit pour être à jour.",
+      "url": "https://www.debian.org/News/2026/20261121.fr",
+      "date": "2026-11-21T16:07:43+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Linuxiac",
+      "titre": "CachyOS de novembre 2026 : support d'Easy Anti-Cheat et outil de récupération",
+      "resume": "La version de novembre 2026 de CachyOS ajoute la prise en charge d'Easy Anti-Cheat, un installateur de paquets remanié et un nouvel environnement de récupération pour les systèmes endommagés.",
+      "pourquoi": "Intéressant pour les joueurs sous Linux dont les jeux exigent Easy Anti-Cheat.",
+      "url": "https://linuxiac.com/cachyos-november-2026-release-adds-easy-anti-cheat-support/",
+      "date": "2026-11-22T13:15:16+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Linuxiac",
+      "titre": "KDE publie Kwi 0.1, son nouvel émulateur de terminal accéléré par GPU",
+      "resume": "Kwi, le nouvel émulateur de terminal de KDE, atteint la version 0.1 avec des onglets améliorés, la prise en charge du menu global, des retouches d'interface et une publication Flatpak.",
+      "pourquoi": "À essayer en Flatpak si vous suivez l'écosystème KDE.",
+      "url": "https://linuxiac.com/kde-releases-kwi-0-1-its-new-gpu-accelerated-terminal-emulator/",
+      "date": "2026-11-21T23:26:42+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Linuxiac",
+      "titre": "KDE Plasma 6.9 : performances de KWin, consommation NVIDIA et saisie CJK",
+      "resume": "KDE Plasma 6.9 doit améliorer les performances de KWin, réduire la consommation des GPU NVIDIA et mieux gérer la saisie du chinois, du japonais et du coréen.",
+      "pourquoi": "Bonne nouvelle pour les utilisateurs de cartes NVIDIA sous Plasma.",
+      "url": "https://linuxiac.com/kde-plasma-6-9-to-improve-performance-nvidia-efficiency-and-cjk-input/",
+      "date": "2026-11-21T13:28:18+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Linuxiac",
+      "titre": "Libreboot renonce à l'interdiction totale du code IA et adopte une politique de réduction",
+      "resume": "Libreboot revient sur son interdiction totale du code généré par IA et adopte une politique visant à réduire ces contributions, avec des exceptions si nécessaire.",
+      "pourquoi": "Un signe de la difficulté des projets libres à tenir une ligne stricte sur le code IA.",
+      "url": "https://linuxiac.com/libreboot-reverses-ai-code-ban-adopts-reduction-policy/",
+      "date": "2026-11-22T10:25:22+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Numerama",
+      "titre": "Quad9 cessera de répondre en France à partir du 24 novembre 2026",
+      "resume": "À partir du mardi 24 novembre 2026, le résolveur DNS gratuit Quad9 ne répondra plus aux internautes situés en France. Numerama invite à vérifier s'il est configuré sur la box, le téléphone ou le navigateur et à le remplacer.",
+      "pourquoi": "À vérifier maintenant, sinon la résolution DNS cessera de fonctionner sans explication.",
+      "url": "https://www.numerama.com/tech/2379931-internet-cessera-de-fonctionner-sans-explication-attention-le-service-quad9-coupe-en-france-ce-mardi-verifiez-si-vous-lutilisez.html",
+      "date": "2026-11-22T12:31:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Korben",
+      "titre": "Plex abandonne TheTVDB le 3 décembre",
+      "resume": "Le 3 décembre, Plex ne récupère plus rien chez TheTVDB. Rien n'est effacé, mais l'ancien agent cesse de fonctionner et les séries en cours suivies en ordre DVD ou absolu risquent de mal ranger leurs nouveaux épisodes.",
+      "pourquoi": "À régler avant le 3 décembre si votre bibliothèque Plex utilise ces ordres.",
+      "url": "https://korben.info/plex-abandonne-thetvdb.html?utm_source=rss&utm_medium=feed&utm_campaign=flux-principal",
+      "date": "2026-11-21T18:19:38+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Korben",
+      "titre": "Londres ne peut plus cacher son injonction technique sur iCloud",
+      "resume": "Le tribunal britannique des pouvoirs d'enquête confirme que le Home Office a remis à Apple une injonction technique. Son contenu reste secret, la Protection avancée des données reste fermée aux Britanniques qui ne l'avaient pas activée, et en France elle s'active toujours dans les Réglages.",
+      "pourquoi": "Concerne la confidentialité de vos sauvegardes iCloud.",
+      "url": "https://korben.info/apple-porte-derobee-icloud-royaume-uni.html?utm_source=rss&utm_medium=feed&utm_campaign=flux-principal",
+      "date": "2026-11-21T19:40:41+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Numerama",
+      "titre": "Ariane 6 prépare son 10e vol avec 36 satellites Amazon Leo",
+      "resume": "Ariane 6 doit emporter 36 satellites Amazon Leo pour son 10e vol, au plus tôt le lundi 23 novembre. Le tir arrive huit jours après la perte de 40 satellites de la même constellation sur une fusée américaine Vulcan.",
+      "pourquoi": "Un test important pour le lanceur européen.",
+      "url": "https://www.numerama.com/sciences/2375399-suivez-en-direct-le-10e-vol-de-la-fusee-ariane-6-dans-sa-version-surpuissante-pour-lancer-36-satellites-dun-coup.html",
+      "date": "2026-11-22T07:01:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Korben",
+      "titre": "PINT fait démarrer Windows NT 4.0 sur Raspberry Pi",
+      "resume": "PINT fait démarrer Windows NT 4.0 sur les Raspberry Pi 2, 3, 4 et Zero 2 W, avec Wi-Fi et son. Aucune image n'est fournie : il faut compiler avec des sources Windows que le dépôt ne contient pas.",
+      "pourquoi": "Un projet de bidouille, pour les amateurs d'archéologie logicielle.",
+      "url": "https://korben.info/pint-windows-nt-raspberry-pi.html?utm_source=rss&utm_medium=feed&utm_campaign=flux-principal",
+      "date": "2026-11-21T18:34:10+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Eurogamer",
+      "titre": "GTA 6 : plus de la moitié des joueurs console actifs le jour du lancement y jouaient, selon Circana",
+      "resume": "Selon Circana, le jour du lancement de GTA 6, plus de la moitié de tous les joueurs actifs sur PS5 et Xbox jouaient à GTA 6.",
+      "pourquoi": "Mesure l'ampleur du lancement.",
+      "url": "https://www.eurogamer.net/gta-6-launch-day-engagement-circana",
+      "date": "2026-11-22T12:02:30+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Gamekult",
+      "titre": "GTA 6 devient le jeu le plus streamé de l'histoire de Twitch",
+      "resume": "Quelques heures après sa sortie, GTA 6 a battu le record de Twitch détenu par Valorant, selon Gamekult.",
+      "pourquoi": "Un indicateur de l'engouement autour du jeu.",
+      "url": "https://www.gamekult.com/actualite/sur-twitch-gta-6-explose-le-record-de-valorant-et-devient-le-jeu-video-le-plus-streame-de-l-histoire-3050873099.html",
+      "date": "2026-11-22T14:02:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Eurogamer",
+      "titre": "GTA 6 : 99 de Metascore, mais des joueurs inondent le score utilisateur de mauvaises notes",
+      "resume": "GTA 6 affiche un Metascore de 99 auprès de la critique, mais son score utilisateur Metacritic est touché par du review bombing.",
+      "pourquoi": "À lire avec prudence, la note joueurs ne reflète pas forcément le jeu.",
+      "url": "https://www.eurogamer.net/gta-6-review-bombed-metacritic-user-score",
+      "date": "2026-11-21T14:19:40+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Eurogamer",
+      "titre": "The Binding of Isaac : Repentance+ perd sa musique générée par IA après la découverte des joueurs",
+      "resume": "Nicalis a retiré la musique générée par IA de The Binding of Isaac : Repentance+ après sa découverte par les joueurs dans la dernière mise à jour, ce qui a provoqué une vague d'avis négatifs sur Steam.",
+      "pourquoi": "Illustre la sensibilité des joueurs à l'IA générative.",
+      "url": "https://www.eurogamer.net/binding-of-isaac-repentance-plus-ai-music-removed",
+      "date": "2026-11-22T13:19:20+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Gamekult",
+      "titre": "Gran Turismo 7 aurait droit à un remake sous Unreal Engine 5 avec DLSS 5",
+      "resume": "Selon Gamekult, Gran Turismo 7 serait en cours de remake sous Unreal Engine 5, avec DLSS 5, alors que Sony porte ses exclusivités sur PC.",
+      "pourquoi": "À suivre pour les fans de simulation de course.",
+      "url": "https://www.gamekult.com/actualite/gran-turismo-7-est-en-train-d-avoir-son-remake-sous-unreal-engine-5-avec-du-dlss-5-3050873076.html",
+      "date": "2026-11-22T12:14:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Gamekult",
+      "titre": "Fallout HD Project : un remaster HD de Fallout 1 réalisé par un développeur solo",
+      "resume": "Un développeur solo travaille sur Fallout HD Project, un remaster complet de Fallout 1, jamais porté sur les plateformes modernes.",
+      "pourquoi": "Une manière de rejouer le classique dans de meilleures conditions.",
+      "url": "https://www.gamekult.com/actualite/fallout-1-s-offre-un-remaster-hd-fait-par-un-fan-3050873041.html",
+      "date": "2026-11-21T14:45:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Time Extension",
+      "titre": "Un dongle à 10 $ ajoute jeu en ligne et sauvegardes cloud aux SNES équipées d'une carte sd2snes",
+      "resume": "Un micrologiciel sd2snes+ Link, sur un dongle USB ESP32-S3, permet aux utilisateurs de sd2snes ou de FXPAK PRO de connecter leur console au réseau, avec jeu en ligne, sauvegardes cloud, RetroAchievements et prise en charge de Satellaview. Il est encore en développement.",
+      "pourquoi": "Utile si vous possédez une SNES avec flash cart.",
+      "url": "https://www.timeextension.com/news/2026/11/a-usd10-dongle-can-upgrade-your-snes-with-online-play-cloud-saves-retroachievements-and-satellaview-support",
+      "date": "2026-11-21T18:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Gamekult",
+      "titre": "Sega Rally 2 : un circuit caché découvert près de trente ans plus tard, jouable",
+      "resume": "Le datamineur Fred.Archi a trouvé un circuit caché dans Sega Rally 2 et il est jouable sans problème, alors que le jeu vient de fêter ses 28 ans.",
+      "pourquoi": "Une curiosité pour les fans d'arcade.",
+      "url": "https://www.gamekult.com/actualite/sega-rally-2-un-circuit-cache-decouvert-presque-trente-ans-plus-tard-et-il-est-jouable-3050873054.html",
+      "date": "2026-11-21T16:35:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Time Extension",
+      "titre": "Final Vendetta arrive enfin sur Neo Geo",
+      "resume": "Le jeu de combat Final Vendetta de Bitmap Bureau, sorti en 2022 sur Switch, PS4 et Xbox, sort sur Neo Geo en cartouche. Le journaliste juge l'attente justifiée, mais s'interroge sur son prix de près de 400 £.",
+      "pourquoi": "Pour collectionneurs prêts à payer le prix.",
+      "url": "https://www.timeextension.com/features/hands-on-final-vendetta-finally-comes-to-neo-geo-the-console-it-truly-belongs-on",
+      "date": "2026-11-21T16:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Space.com",
+      "titre": "SpaceX retire le premier étage supérieur de Starship capturé par les « baguettes »",
+      "resume": "Le Ship 42, lancé le 13 novembre lors du 15e vol d'essai de Starship, est revenu le lendemain dans les bras de la tour de lancement. Selon Elon Musk, il pourrait être réutilisé après quelques semaines de remise en état, mais il sera conservé pour une exposition publique.",
+      "pourquoi": "Un moment historique pour le programme Starship.",
+      "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-will-retire-1st-starship-upper-stage-ever-caught-by-chopsticks-elon-musk-says",
+      "date": "2026-11-21T13:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Futura",
+      "titre": "Des trous noirs de la taille d'un atome pourraient faire exploser des étoiles de l'intérieur",
+      "resume": "Des astrophysiciens du MIT ont simulé un scénario, issu d'idées explorées par Stephen Hawking il y a plus de 50 ans, dans lequel de minuscules trous noirs feraient exploser des étoiles. Il pourrait aider à les détecter.",
+      "pourquoi": "Une piste de détection pour des objets jamais observés.",
+      "url": "https://www.futura-sciences.com/sciences/actualites/trou-noir-trous-noirs-taille-atome-pourraient-faire-exploser-soleil-interieur-139509/#xtor%3DRSS-8",
+      "date": "2026-11-22T16:13:39+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Futura",
+      "titre": "Chine : 66 milliards d'arbres plantés, des forêts qui poussent 66 % plus vite que les forêts naturelles",
+      "resume": "Quelque 66 milliards d'arbres ont été plantés depuis 1978 et 34 milliards supplémentaires sont prévus d'ici 2050. Les forêts issues du programme poussent 66 % plus vite que les forêts naturelles, mais le comportement ensuite pose question.",
+      "pourquoi": "Éclaire les limites des reboisements massifs.",
+      "url": "https://www.futura-sciences.com/planete/actualites/foret-plantant-66-milliards-arbres-chine-cree-forets-ne-comportent-pas-tout-comme-forets-naturelles-g6r7-139505/#xtor%3DRSS-8",
+      "date": "2026-11-22T08:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Lobsters",
+      "titre": "miniPG : Postgres dans un seul binaire, utilisable comme sqlite3",
+      "resume": "miniPG est un programme unique qui embarque un serveur et un client Postgres complets. Ex : minipg ./mydb \"select * from notes\" ; le dossier est la base. Il se lance aussi en serveur (minipg serve ./mydb -p 5432) ou lance un programme configuré pour cette base (minipg run). Binaire pour Mac, Windows et Linux, sans Docker.",
+      "pourquoi": "Pratique pour essayer un logiciel auto-hébergé qui exige Postgres.",
+      "url": "https://progrium.xyz/articles/2026/single-binary-postgres",
+      "date": "2026-11-21T19:32:22+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Hacker News",
+      "titre": "PcapAnalyzer : analyseur pcap auto-hébergé avec 27 détecteurs de problèmes",
+      "resume": "PcapAnalyzer est un outil libre (Apache 2.0, bêta) qui analyse un fichier .pcap ou .pcapng en local, avec 27 détecteurs (TCP, DNS, DHCP, TLS, tunnels, sécurité) et des vues de type Wireshark.",
+      "pourquoi": "Utile pour diagnostiquer une panne réseau sans envoyer ses captures.",
+      "url": "https://github.com/sebaandrada-cell/PcapAnalyzer",
+      "date": "2026-11-21T22:09:58+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50594132",
+        "points": 154,
+        "comments": 20
+      }
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Show HN",
+      "titre": "Zero C# : compiler du C# sans runtime ni ramasse-miettes",
+      "resume": "Un fork de bflat compile du C# en programme natif, sans .NET ni GC, avec des arènes mémoire. Hello world pèse 11 Ko sous Windows et 40 Ko sous Linux. Les exceptions ne sont pas capturées : throw termine le programme.",
+      "pourquoi": "À essayer pour du C# très léger.",
+      "url": "https://onurgumus.github.io/zero-csharp/index.html",
+      "date": "2026-11-21T15:39:09+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Show HN",
+      "titre": "Worker 755 : un jeu où l'on joue le sous-agent d'un LLM",
+      "resume": "Dans ce jeu de navigateur, le manager est un vrai LLM qui vous prend pour son sous-agent. Ses instructions arrivent dans votre terminal avec 90 secondes pour les exécuter.",
+      "pourquoi": "Une manière ludique de voir l'orchestration d'agents côté sous-agent.",
+      "url": "https://github.com/gulivan/worker755",
+      "date": "2026-11-22T13:56:58+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50599762",
+        "points": 156,
+        "comments": 39
+      }
+    }
+  ]
+}
