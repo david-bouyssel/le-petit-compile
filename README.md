@@ -25,3 +25,7 @@ python scripts/build.py --check  # valide seulement
 ```
 
 Python 3.10 ou plus récent, bibliothèque standard uniquement.
+
+## Documentation
+
+La documentation détaillée est dans [doc/](doc/README.md) : architecture, collecte, sources, format des éditions, ligne éditoriale, site, publication et dépannage. Les skills Claude Code du projet sont dans [.claude/skills/](.claude/skills/).
