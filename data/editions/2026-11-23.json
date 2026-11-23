@@ -1,0 +1,377 @@
+{
+  "date": "2026-11-23",
+  "genere": "2026-11-23T06:10:47+01:00",
+  "une": {
+    "rubrique": "secu",
+    "source": "BleepingComputer",
+    "titre": "GL.iNet : une faille du cloud de gestion à distance exploitée pour infecter des routeurs et des KVM",
+    "resume": "GL.iNet confirme que des pirates ont exploité une vulnérabilité de ses services cloud de gestion à distance pour installer un logiciel malveillant sur des routeurs et des KVM de clients. Selon BleepingComputer, des utilisateurs signalent des portes dérobées et des reverse shells donnant un accès distant aux appareils infectés. GL.iNet dit avoir identifié la faille le 20 novembre 2026, l'avoir corrigée côté cloud et avoir bloqué l'accès utilisé : les appareils ne peuvent plus être nouvellement infectés par ce chemin. Ce correctif ne nettoie pas les appareils déjà infectés : l'éditeur publie des firmwares de sécurité par modèle (par exemple 4.11.1 ou plus pour les GL-MT3000 et GL-MT6000, 1.10.3 ou plus pour plusieurs KVM RM). Le firmware retire le malware sans réinitialisation d'usine et en conservant les réglages. Pour vérifier, il faut chercher le texte exact « crond -i /tmp/.log » dans les processus en cours.",
+    "pourquoi": "À vérifier et à mettre à jour sans attendre si vous possédez un routeur ou un KVM GL.iNet, même si le contrôle ne trouve aucun indice d'infection.",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
+    "date": "2026-11-22T18:45:37+00:00",
+    "suite": false,
+    "hn": null
+  },
+  "items": [
+    {
+      "rubrique": "secu",
+      "source": "Numerama",
+      "titre": "Semaine cyber : sanction de la CNIL, rapport sur la panne Microsoft, Commission européenne piratée avec un outil piloté par des agents IA",
+      "resume": "Numerama retient trois actualités de la semaine. Une sanction de la CNIL visait une entreprise restée anonyme, que Grok a nommée en moins d'une heure. Le rapport préliminaire sur la panne mondiale de Microsoft explique pourquoi Teams a tenu pendant qu'Outlook tombait. Enfin, la Commission européenne a subi une cyberattaque menée avec un outil de piratage piloté par des agents IA.",
+      "pourquoi": "Un récapitulatif utile pour rattraper trois dossiers cyber de la semaine.",
+      "url": "https://www.numerama.com/cyberguerre/2380113-grok-devoile-lentreprise-que-la-cnil-navait-pas-nommee-microsoft-detaille-sa-panne-geante-la-commission-europeenne-piratee-avec-artex-on-vous-raconte-la-semaine-cyberguerre.html",
+      "date": "2026-11-22T17:12:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "Zataz",
+      "titre": "Cyberattaque à Chambourcy : INC Ransom revendique l'intrusion",
+      "resume": "Le groupe INC Ransom revendique l'attaque informatique visant la commune de Chambourcy. ZATAZ affirme avoir constaté l'exposition de documents de la police municipale.",
+      "pourquoi": "Un nouvel exemple de collectivité locale ciblée par un groupe de rançongiciel.",
+      "url": "https://www.zataz.com/cyberattaque-a-chambourcy-inc-ransom-revendique-lattaque/",
+      "date": "2026-11-23T00:36:24+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "Zataz",
+      "titre": "Ledger : un pirate piège d'autres pirates avec un faux fichier de fuite",
+      "resume": "Sur un forum pirate, une prétendue nouvelle fuite de données Ledger dissimule en réalité un piège. ZATAZ a suivi la manœuvre.",
+      "pourquoi": "Rappelle qu'un fichier « de fuite » téléchargé sur un forum peut lui-même être malveillant.",
+      "url": "https://www.zataz.com/ledger-un-pirate-piege-dautres-pirates-avec-un-faux-fichier/",
+      "date": "2026-11-23T01:31:54+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "Developpez.com",
+      "titre": "Gemini 4 Neon de Google : un modèle intermédiaire qui devance Opus 5.5 et GPT-6.2 sur le code et l'analyse",
+      "resume": "Google ajoute Gemini 4 Neon à sa gamme, entre Hydrogen (rapide et peu coûteux) et Carbon (raisonnement approfondi). D'après les métriques de Google, il tourne environ trois fois plus vite que Carbon pour près de 60 % de coût en moins. Il offre un contexte d'1 million de tokens, jusqu'à 64 000 tokens de sortie et quatre niveaux de réflexion réglables. Artificial Analysis lui attribue 61 sur son indice d'intelligence, au troisième rang mondial. Developpez.com évoque aussi des faiblesses en sécurité et des données obsolètes.",
+      "pourquoi": "À tester si vous cherchez un modèle rapide et économe en tokens pour du code ou de l'analyse.",
+      "url": "https://intelligence-artificielle.developpez.com/actu/389346/Gemini-4-Neon-est-le-modele-d-IA-le-plus-puissant-il-surpasse-ses-rivaux-Opus-5-5-et-GPT-6-2-dans-les-taches-de-codage-et-d-analyse-tout-en-offrant-une-execution-rapide-et-econome-en-tokens/",
+      "date": "2026-11-22T14:08:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "Sciences et Avenir",
+      "titre": "Comment l'IA fait-elle des maths ? Des milliers d'agents qui explorent, prouvent et vérifient",
+      "resume": "Sciences et Avenir explique que, cette année, l'IA est devenue capable de démontrer des théorèmes qui résistaient aux mathématiciens. Derrière ces résultats, des milliers d'agents intelligents travaillent ensemble pour explorer des pistes, élaborer des preuves et en vérifier la validité.",
+      "pourquoi": "Donne le mécanisme derrière les récentes preuves assistées par IA.",
+      "url": "https://www.sciencesetavenir.fr/fondamental/mathematiques/comment-l-ia-fait-elle-des-maths_196275?xtor=RSS-10",
+      "date": "2026-11-22T13:00:00+00:00",
+      "suite": true,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Phoronix",
+      "titre": "Linux 7.4-rc4 publiée : le cycle reste chargé, nourri par des rapports de bogues et des correctifs générés par IA",
+      "resume": "La quatrième préversion de Linux 7.4 est publiée, annoncée par « It's Huge. What A Surprise. ». Selon Phoronix, le cycle 7.4 reste très actif, alimenté par des rapports de bogues et des correctifs générés par IA ou LLM.",
+      "pourquoi": "À suivre si vous attendez la sortie de Linux 7.4 pour votre distribution.",
+      "url": "https://www.phoronix.com/news/Linux-7.4-rc4-Released",
+      "date": "2026-11-22T23:13:30+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Phoronix",
+      "titre": "CachyOS Package Installer 2.0 : nouvelle interface et prise en charge d'AUR, Flatpak et AppImage",
+      "resume": "Les développeurs de CachyOS publient officiellement la version 2.0 de leur installateur de paquets, après des semaines de teasing. Elle apporte une nouvelle interface et une gestion pratique des paquets AUR, Flatpak et AppImage sur cette distribution basée sur Arch Linux.",
+      "pourquoi": "Pratique pour installer des logiciels de sources variées depuis un seul outil sur CachyOS.",
+      "url": "https://www.phoronix.com/news/CachyOS-Package-Installer-2.0",
+      "date": "2026-11-22T11:55:29+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Linuxiac",
+      "titre": "KaOS 2026.11 abandonne KDE Plasma et Qt 5 au profit de Niri et Noctalia",
+      "resume": "KaOS 2026.11 supprime KDE Plasma et Qt 5 et adopte Niri et Noctalia. La distribution poursuit aussi sa transition loin de systemd.",
+      "pourquoi": "Un changement de cap majeur pour les utilisateurs de KaOS avant de mettre à jour.",
+      "url": "https://linuxiac.com/kaos-2026-11-drops-kde-plasma-and-qt-5-moves-forward-with-niri/",
+      "date": "2026-11-22T19:22:49+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Linuxiac",
+      "titre": "DietPi 10.9 gère cinq nouvelles cartes monocarte",
+      "resume": "DietPi 10.9 ajoute la prise en charge de nouvelles cartes Odroid et Orange Pi, élargit son catalogue de logiciels et améliore la gestion des Raspberry Pi.",
+      "pourquoi": "Utile si vous équipez un serveur domestique ou un projet embarqué avec l'une de ces cartes.",
+      "url": "https://linuxiac.com/dietpi-10-9-released-with-support-for-five-new-single-board-computers/",
+      "date": "2026-11-21T23:42:10+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Phoronix",
+      "titre": "Un premier pilote Rust pour l'interface WMI de Linux, destiné aux portables Clevo",
+      "resume": "Le premier pilote basé sur les abstractions Rust de l'interface WMI du noyau Linux est en développement : « clevo-laptop », pour les portables Clevo, y compris ceux vendus par TUXEDO Computers, Metabox, Sager et XMG.",
+      "pourquoi": "Montre l'avancée de Rust dans les pilotes du noyau, avec un bénéfice direct pour ces portables.",
+      "url": "https://www.phoronix.com/news/Rust-WMI-Driver-Clevo-Laptops",
+      "date": "2026-11-22T10:56:26+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "OMG! Ubuntu",
+      "titre": "High Tide 1.8.0 : le client TIDAL pour Linux diffuse vers Chromecast et DLNA",
+      "resume": "High Tide, client open source de TIDAL pour Linux, peut désormais diffuser vers des appareils Chromecast et DLNA comme des TV et des enceintes connectées. La fonction arrive avec la version 1.8.0, qui corrige aussi des bogues et affiche les noms d'artistes dans Discord RPC.",
+      "pourquoi": "Utile pour envoyer la musique de son PC Linux vers une enceinte ou une TV sans Bluetooth.",
+      "url": "https://www.omgubuntu.co.uk/2026/11/high-tide-chromecast-dlna-support",
+      "date": "2026-11-22T21:17:14+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Hacker News",
+      "titre": "Toyota, Nissan et Honda vont standardiser certaines pièces pour réduire les coûts",
+      "resume": "D'après Automotive News, les trois constructeurs commenceront par des critères de qualité communs pour l'acier, des protocoles homogènes pour les plastiques et un code couleur universel pour les faisceaux électriques. Les discussions débutent avec les fournisseurs japonais, puis s'élargiront aux fournisseurs étrangers. Les premières mesures sont prévues l'an prochain. Il s'agit de mieux résister aux constructeurs chinois.",
+      "pourquoi": "Montre une réponse industrielle collective à la concurrence chinoise.",
+      "url": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
+      "date": "2026-11-22T04:04:56+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50596133",
+        "points": 1230,
+        "comments": 686
+      }
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Frandroid",
+      "titre": "Tesla déploie le FSD v15, qui assouplit des garde-fous que l'Europe veut durcir",
+      "resume": "Tesla commence à déployer la version 15 de son FSD, sa conduite supervisée, portée par un modèle d'IA dix fois plus massif et une nouvelle visualisation en temps réel. En France, le système reste interdit. Selon Frandroid, cette version assouplit précisément les garde-fous que l'Europe cherche à durcir.",
+      "pourquoi": "Explique pourquoi l'arrivée du FSD en France risque d'être encore repoussée.",
+      "url": "https://www.frandroid.com/marques/tesla/3333971_tesla-lance-son-spectaculaire-fsd-v15-pourquoi-ces-nouveautes-vont-encore-retarder-son-arrivee-en-france",
+      "date": "2026-11-22T11:17:02+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Numerama",
+      "titre": "Stryx AI, start-up française d'Armand Thiberge, lève 7,7 millions d'euros pour des drones intercepteurs",
+      "resume": "Fondée en 2025 par Armand Thiberge, créateur de Brevo, Stryx AI conçoit des drones chargés d'en intercepter d'autres. Elle vient de lever 7,7 millions d'euros pour les produire en France. Son argument est de rendre l'interception presque aussi bon marché que la cible, mais le prix de son intercepteur reste inconnu.",
+      "pourquoi": "Un acteur français à suivre dans la défense anti-drones.",
+      "url": "https://www.numerama.com/tech/2379779-cest-quoi-stryx-ai-cette-start-up-francaise-qui-veut-intercepter-les-drones.html",
+      "date": "2026-11-22T11:01:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Numerama",
+      "titre": "Récap tech : piratage de GTA 6, entrée en bourse d'Anthropic, reconnaissance faciale sur l'iPhone Duo",
+      "resume": "Numerama résume la semaine. GTA 6 est arrivé après 13 ans d'attente et la communauté de l'émulation se bat pour le pirater. L'entrée en bourse d'Anthropic en fait le premier géant de l'IA coté à Wall Street. Apple a ajouté la reconnaissance faciale à l'iPhone Duo.",
+      "pourquoi": "Un tour d'horizon rapide des principales actus tech de la semaine.",
+      "url": "https://www.numerama.com/pop-culture/2380403-piratage-de-gta-6-ipo-danthropic-et-face-unlock-sur-iphone-duo-le-recap-tech-de-la-semaine.html",
+      "date": "2026-11-22T09:07:00+00:00",
+      "suite": true,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "The Verge",
+      "titre": "Delta : retards à Atlanta après une panne du système de calcul de masse et centrage",
+      "resume": "Tous les vols Delta au départ et à l'arrivée d'Atlanta subissent d'importants retards dimanche, à cause d'un problème du système qui calcule la masse et le centrage des avions. Seule Delta est touchée pour l'instant, selon The Verge.",
+      "pourquoi": "Une nouvelle panne informatique dans une série d'incidents récents.",
+      "url": "https://www.theverge.com/transportation/1039779/delta-flights-delayed-system-outage",
+      "date": "2026-11-22T17:46:44+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Eurogamer",
+      "titre": "GTA 6 : le mutisme de Jason Duval s'inspire de Steve McQueen et d'anciens Army Rangers",
+      "resume": "Le caractère peu bavard de Jason Duval est voulu : Rockstar explique qu'il s'inspire de Steve McQueen et des recherches du studio sur d'anciens Army Rangers.",
+      "pourquoi": "Éclaire un choix d'écriture du personnage principal du jeu.",
+      "url": "https://www.eurogamer.net/gta-6-jason-steve-mcqueen-army-rangers",
+      "date": "2026-11-22T16:11:00+00:00",
+      "suite": true,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Eurogamer",
+      "titre": "GTA 6 : un joueur banni 30 jours des fonctions sociales du PSN pour une photo de naturisme",
+      "resume": "Un joueur de GTA 6 affirme avoir reçu une suspension de 30 jours des fonctions sociales du PlayStation Network après avoir envoyé à un ami une photo prise dans le complexe naturiste du jeu.",
+      "pourquoi": "À savoir avant de partager des captures du jeu sur PSN.",
+      "url": "https://www.eurogamer.net/gta-6-psn-ban-nude-photos-nudist-resort",
+      "date": "2026-11-22T11:22:10+00:00",
+      "suite": true,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "The Verge",
+      "titre": "The Binding of Isaac: Repentance Plus retire sa musique générée par IA après un review bombing",
+      "resume": "Le jeu subit depuis quelques jours une vague de mauvaises notes sur Steam après la découverte d'un segment à thème GTA utilisant de la musique générée par IA. L'utilisateur Reddit ShweetsStuff a trouvé des fichiers audio avec des métadonnées Suno. Le développeur a retiré cette musique.",
+      "pourquoi": "Illustre la sensibilité des joueurs à l'IA générative dans les jeux.",
+      "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
+      "date": "2026-11-22T17:25:20+00:00",
+      "suite": true,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Gamekult",
+      "titre": "Deux jeux nommés Piece by Piece sortent dans un même bundle sur Switch",
+      "resume": "Deux jeux sans aucun lien, chacun intitulé Piece by Piece, sortent dans le même bundle sur Switch. Le pack est né de l'entente entre les deux développeurs, qui n'avaient pas prévu de collaborer.",
+      "pourquoi": "Une curiosité éditoriale qui évite la confusion sur l'eShop.",
+      "url": "https://www.gamekult.com/actualite/deux-jeux-portant-le-meme-nom-et-sortis-en-meme-temps-font-equipe-pour-sortir-sur-switch-3050872912.html",
+      "date": "2026-11-22T17:25:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Gamekult",
+      "titre": "Infinity Ward a imaginé un Call of Duty médiéval avant de l'abandonner",
+      "resume": "Selon Gamekult, l'idée d'un épisode médiéval de Call of Duty, avec épées et fléaux, a réellement été imaginée par Infinity Ward avant d'être mise au placard.",
+      "pourquoi": "Un morceau d'histoire des projets avortés de la série.",
+      "url": "https://www.gamekult.com/actualite/sachez-que-l-on-aurait-pu-avoir-un-call-of-duty-au-moyen-age-3050873058.html",
+      "date": "2026-11-22T08:15:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Time Extension",
+      "titre": "You Are Empty: Absolute Edition retiré de Steam après une plainte DMCA",
+      "resume": "La réédition du FPS ukrainien de 2006, par ZOOM, a été retirée de Steam après une plainte DMCA de Denis Volchenko, l'un des créateurs d'origine. ZOOM dénonce une « fabrication complète et totale ». Sorti le 27 octobre sur ZOOM et Steam, le jeu avait obtenu des centaines d'avis positifs.",
+      "pourquoi": "Un litige de droits sur un remaster rétro, à suivre.",
+      "url": "https://www.timeextension.com/news/2026/11/i-am-prepared-to-use-all-necessary-legal-avenues-soviet-fps-you-are-empty-absolute-edition-delisted-from-steam-after-dmca-complaint",
+      "date": "2026-11-22T15:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Time Extension",
+      "titre": "Seicross revient dans la gamme Arcade Archives 2",
+      "resume": "Le jeu d'arcade de 1984 de Nichibutsu, aussi connu sous le nom Sector Zone, rejoint la gamme Arcade Archives 2 de Hamster. Les joueurs s'affrontent à moto-hoverbike dans une ville informatisée façon Tron.",
+      "pourquoi": "Un classique d'arcade de nouveau jouable sur consoles modernes.",
+      "url": "https://www.timeextension.com/news/2026/11/1984s-tron-tastic-bike-blaster-seicross-receives-arcade-archives-2-update",
+      "date": "2026-11-22T14:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Time Extension",
+      "titre": "Golden Age, le magazine de Jaz Rignall, dépasse son premier objectif Kickstarter",
+      "resume": "Le nouveau périodique de Julian « Jaz » Rignall a levé plus de 25 000 £ sur Kickstarter. Il prévoit six numéros en format A5 relié en 2027, avec un numéro spécial Noël.",
+      "pourquoi": "À soutenir si vous aimez la presse jeu vidéo des années 1990.",
+      "url": "https://www.timeextension.com/news/2026/11/golden-age-the-new-vintage-gaming-magazine-from-jaz-rignall-hits-initial-kickstarter-goals",
+      "date": "2026-11-22T10:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Space.com",
+      "titre": "Ariane 6 lance 36 satellites Amazon Leo huit jours après l'échec d'un autre lancement",
+      "resume": "Une Ariane 6 doit décoller lundi 23 novembre de Kourou avec 36 satellites Amazon Leo, dans une fenêtre de 29 minutes ouvrant à 6 h 09 EST (11 h 09 GMT). Le lancement intervient huit jours après un échec qui a fait perdre 40 satellites.",
+      "pourquoi": "Un test de confiance pour la constellation d'Amazon et pour Ariane 6.",
+      "url": "https://www.space.com/space-exploration/launches-spacecraft/arianespace-ariane-6-amazon-leo-internet-satellite-launch",
+      "date": "2026-11-22T22:00:00+00:00",
+      "suite": true,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Space.com",
+      "titre": "SpaceX bat son record de rotation de rampe : deux lancements à 32 heures d'écart",
+      "resume": "Un Falcon 9 a décollé dimanche 22 novembre de Vandenberg pour la mission NROL-136, environ 32 heures après USSF-317 depuis la même rampe. SpaceX annonce 32 h 3 min 21 s, contre 45 h pour l'ancien record de la rampe 40.",
+      "pourquoi": "Montre la cadence de lancement atteinte par SpaceX.",
+      "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-spy-satellite-launch-nrol-136-proliferated-architecture",
+      "date": "2026-11-22T16:05:33+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Sciences et Avenir",
+      "titre": "Homo naledi : les fossiles de Rising Star seraient tous féminins, selon l'analyse des protéines de l'émail",
+      "resume": "L'analyse des protéines de l'émail dentaire des individus de la grotte de Rising Star, en Afrique du Sud, suggère qu'ils sont tous de sexe féminin. Le résultat est inattendu et intrigue les spécialistes.",
+      "pourquoi": "Ouvre une question nouvelle sur la vie sociale de cette espèce humaine ancienne.",
+      "url": "https://www.sciencesetavenir.fr/archeo-paleo/homo-naledi-l-enigme-des-femmes-fossiles_196287?xtor=RSS-4",
+      "date": "2026-11-22T09:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Futura",
+      "titre": "Un parasite nord-américain détecté pour la première fois en France, chez un daim en Sologne",
+      "resume": "Le réseau Sagir a découvert un ver plat de 5 cm dans le foie d'un daim en Sologne. Ce parasite d'Amérique du Nord n'avait jamais été signalé sur le territoire français.",
+      "pourquoi": "Un signal de surveillance sanitaire de la faune.",
+      "url": "https://www.futura-sciences.com/planete/actualites/ver-parasite-geant-venu-amerique-decouvert-premiere-fois-france-scientifiques-inquietent-k8p9-139448/#xtor%3DRSS-8",
+      "date": "2026-11-22T09:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Futura",
+      "titre": "Des pommes de terre cultivées dans un simulant de sol lunaire",
+      "resume": "Des chercheurs ont réussi à cultiver des pommes de terre dans un simulant de régolithe lunaire. Un ingrédient ajouté au sol a été décisif, selon Futura.",
+      "pourquoi": "Une étape vers l'agriculture hors Terre.",
+      "url": "https://www.futura-sciences.com/sciences/actualites/espace-ils-ont-tente-faire-pousser-pommes-terre-sol-lunaire-ce-quils-ont-ajoute-tout-change-139513/#xtor%3DRSS-8",
+      "date": "2026-11-22T14:07:59+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Ars Technica",
+      "titre": "Les médicaments GLP-1 pourraient libérer des terres agricoles plus vastes que l'Italie",
+      "resume": "Selon Ars Technica, les médicaments GLP-1 pourraient réduire assez la demande alimentaire pour libérer des terres agricoles plus grandes que l'Italie.",
+      "pourquoi": "Un effet environnemental inattendu de ces traitements.",
+      "url": "https://arstechnica.com/health/2026/11/glp-1-drugs-could-have-a-surprisingly-large-environmental-payoff/",
+      "date": "2026-11-22T12:07:41+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Hacker News",
+      "titre": "Guide pour débutants : faire tourner une IA locale avec Unsloth, Inkling ou Qwen",
+      "resume": "Le guide explique comment installer Unsloth Desktop sous Windows, télécharger un modèle quantifié adapté à la VRAM du GPU, régler la taille de contexte et activer l'accès réseau local pour toute la maison. L'auteur utilise une RTX 5090 de 32 Go et compte 10 à 15 minutes hors téléchargements.",
+      "pourquoi": "Utile pour héberger son propre assistant, privé et sans limite d'usage.",
+      "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+      "date": "2026-11-22T21:01:16+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50603845",
+        "points": 351,
+        "comments": 143
+      }
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Lobsters",
+      "titre": "Calculateur WASM pour placer des liaisons radio et des nœuds d'un réseau maillé urbain",
+      "resume": "Un calculateur local basé sur WASM, fondé sur FSPL et Delta-Bullington, estime l'emplacement des liaisons radio et le nombre de nœuds pour un réseau maillé urbain, dans l'objectif de passer des appels sur ce réseau.",
+      "pourquoi": "Utile pour planifier un réseau maillé communautaire.",
+      "url": "https://meshcoveragecalculator.lalala.ing/",
+      "date": "2026-11-22T18:17:44+00:00",
+      "suite": false,
+      "hn": null
+    }
+  ]
+}
