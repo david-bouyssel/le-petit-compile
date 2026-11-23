@@ -85,7 +85,8 @@
         {"name": "Time Extension", "url": "https://www.timeextension.com/feeds/latest"},
         {"name": "RetroRGB", "url": "https://www.retrorgb.com/feed"},
         {"name": "Retro Dodo", "url": "https://retrododo.com/feed/"},
-        {"name": "Libretro", "url": "https://www.libretro.com/index.php/feed/"}
+        {"name": "Libretro", "url": "https://www.libretro.com/index.php/feed/"},
+        {"name": "HN (décompilation)", "url": "https://hnrss.org/newest?q=decompilation+OR+recompilation&points=20"}
       ]
     },
     {
@@ -106,7 +107,10 @@
       "cible": "3 à 6",
       "feeds": [
         {"name": "Show HN", "url": "https://hnrss.org/show?points=50"},
-        {"name": "Hacker News (tutos)", "url": "https://hnrss.org/newest?q=tutorial&points=30"}
+        {"name": "Hacker News (tutos)", "url": "https://hnrss.org/newest?q=tutorial&points=30"},
+        {"name": "HN (LLM)", "url": "https://hnrss.org/newest?q=LLM&points=60"},
+        {"name": "HN (agents IA)", "url": "https://hnrss.org/newest?q=agents+OR+MCP+OR+RAG&points=40"},
+        {"name": "HN (self-hosted)", "url": "https://hnrss.org/newest?q=self-hosted+OR+Docker&points=40"}
       ]
     }
   ],

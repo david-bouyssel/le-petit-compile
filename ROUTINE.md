@@ -31,6 +31,14 @@ Lis tous les candidats, puis choisis :
 - **1 article « à la une »** : le plus important du jour pour un développeur curieux de tech, d'IA et de jeu vidéo ;
 - **25 à 40 articles** répartis dans les rubriques de `config/sources.json`. Le champ `cible` de chaque rubrique donne le nombre visé. Une rubrique sans bon article peut rester vide.
 
+**Profil du lecteur.** DevOps orienté web et IA, qui aime bidouiller, surtout autour de l'IA. Applique ce profil à chaque choix.
+
+- Favorise : LLM, agents, MCP, RAG, outils et modèles IA utilisables ; DevOps web (Docker, CI/CD, self-hosting, déploiement, observabilité) ; bidouille concrète ; recompilation ou décompilation de vieux jeux assistée par IA ; failles et incidents qui touchent le web, le cloud, les paquets ou les outils de dev.
+- Écarte : failles de matériel exotique (routeurs, KVM, IoT) et exploitations trop techniques ou sans action possible pour le lecteur ; outils et tutos trop avancés (théorie, internes de noyau, calcul haute performance) ; notes de version Linux ou de distribution sans impact pour un dev web/IA.
+- `linux` : peu d'articles. Ne garde que ce qui change l'usage d'un dev (outils, conteneurs, sécurité, noyau seulement si impact large). Une rubrique à 0 ou 1 article est acceptable.
+- `retro` : garde aussi les projets de décompilation, recompilation ou portage de vieux jeux par IA.
+- `tutos` : accessible et immédiatement utilisable, orienté IA, web et DevOps.
+
 Règles de tri :
 
 - Privilégie le neuf et le concret : sorties, versions, failles avec CVE, annonces, découvertes, outils utilisables.

@@ -48,9 +48,9 @@ L'ordre des rubriques dans le fichier est l'ordre d'affichage sur le site. L'ord
 | `linux` | Linux et open source | 2 à 4 | LinuxFr, Linuxiac, Phoronix, OMG! Ubuntu |
 | `decouvertes` | Découvertes technologiques | 3 à 5 | Numerama, Korben, Ars Technica, The Verge, Frandroid |
 | `jeux` | Jeux vidéo | 3 à 5 | Gematsu, Eurogamer, Rock Paper Shotgun, Gamekult |
-| `retro` | Rétro gaming et émulation | 2 à 4 | Time Extension, RetroRGB, Retro Dodo, Libretro |
+| `retro` | Rétro gaming et émulation | 2 à 4 | Time Extension, RetroRGB, Retro Dodo, Libretro, HN « decompilation » |
 | `science` | Science et espace | 2 à 4 | Futura, Space.com, Sciences et Avenir |
-| `tutos` | Tutos et outils | 3 à 6 | Show HN (50 points et plus), Hacker News « tutorial » (30 points et plus) |
+| `tutos` | Tutos et outils | 3 à 6 | Show HN (50 points et plus), Hacker News « tutorial » (30 points et plus), HN « LLM », « agents/MCP/RAG », « self-hosted/Docker » |
 
 ## Ajouter une source
 

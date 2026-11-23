@@ -58,11 +58,15 @@ L'article de la une ne figure pas aussi dans `items`.
 | `linux` | Distributions, noyau, logiciels libres, gouvernance open source |
 | `decouvertes` | Matériel, produits tech, industrie, usages numériques |
 | `jeux` | Jeux vidéo récents ou à venir, industrie du jeu |
-| `retro` | Rétro gaming, homebrew, émulation, matériel ancien |
+| `retro` | Rétro gaming, homebrew, émulation, matériel ancien, décompilation ou recompilation de vieux jeux par IA |
 | `science` | Sciences, espace, santé, climat |
 | `tutos` | Tutoriels, guides, outils prêts à l'emploi, Show HN |
 
 Les candidats HN (`rubrique_suggeree: null`) vont dans la rubrique de leur sujet, ou sont écartés.
+
+### Profil du lecteur
+
+Le tri suit un profil : DevOps orienté web et IA, qui aime bidouiller. On favorise l'IA utilisable (LLM, agents, MCP, RAG), le DevOps web et la bidouille concrète. On écarte les failles de matériel exotique, les contenus trop avancés et les notes de version Linux sans impact pour un dev web ou IA. Détail dans `ROUTINE.md`.
 
 ## Rédiger
 
