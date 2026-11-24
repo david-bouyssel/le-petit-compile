@@ -18,12 +18,15 @@ le-petit-compile/
 ├── CLAUDE.md                   Contexte projet pour les sessions Claude Code
 ├── README.md                   Présentation courte
 ├── config/
-│   └── sources.json            Rubriques, flux RSS, réglages globaux
+│   ├── sources.json            Rubriques, flux RSS, réglages globaux
+│   └── mods.json               Liste du mod du jour (Mod Archive)
 ├── scripts/
 │   ├── collect.py              Collecte -> work/candidates.json
 │   └── build.py                Validation + génération -> docs/
 ├── templates/
 │   └── page.html               Gabarit unique de page (HTML, CSS, JS inline)
+├── vendor/
+│   └── chiptune3/              Lecteur de modules (JS + WebAssembly), copié dans docs/
 ├── data/
 │   └── editions/
 │       └── AAAA-MM-JJ.json     Une édition par jour (versionnée)
@@ -79,6 +82,6 @@ templates/page.html ──┼─► scripts/build.py ◄────────
 | Bibliothèque standard Python uniquement | La routine cloud tourne sans `pip install` ; rien ne casse à cause d'une dépendance. |
 | JSON comme format d'édition | Facile à écrire pour Claude, facile à valider, diff lisible dans git. |
 | Site regénéré entièrement à chaque build | Pas d'état caché : le site dépend seulement de `data/`, `config/` et `templates/`. |
-| Données injectées dans la page (`<script type="application/json">`) | Une seule page par édition, aucun appel réseau côté lecteur sauf les polices. |
+| Données injectées dans la page (`<script type="application/json">`) | Une seule page par édition, aucun appel réseau côté lecteur sauf les polices et, au clic, le mod du jour. |
 | Fuseau `Europe/Paris` pour la date | L'édition porte la date du lecteur français, même si la routine tourne en UTC. |
 | Fusion des branches `claude/*` par Actions | La routine cloud peut n'avoir le droit de pousser que sur `claude/*`. |

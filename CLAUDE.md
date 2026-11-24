@@ -5,6 +5,8 @@ Revue de presse tech quotidienne en français. Une routine Claude Code cloud col
 ## Repères
 
 - `config/sources.json` : rubriques, flux, réglages. Les `id` de rubrique sont référencés par toutes les éditions.
+- `config/mods.json` : liste du « mod du jour » (modules Mod Archive), un morceau par édition choisi par `build.py`.
+- `vendor/chiptune3/` : lecteur de modules copié tel quel dans `docs/vendor/`. Ne le modifie pas à la main.
 - `scripts/collect.py` : collecte vers `work/candidates.json` (ignoré par git).
 - `scripts/build.py` : valide `data/editions/*.json` et génère `docs/` (ignoré par git).
 - `templates/page.html` : gabarit unique, HTML, CSS et JS inline. Marqueurs `__TITRE__` et `__DATA__`.

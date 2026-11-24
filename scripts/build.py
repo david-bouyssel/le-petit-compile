@@ -12,17 +12,21 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import shutil
 import sys
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config" / "sources.json"
+MODS = ROOT / "config" / "mods.json"
 EDITIONS = ROOT / "data" / "editions"
 TEMPLATE = ROOT / "templates" / "page.html"
 DOCS = ROOT / "docs"
+VENDOR = ROOT / "vendor"
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+MOD_FORMATS = {"MOD", "XM", "IT", "S3M"}
 REQUIRED = ("rubrique", "source", "titre", "resume", "pourquoi", "url")
 
 
@@ -89,12 +93,67 @@ def load_all(rubriques: set[str]) -> tuple[list[dict], list[str]]:
     return editions, errors
 
 
+def load_mods() -> tuple[dict, list[str]]:
+    """Charge config/mods.json (facultatif) et le valide."""
+    if not MODS.exists():
+        return {"mods": [], "mixes": {}}, []
+    try:
+        cfg = json.loads(MODS.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        return {"mods": [], "mixes": {}}, [f"mods.json : JSON invalide ({exc})"]
+    errs, seen = [], set()
+    mods, mixes = cfg.get("mods"), cfg.get("mixes", {})
+    if not isinstance(mods, list) or not isinstance(mixes, dict):
+        return {"mods": [], "mixes": {}}, ["mods.json : « mods » doit être une liste et « mixes » un objet"]
+    for n, m in enumerate(mods):
+        where = f"mods.json mods[{n}]"
+        if not isinstance(m, dict):
+            errs.append(f"{where} : doit être un objet")
+            continue
+        if not isinstance(m.get("id"), int) or m["id"] <= 0:
+            errs.append(f"{where} : « id » doit être l'identifiant numérique Mod Archive")
+        elif m["id"] in seen:
+            errs.append(f"{where} : id {m['id']} en double")
+        seen.add(m.get("id"))
+        for key in ("artiste", "titre", "licence"):
+            if not isinstance(m.get(key), str) or not m[key].strip():
+                errs.append(f"{where} : champ « {key} » manquant ou vide")
+        if m.get("format") not in MOD_FORMATS:
+            errs.append(f"{where} : format attendu parmi {', '.join(sorted(MOD_FORMATS))}")
+        if not isinstance(m.get("ko"), int) or m["ko"] <= 0:
+            errs.append(f"{where} : « ko » doit être la taille en Ko (entier)")
+        if m.get("mix") is not None and str(m["mix"]) not in mixes:
+            errs.append(f"{where} : mix {m['mix']} absent de « mixes »")
+    return cfg, errs
+
+
+def mod_du_jour(mods_cfg: dict, day: str) -> dict | None:
+    """Module de l'édition : parcourt la liste dans l'ordre, un morceau par jour."""
+    mods = mods_cfg.get("mods") or []
+    if not mods:
+        return None
+    m = mods[date.fromisoformat(day).toordinal() % len(mods)]
+    mix = m.get("mix")
+    video = mods_cfg.get("mixes", {}).get(str(mix)) if mix is not None else None
+    return {
+        "artiste": m["artiste"],
+        "titre": m["titre"],
+        "format": m["format"],
+        "ko": m["ko"],
+        "licence": m["licence"],
+        "fichier": f"https://api.modarchive.org/downloads.php?moduleid={m['id']}",
+        "page": f"https://modarchive.org/index.php?request=view_by_moduleid&query={m['id']}",
+        "mix": {"nom": f"Random chiptune mix {mix}" if mix != 1 else "Random chiptune mix",
+                "url": f"https://www.youtube.com/watch?v={video}"} if video else None,
+    }
+
+
 def to_script_json(data: object) -> str:
     raw = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     return raw.replace("</", "<\\/").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
 
 
-def render(template: str, cfg: dict, editions: list[dict], idx: int, is_index: bool) -> str:
+def render(template: str, cfg: dict, mods_cfg: dict, editions: list[dict], idx: int, is_index: bool) -> str:
     ed = editions[idx]
     keep = cfg.get("archive_editions", 14)
     prefix = "editions/" if is_index else ""
@@ -110,6 +169,8 @@ def render(template: str, cfg: dict, editions: list[dict], idx: int, is_index: b
             "rubriques": [{"id": r["id"], "nom": r["nom"], "couleur": r["couleur"]} for r in cfg["rubriques"]],
         },
         "edition": ed,
+        "mod": mod_du_jour(mods_cfg, ed["date"]),
+        "lecteur": ("./" if is_index else "../") + "vendor/chiptune3/chiptune3.js",
         "archive": archive,
         "nav": {
             "accueil": None if is_index else "../index.html",
@@ -131,6 +192,8 @@ def main() -> int:
     cfg = json.loads(CONFIG.read_text(encoding="utf-8"))
     rubriques = {r["id"] for r in cfg["rubriques"]}
     editions, errors = load_all(rubriques)
+    mods_cfg, mod_errors = load_mods()
+    errors += mod_errors
     if errors:
         print(f"{len(errors)} erreur(s) :", file=sys.stderr)
         for e in errors:
@@ -142,16 +205,21 @@ def main() -> int:
     last = editions[-1]
     print(f"{len(editions)} édition(s) valide(s), dernière : n° {last['numero']} du {last['date']} "
           f"({len(last['items']) + 1} articles)")
+    mod = mod_du_jour(mods_cfg, last["date"])
+    if mod:
+        print(f"Mod du jour : {mod['artiste']} - {mod['titre']} ({len(mods_cfg['mods'])} morceaux dans la liste)")
     if args.check:
         return 0
 
     template = TEMPLATE.read_text(encoding="utf-8")
     (DOCS / "editions").mkdir(parents=True, exist_ok=True)
     (DOCS / ".nojekyll").write_text("", encoding="utf-8")
+    if VENDOR.is_dir():
+        shutil.copytree(VENDOR, DOCS / "vendor", dirs_exist_ok=True)
     for idx, ed in enumerate(editions):
         out = DOCS / "editions" / f"{ed['date']}.html"
-        out.write_text(render(template, cfg, editions, idx, is_index=False), encoding="utf-8")
-    (DOCS / "index.html").write_text(render(template, cfg, editions, len(editions) - 1, is_index=True),
+        out.write_text(render(template, cfg, mods_cfg, editions, idx, is_index=False), encoding="utf-8")
+    (DOCS / "index.html").write_text(render(template, cfg, mods_cfg, editions, len(editions) - 1, is_index=True),
                                      encoding="utf-8")
     print(f"Site généré dans {DOCS.relative_to(ROOT)}/ ({datetime.now(timezone.utc):%H:%M} UTC)")
     return 0
