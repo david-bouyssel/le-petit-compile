@@ -64,9 +64,9 @@ L'article de la une ne figure pas aussi dans `items`.
 
 Les candidats HN (`rubrique_suggeree: null`) vont dans la rubrique de leur sujet, ou sont écartés.
 
-### Profil du lecteur
+### Actualités majeures et profil du lecteur
 
-Le tri suit un profil : DevOps orienté web et IA, qui aime bidouiller. On favorise l'IA utilisable (LLM, agents, MCP, RAG), le DevOps web et la bidouille concrète. On écarte les failles de matériel exotique, les contenus trop avancés et les notes de version Linux sans impact pour un dev web ou IA. Détail dans `ROUTINE.md`.
+Un sujet repris par au moins 3 sources est une actualité majeure : il est toujours retenu, même hors profil. Pour le reste, le tri suit un profil : DevOps orienté web et IA, qui aime bidouiller. On favorise l'IA utilisable (LLM, agents, MCP, RAG), le DevOps web et la bidouille concrète. On écarte les failles de matériel exotique, les contenus trop avancés et les notes de version Linux sans impact pour un dev web ou IA. Détail dans `ROUTINE.md`.
 
 ## Rédiger
 

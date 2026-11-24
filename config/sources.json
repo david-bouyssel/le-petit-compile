@@ -86,7 +86,8 @@
         {"name": "RetroRGB", "url": "https://www.retrorgb.com/feed"},
         {"name": "Retro Dodo", "url": "https://retrododo.com/feed/"},
         {"name": "Libretro", "url": "https://www.libretro.com/index.php/feed/"},
-        {"name": "HN (décompilation)", "url": "https://hnrss.org/newest?q=decompilation+OR+recompilation&points=20"}
+        {"name": "HN (décompilation)", "type": "hn", "url": "https://hn.algolia.com/api/v1/search_by_date?tags=story&restrictSearchableAttributes=title&typoTolerance=false&hitsPerPage=30&numericFilters=points%3E20&query=decompilation"},
+        {"name": "HN (recompilation)", "type": "hn", "url": "https://hn.algolia.com/api/v1/search_by_date?tags=story&restrictSearchableAttributes=title&typoTolerance=false&hitsPerPage=30&numericFilters=points%3E20&query=recompilation"}
       ]
     },
     {
@@ -107,10 +108,15 @@
       "cible": "3 à 6",
       "feeds": [
         {"name": "Show HN", "url": "https://hnrss.org/show?points=50"},
-        {"name": "Hacker News (tutos)", "url": "https://hnrss.org/newest?q=tutorial&points=30"},
-        {"name": "HN (LLM)", "url": "https://hnrss.org/newest?q=LLM&points=60"},
-        {"name": "HN (agents IA)", "url": "https://hnrss.org/newest?q=agents+OR+MCP+OR+RAG&points=40"},
-        {"name": "HN (self-hosted)", "url": "https://hnrss.org/newest?q=self-hosted+OR+Docker&points=40"}
+        {"name": "HN (tutoriels)", "type": "hn", "url": "https://hn.algolia.com/api/v1/search_by_date?tags=story&restrictSearchableAttributes=title&typoTolerance=false&hitsPerPage=30&numericFilters=points%3E30&query=tutorial"},
+        {"name": "HN (LLM)", "type": "hn", "url": "https://hn.algolia.com/api/v1/search_by_date?tags=story&restrictSearchableAttributes=title&typoTolerance=false&hitsPerPage=30&numericFilters=points%3E60&query=LLM"},
+        {"name": "HN (MCP)", "type": "hn", "url": "https://hn.algolia.com/api/v1/search_by_date?tags=story&restrictSearchableAttributes=title&typoTolerance=false&hitsPerPage=30&numericFilters=points%3E30&query=MCP"},
+        {"name": "HN (agents IA)", "type": "hn", "url": "https://hn.algolia.com/api/v1/search_by_date?tags=story&restrictSearchableAttributes=title&typoTolerance=false&hitsPerPage=30&numericFilters=points%3E40&query=AI%20agent"},
+        {"name": "HN (self-hosted)", "type": "hn", "url": "https://hn.algolia.com/api/v1/search_by_date?tags=story&restrictSearchableAttributes=title&typoTolerance=false&hitsPerPage=30&numericFilters=points%3E40&query=self-hosted"},
+        {"name": "The Bearded Bear", "url": "https://the-bearded-bear.com/blog/rss.xml"},
+        {"name": "Stéphane Robert", "url": "https://www.stephane-robert.info/rss.xml"},
+        {"name": "jola.dev", "url": "https://jola.dev/rss.xml"},
+        {"name": "Philipp Schmid", "url": "https://www.philschmid.de/rss"}
       ]
     }
   ],

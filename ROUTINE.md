@@ -31,7 +31,9 @@ Lis tous les candidats, puis choisis :
 - **1 article « à la une »** : le plus important du jour pour un développeur curieux de tech, d'IA et de jeu vidéo ;
 - **25 à 40 articles** répartis dans les rubriques de `config/sources.json`. Le champ `cible` de chaque rubrique donne le nombre visé. Une rubrique sans bon article peut rester vide.
 
-**Profil du lecteur.** DevOps orienté web et IA, qui aime bidouiller, surtout autour de l'IA. Applique ce profil à chaque choix.
+**Grandes actualités d'abord.** Avant d'appliquer le profil, compte les sources par sujet. Un sujet repris par au moins 3 sources différentes est une actualité majeure du jour (exemple : changement de PDG d'un géant de la tech, rachat géant, panne mondiale). Garde-le toujours, même hors profil, en un seul article dans la rubrique qui lui va. Il peut faire la une.
+
+**Profil du lecteur.** DevOps orienté web et IA, qui aime bidouiller, surtout autour de l'IA. Applique ce profil aux autres choix : il sert à départager, pas à écarter l'actualité majeure.
 
 - Favorise : LLM, agents, MCP, RAG, outils et modèles IA utilisables ; DevOps web (Docker, CI/CD, self-hosting, déploiement, observabilité) ; bidouille concrète ; recompilation ou décompilation de vieux jeux assistée par IA ; failles et incidents qui touchent le web, le cloud, les paquets ou les outils de dev.
 - Écarte : failles de matériel exotique (routeurs, KVM, IoT) et exploitations trop techniques ou sans action possible pour le lecteur ; outils et tutos trop avancés (théorie, internes de noyau, calcul haute performance) ; notes de version Linux ou de distribution sans impact pour un dev web/IA.
@@ -47,7 +49,7 @@ Règles de tri :
 - `rubrique_suggeree` n'est qu'une indication : range chaque article dans la rubrique qui lui va vraiment. Les candidats Hacker News (`rubrique_suggeree: null`) vont dans la rubrique de leur sujet, ou sont écartés.
 - `tutos` : tutoriels, guides et outils utilisables tout de suite (Show HN, bibliothèques, astuces de dev). Un candidat d'une autre rubrique peut y aller.
 - `jeux` : jeux vidéo récents ou à venir. `retro` : rétro gaming, homebrew, émulation, matériel ancien.
-- Un score HN élevé (plus de 200 points) est un bon signal d'intérêt.
+- Un score HN élevé est un bon signal d'intérêt. Au-delà de 300 points, garde le sujet sauf s'il est sans rapport avec la tech ou relève des exclusions du profil. Au-delà de 200 points, préfère-le à un candidat sans score.
 
 **Suivi des sujets.** Lis les titres des 14 dernières éditions de `data/editions/`. Si un article prolonge un sujet déjà traité, mets `"suite": true`. Ne republie pas une information déjà donnée sans fait nouveau.
 

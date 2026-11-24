@@ -133,8 +133,9 @@ def load_seen(days: int = 30) -> set[str]:
 def collect_feed(rubrique: str, feed: dict, since: datetime, max_items: int) -> tuple[dict, list[dict]]:
     status = {"rubrique": rubrique, "name": feed["name"], "url": feed["url"], "ok": False, "count": 0, "error": None}
     try:
-        items = parse_feed(fetch(feed["url"]))
-    except Exception as exc:  # flux mort, réseau bloqué, XML invalide
+        data = fetch(feed["url"])
+        items = parse_hn(data) if feed.get("type") == "hn" else parse_feed(data)
+    except Exception as exc:  # flux mort, réseau bloqué, XML ou JSON invalide
         status["error"] = f"{type(exc).__name__}: {exc}"[:200]
         return status, []
     recent = [i for i in items if i["date"] is None or i["date"] >= since]
@@ -147,15 +148,10 @@ def collect_feed(rubrique: str, feed: dict, since: datetime, max_items: int) -> 
     return status, recent
 
 
-def collect_hn(url: str) -> tuple[dict, list[dict]]:
-    status = {"rubrique": None, "name": "Hacker News (une)", "url": url, "ok": False, "count": 0, "error": None}
-    try:
-        hits = json.loads(fetch(url)).get("hits", [])
-    except Exception as exc:
-        status["error"] = f"{type(exc).__name__}: {exc}"[:200]
-        return status, []
+def parse_hn(data: bytes) -> list[dict]:
+    """Lit une réponse de l'API Algolia de Hacker News (search ou search_by_date)."""
     stories = []
-    for h in hits:
+    for h in json.loads(data).get("hits", []):
         hn_url = f"https://news.ycombinator.com/item?id={h.get('objectID')}"
         stories.append({
             "titre": h.get("title") or "",
@@ -166,6 +162,16 @@ def collect_hn(url: str) -> tuple[dict, list[dict]]:
             "rubrique_suggeree": None,
             "hn": {"url": hn_url, "points": h.get("points") or 0, "comments": h.get("num_comments") or 0},
         })
+    return stories
+
+
+def collect_hn(url: str) -> tuple[dict, list[dict]]:
+    status = {"rubrique": None, "name": "Hacker News (une)", "url": url, "ok": False, "count": 0, "error": None}
+    try:
+        stories = parse_hn(fetch(url))
+    except Exception as exc:
+        status["error"] = f"{type(exc).__name__}: {exc}"[:200]
+        return status, []
     status.update(ok=True, count=len(stories))
     return status, stories
 
@@ -199,7 +205,7 @@ def main() -> int:
             if key in seen or key in candidates:
                 continue
             hn = hn_by_url.get(key)
-            item["hn"] = hn["hn"] if hn else None
+            item["hn"] = hn["hn"] if hn else item.get("hn")
             candidates[key] = item
     for key, story in hn_by_url.items():
         if key not in seen and key not in candidates:

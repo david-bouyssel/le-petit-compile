@@ -29,7 +29,7 @@ Code de sortie : `0` si au moins une source répond, `1` si toutes échouent.
    - `extrait` : `description`, `summary`, `content:encoded` ou `content`, sans HTML, coupé à 700 caractères ;
    - `date` : `pubDate`, `published`, `updated` ou `dc:date`, convertie en UTC.
 4. **Filtre temporel** : garde les articles postérieurs à `maintenant - window_hours`, ou sans date. Garde au plus `max_per_feed` articles par flux, les plus récents d'abord.
-5. **Hacker News** (`collect_hn`) : l'API Algolia renvoie jusqu'à 60 articles de la une, avec points et commentaires.
+5. **Hacker News** (`collect_hn`) : l'API Algolia renvoie jusqu'à 60 articles de la une, avec points et commentaires. Les flux `"type": "hn"` des rubriques passent par le même analyseur (`parse_hn`).
 6. **Déduplication** :
    - les URL des 30 dernières éditions de `data/editions/` sont ignorées ;
    - une URL vue dans deux flux n'est gardée qu'une fois (le premier flux dans l'ordre de la config) ;

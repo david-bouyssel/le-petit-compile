@@ -34,7 +34,17 @@ Chaque rubrique est un objet :
 | `nom` | Libellé affiché sur le site |
 | `couleur` | Couleur d'accent de la rubrique (hexadécimal) |
 | `cible` | Nombre d'articles visé, lu par Claude lors de la sélection |
-| `feeds` | Liste des flux : `name` (affiché comme source) et `url` (RSS ou Atom) |
+| `feeds` | Liste des flux : `name` (affiché comme source), `url` (RSS ou Atom) et `type` optionnel (`"hn"` pour une recherche Algolia Hacker News) |
+
+### Recherches Hacker News
+
+Un flux `"type": "hn"` interroge l'API Algolia au lieu d'un flux RSS. Les articles gardent leurs points et commentaires HN. Modèle d'URL :
+
+```text
+https://hn.algolia.com/api/v1/search_by_date?tags=story&restrictSearchableAttributes=title&typoTolerance=false&hitsPerPage=30&numericFilters=points%3E40&query=self-hosted
+```
+
+`restrictSearchableAttributes=title` et `typoTolerance=false` évitent les faux positifs (« MCP » trouvait « Maps »). Les recherches `q=` de hnrss.org renvoyaient des erreurs 502 et ont été remplacées.
 
 L'ordre des rubriques dans le fichier est l'ordre d'affichage sur le site. L'ordre des flux compte aussi : en cas de doublon d'URL entre deux flux, `collect.py` garde le premier.
 
@@ -48,9 +58,9 @@ L'ordre des rubriques dans le fichier est l'ordre d'affichage sur le site. L'ord
 | `linux` | Linux et open source | 2 à 4 | LinuxFr, Linuxiac, Phoronix, OMG! Ubuntu |
 | `decouvertes` | Découvertes technologiques | 3 à 5 | Numerama, Korben, Ars Technica, The Verge, Frandroid |
 | `jeux` | Jeux vidéo | 3 à 5 | Gematsu, Eurogamer, Rock Paper Shotgun, Gamekult |
-| `retro` | Rétro gaming et émulation | 2 à 4 | Time Extension, RetroRGB, Retro Dodo, Libretro, HN « decompilation » |
+| `retro` | Rétro gaming et émulation | 2 à 4 | Time Extension, RetroRGB, Retro Dodo, Libretro, HN « decompilation » et « recompilation » |
 | `science` | Science et espace | 2 à 4 | Futura, Space.com, Sciences et Avenir |
-| `tutos` | Tutos et outils | 3 à 6 | Show HN (50 points et plus), Hacker News « tutorial » (30 points et plus), HN « LLM », « agents/MCP/RAG », « self-hosted/Docker » |
+| `tutos` | Tutos et outils | 3 à 6 | Show HN (50 points et plus), HN « tutorial », « LLM », « MCP », « AI agent », « self-hosted », The Bearded Bear, Stéphane Robert, jola.dev, Philipp Schmid |
 
 ## Ajouter une source
 
