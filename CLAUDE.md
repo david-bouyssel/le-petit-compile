@@ -1,4 +1,4 @@
-# veille-auto : Le Petit Compilé
+# le-petit-compile : Le Petit Compilé
 
 Revue de presse tech quotidienne en français. Une routine Claude Code cloud collecte des flux RSS, rédige une édition JSON et publie un site statique sur GitHub Pages. Documentation complète dans [doc/](doc/README.md).
 

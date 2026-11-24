@@ -1,6 +1,6 @@
 ---
 name: gerer-sources
-description: Gère les sources de veille-auto dans config/sources.json - ajouter, retirer, tester ou réparer un flux RSS/Atom, trouver l'URL du flux d'un site, ajouter ou modifier une rubrique, régler window_hours ou max_per_feed. Utilise cette skill quand l'utilisateur veut suivre un nouveau site, quand collect.py signale ECHEC pour une source, ou quand il veut changer les rubriques de la revue de presse.
+description: Gère les sources de le-petit-compile dans config/sources.json - ajouter, retirer, tester ou réparer un flux RSS/Atom, trouver l'URL du flux d'un site, ajouter ou modifier une rubrique, régler window_hours ou max_per_feed. Utilise cette skill quand l'utilisateur veut suivre un nouveau site, quand collect.py signale ECHEC pour une source, ou quand il veut changer les rubriques de la revue de presse.
 ---
 
 # Gérer les sources

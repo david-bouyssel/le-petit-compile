@@ -1,6 +1,6 @@
 ---
 name: corriger-edition
-description: Corrige une édition existante de veille-auto (data/editions/AAAA-MM-JJ.json) - erreurs de validation de scripts/build.py, JSON cassé, erreur factuelle, doublon, mauvaise rubrique, article à retirer ou à ajouter. Utilise cette skill quand build.py échoue, quand le workflow « Publier la veille » plante à « Générer le site », ou quand l'utilisateur signale un problème dans une édition publiée. Ne l'utilise pas pour créer une nouvelle édition (skill edition-du-jour).
+description: Corrige une édition existante de le-petit-compile (data/editions/AAAA-MM-JJ.json) - erreurs de validation de scripts/build.py, JSON cassé, erreur factuelle, doublon, mauvaise rubrique, article à retirer ou à ajouter. Utilise cette skill quand build.py échoue, quand le workflow « Publier la veille » plante à « Générer le site », ou quand l'utilisateur signale un problème dans une édition publiée. Ne l'utilise pas pour créer une nouvelle édition (skill edition-du-jour).
 ---
 
 # Corriger une édition

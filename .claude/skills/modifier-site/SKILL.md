@@ -1,6 +1,6 @@
 ---
 name: modifier-site
-description: Modifie le site « Le Petit Compilé » de veille-auto - mise en page, styles, thème clair/sombre, filtres, recherche, archives, navigation, titre - dans templates/page.html et scripts/build.py, puis prévisualise le résultat. Utilise cette skill pour toute demande de changement visuel ou fonctionnel du site publié. Ne l'utilise pas pour le contenu d'une édition (skills edition-du-jour et corriger-edition).
+description: Modifie le site « Le Petit Compilé » de le-petit-compile - mise en page, styles, thème clair/sombre, filtres, recherche, archives, navigation, titre - dans templates/page.html et scripts/build.py, puis prévisualise le résultat. Utilise cette skill pour toute demande de changement visuel ou fonctionnel du site publié. Ne l'utilise pas pour le contenu d'une édition (skills edition-du-jour et corriger-edition).
 ---
 
 # Modifier le site

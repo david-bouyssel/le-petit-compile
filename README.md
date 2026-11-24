@@ -1,4 +1,4 @@
-# veille-auto
+# le-petit-compile
 
 Revue de presse tech quotidienne en français, rédigée par une routine Claude dans le cloud et publiée sur GitHub Pages.
 

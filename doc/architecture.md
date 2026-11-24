@@ -13,7 +13,7 @@ Le seul artefact versionné produit chaque jour est un fichier JSON : `data/edit
 ## Arborescence
 
 ```text
-veille-auto/
+le-petit-compile/
 ├── ROUTINE.md                  Consignes de la routine quotidienne (lues par Claude)
 ├── CLAUDE.md                   Contexte projet pour les sessions Claude Code
 ├── README.md                   Présentation courte

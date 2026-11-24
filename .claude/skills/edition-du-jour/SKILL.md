@@ -1,6 +1,6 @@
 ---
 name: edition-du-jour
-description: Produit l'édition quotidienne de la revue de presse « Le Petit Compilé » dans veille-auto - collecte des flux RSS, sélection, rédaction en français, validation et publication de data/editions/AAAA-MM-JJ.json. Utilise cette skill quand l'utilisateur demande de faire, générer, rattraper ou relancer l'édition du jour (ou d'une date manquée) hors de la routine cloud. Ne l'utilise pas pour corriger une édition existante (skill corriger-edition) ni pour modifier les sources (skill gerer-sources).
+description: Produit l'édition quotidienne de la revue de presse « Le Petit Compilé » dans le-petit-compile - collecte des flux RSS, sélection, rédaction en français, validation et publication de data/editions/AAAA-MM-JJ.json. Utilise cette skill quand l'utilisateur demande de faire, générer, rattraper ou relancer l'édition du jour (ou d'une date manquée) hors de la routine cloud. Ne l'utilise pas pour corriger une édition existante (skill corriger-edition) ni pour modifier les sources (skill gerer-sources).
 ---
 
 # Édition du jour

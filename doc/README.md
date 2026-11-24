@@ -1,6 +1,6 @@
-# Documentation de veille-auto
+# Documentation de le-petit-compile
 
-veille-auto produit **Le Petit Compilé**, une revue de presse tech quotidienne en français. Une routine Claude Code dans le cloud collecte les flux, choisit et résume les articles, puis publie le site sur GitHub Pages.
+le-petit-compile produit **Le Petit Compilé**, une revue de presse tech quotidienne en français. Une routine Claude Code dans le cloud collecte les flux, choisit et résume les articles, puis publie le site sur GitHub Pages.
 
 Cette documentation décrit le fonctionnement complet du projet. Pour un aperçu rapide, lis d'abord le [README du dépôt](../README.md).
 

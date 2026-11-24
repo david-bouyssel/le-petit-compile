@@ -26,7 +26,7 @@ CONFIG = ROOT / "config" / "sources.json"
 EDITIONS = ROOT / "data" / "editions"
 OUT = ROOT / "work" / "candidates.json"
 
-USER_AGENT = "Mozilla/5.0 (compatible; veille-auto/1.0; +https://github.com/)"
+USER_AGENT = "Mozilla/5.0 (compatible; le-petit-compile/1.0; +https://github.com/)"
 TIMEOUT = 20
 EXCERPT_MAX = 700
 TRACKING = re.compile(r"^(utm_|fbclid$|gclid$|mc_|ref$|ref_src$|xtor$)")
