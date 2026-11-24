@@ -49,8 +49,9 @@
   .masthead p { margin: 10px 0 0; font: italic 400 17px/1.3 var(--serif); color: var(--soft); }
 
   /* Le chiptune du jour */
-  .mod { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 14px;
-         padding: 9px 0; border-bottom: 1px solid var(--rule); font: 500 12.5px/1.4 var(--sans); color: var(--muted); }
+  .mod { display: flex; flex-direction: column; align-items: center; gap: 7px;
+         padding: 10px 0 11px; border-bottom: 1px solid var(--rule); font: 500 12.5px/1.4 var(--sans); color: var(--muted); }
+  .mod-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 12px; }
   .mod-label { font: 600 11px var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
   .mod-play { font: 600 12px var(--sans); color: var(--ink); background: none; border: 1px solid var(--ink);
               border-radius: 999px; padding: 3px 12px; cursor: pointer; min-width: 92px; }
@@ -59,8 +60,11 @@
   .mod-play:disabled { opacity: .6; cursor: progress; }
   .mod-info { color: var(--ink); }
   .mod-info i { font: italic 500 15px var(--serif); }
-  .mod-time { font-variant-numeric: tabular-nums; min-width: 4.5em; }
-  .mod input[type="range"] { width: 80px; accent-color: var(--accent); margin: 0; }
+  .mod-time { font-variant-numeric: tabular-nums; }
+  .mod-time:empty { display: none; }
+  .mod-vol { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+  .mod-vol svg { width: 16px; height: 16px; flex: none; }
+  .mod input[type="range"] { width: 96px; accent-color: var(--accent); margin: 0; cursor: pointer; }
   .mod a { color: var(--muted); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
   .mod a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 
@@ -194,11 +198,18 @@
   </header>
   <section class="mod" id="mod" aria-label="Le chiptune du jour" hidden>
     <span class="mod-label">Le chiptune du jour</span>
-    <button type="button" class="mod-play" id="modPlay" aria-pressed="false">▶ Écouter</button>
-    <span class="mod-info" id="modInfo"></span>
-    <span class="mod-time" id="modTime" aria-live="polite"></span>
-    <input type="range" id="modVol" min="0" max="1" step="0.05" value="0.5" aria-label="Volume du chiptune du jour">
-    <span id="modLinks"></span>
+    <div class="mod-row">
+      <button type="button" class="mod-play" id="modPlay" aria-pressed="false">▶ Écouter</button>
+      <span class="mod-info" id="modInfo"></span>
+      <span class="mod-time" id="modTime" aria-live="polite"></span>
+    </div>
+    <div class="mod-row">
+      <label class="mod-vol" title="Volume">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+        <input type="range" id="modVol" min="0" max="1" step="0.05" value="0.5" aria-label="Volume du chiptune du jour">
+      </label>
+      <span id="modLinks"></span>
+    </div>
   </section>
 
   <div class="layout">
@@ -409,7 +420,7 @@
     var taille = M.ko >= 1024 ? (M.ko / 1024).toFixed(1).replace(".", ",") + " Mo" : M.ko + " Ko";
     document.getElementById("modInfo").innerHTML = esc(M.artiste) + ' — <i>' + esc(M.titre) + '</i> · ' + esc(M.format) + ' · ' + esc(taille);
     document.getElementById("modLinks").innerHTML =
-      '<a href="' + safeUrl(M.page) + '" target="_blank" rel="noopener" title="Licence : ' + esc(M.licence) + '">Mod Archive</a>';
+      'Source : <a href="' + safeUrl(M.page) + '" target="_blank" rel="noopener" title="Licence : ' + esc(M.licence) + '">Mod Archive</a>';
     var vol = parseFloat(store("va-mod-vol")); if (!(vol >= 0 && vol <= 1)) vol = 0.5;
     volEl.value = vol;
     box.hidden = false;

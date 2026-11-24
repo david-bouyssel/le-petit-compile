@@ -109,7 +109,7 @@ Le script de la page lit `#data` et construit tout le contenu côté navigateur 
 - **Lien HN** : points et commentaires si `hn` est renseigné.
 - **Navigation** entre éditions et **archives** des éditions précédentes.
 - **Thème** clair ou sombre : suit le système, ou le choix du lecteur.
-- **Le chiptune du jour**, sous le titre : artiste, titre, format et taille, lien vers la fiche Mod Archive (licence en infobulle). Rien n'est chargé avant le clic sur « Écouter » : le lecteur `chiptune3` (libopenmpt en WebAssembly, dans un AudioWorklet) est alors importé, puis le module est téléchargé et joué en boucle. Le bouton bascule ensuite entre pause et lecture. Un curseur règle le volume. En cas d'échec, le bandeau affiche la cause (« Lecteur introuvable », « Téléchargement impossible », « Navigateur non compatible »…) et la console donne le détail.
+- **Le chiptune du jour**, sous le titre, sur trois lignes : le libellé ; le bouton « Écouter », l'artiste, le titre, le format, la taille et, pendant la lecture, le temps écoulé et la durée ; le volume (icône de haut-parleur et curseur) et la source, un lien vers la fiche Mod Archive avec la licence en infobulle. Rien n'est chargé avant le clic sur « Écouter » : le lecteur `chiptune3` (libopenmpt en WebAssembly, dans un AudioWorklet) est alors importé, puis le module est téléchargé et joué en boucle. Le bouton bascule ensuite entre pause et lecture. Un curseur règle le volume. En cas d'échec, le bandeau affiche la cause (« Lecteur introuvable », « Téléchargement impossible », « Navigateur non compatible »…) et la console donne le détail.
 
 ### Stockage local
 
