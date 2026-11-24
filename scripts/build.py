@@ -124,6 +124,10 @@ def load_mods() -> tuple[dict, list[str]]:
             errs.append(f"{where} : « ko » doit être la taille en Ko (entier)")
         if m.get("mix") is not None and str(m["mix"]) not in mixes:
             errs.append(f"{where} : mix {m['mix']} absent de « mixes »")
+    sel = cfg.get("selection")
+    if sel is not None and not (isinstance(sel, dict) and isinstance(sel.get("nom"), str) and sel["nom"].strip()
+                                and str(sel.get("url", "")).startswith("https://")):
+        errs.append("mods.json : « selection » doit être null ou {nom, url} avec une url https://")
     return cfg, errs
 
 
@@ -141,6 +145,7 @@ def mod_du_jour(mods_cfg: dict, day: str) -> dict | None:
         "licence": m["licence"],
         "fichier": f"https://api.modarchive.org/downloads.php?moduleid={m['id']}",
         "page": f"https://modarchive.org/index.php?request=view_by_moduleid&query={m['id']}",
+        "selection": mods_cfg.get("selection"),
     }
 
 

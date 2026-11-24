@@ -420,7 +420,8 @@
     var taille = M.ko >= 1024 ? (M.ko / 1024).toFixed(1).replace(".", ",") + " Mo" : M.ko + " Ko";
     document.getElementById("modInfo").innerHTML = esc(M.artiste) + ' — <i>' + esc(M.titre) + '</i> · ' + esc(M.format) + ' · ' + esc(taille);
     document.getElementById("modLinks").innerHTML =
-      'Source : <a href="' + safeUrl(M.page) + '" target="_blank" rel="noopener" title="Licence : ' + esc(M.licence) + '">Mod Archive</a>';
+      'Source : <a href="' + safeUrl(M.page) + '" target="_blank" rel="noopener" title="Licence : ' + esc(M.licence) + '">Mod Archive</a>' +
+      (M.selection ? ' · Sélection : <a href="' + safeUrl(M.selection.url) + '" target="_blank" rel="noopener">' + esc(M.selection.nom) + '</a>' : "");
     var vol = parseFloat(store("va-mod-vol")); if (!(vol >= 0 && vol <= 1)) vol = 0.5;
     volEl.value = vol;
     box.hidden = false;

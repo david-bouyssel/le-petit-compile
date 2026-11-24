@@ -55,7 +55,8 @@ Le JSON est protégé pour l'intégration dans une balise `<script>` : `</` devi
   "mod": {
     "artiste": "…", "titre": "…", "format": "XM", "ko": 114, "licence": "…",
     "fichier": "https://api.modarchive.org/downloads.php?moduleid=…",
-    "page": "https://modarchive.org/index.php?request=view_by_moduleid&query=…"
+    "page": "https://modarchive.org/index.php?request=view_by_moduleid&query=…",
+    "selection": {"nom": "Krelez", "url": "https://www.youtube.com/@Krelez"}
   },
   "lecteur": "./vendor/chiptune3/chiptune3.js",
   "archive": [
@@ -91,6 +92,8 @@ Le JSON est protégé pour l'intégration dans une balise `<script>` : `</` devi
 
 `mixes` associe un numéro de mix à l'identifiant de la vidéo YouTube.
 
+`selection` (facultatif) crédite l'origine de la sélection : `{"nom": "Krelez", "url": "https://www.youtube.com/@Krelez"}`. La page affiche « Sélection : Krelez » à côté de la source.
+
 Le choix est déterministe : l'édition du jour `d` reçoit `mods[d.toordinal() % len(mods)]`. La liste défile donc dans son ordre, un morceau par jour, puis recommence. Ajouter ou retirer un morceau décale l'attribution des éditions suivantes et des pages déjà générées, ce qui est sans conséquence.
 
 Pour ajouter un morceau : trouve-le sur Mod Archive, note son `id` (dans l'URL `view_by_moduleid&query=…`), son format, sa taille et sa licence, puis lance `python scripts/build.py --check`.
@@ -109,7 +112,7 @@ Le script de la page lit `#data` et construit tout le contenu côté navigateur 
 - **Lien HN** : points et commentaires si `hn` est renseigné.
 - **Navigation** entre éditions et **archives** des éditions précédentes.
 - **Thème** clair ou sombre : suit le système, ou le choix du lecteur.
-- **Le chiptune du jour**, sous le titre, sur trois lignes : le libellé ; le bouton « Écouter », l'artiste, le titre, le format, la taille et, pendant la lecture, le temps écoulé et la durée ; le volume (icône de haut-parleur et curseur) et la source, un lien vers la fiche Mod Archive avec la licence en infobulle. Rien n'est chargé avant le clic sur « Écouter » : le lecteur `chiptune3` (libopenmpt en WebAssembly, dans un AudioWorklet) est alors importé, puis le module est téléchargé et joué en boucle. Le bouton bascule ensuite entre pause et lecture. Un curseur règle le volume. En cas d'échec, le bandeau affiche la cause (« Lecteur introuvable », « Téléchargement impossible », « Navigateur non compatible »…) et la console donne le détail.
+- **Le chiptune du jour**, sous le titre, sur trois lignes : le libellé ; le bouton « Écouter », l'artiste, le titre, le format, la taille et, pendant la lecture, le temps écoulé et la durée ; le volume (icône de haut-parleur et curseur) la source, un lien vers la fiche Mod Archive avec la licence en infobulle, et la sélection, un lien vers la chaîne YouTube Krelez. Rien n'est chargé avant le clic sur « Écouter » : le lecteur `chiptune3` (libopenmpt en WebAssembly, dans un AudioWorklet) est alors importé, puis le module est téléchargé et joué en boucle. Le bouton bascule ensuite entre pause et lecture. Un curseur règle le volume. En cas d'échec, le bandeau affiche la cause (« Lecteur introuvable », « Téléchargement impossible », « Navigateur non compatible »…) et la console donne le détail.
 
 ### Stockage local
 
