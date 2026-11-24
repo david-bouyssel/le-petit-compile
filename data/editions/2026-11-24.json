@@ -1,0 +1,430 @@
+{
+  "date": "2026-11-24",
+  "genere": "2026-11-24T06:08:59+01:00",
+  "une": {
+    "rubrique": "dev",
+    "source": "Ladybird",
+    "titre": "Ladybird passe en alpha : un navigateur au moteur entièrement nouveau, pour macOS et Linux",
+    "resume": "Andreas Kling annonce le 23 novembre 2026 que Ladybird est en alpha, téléchargeable sur macOS et Linux. Le navigateur repose sur un moteur écrit de zéro, qui n'est pas un fork. Le projet prévient que certains sites ne fonctionneront pas et que le navigateur plantera parfois. Il propose de signaler un site cassé depuis le navigateur et de lire le rapport de plantage avant de l'envoyer. L'alpha est un canal glissant avec des mises à jour automatiques régulières, et le projet ne promet aucune garantie de sécurité à ce stade. Ladybird prend en charge WebDriver pour les tests automatisés ainsi que le protocole DevTools de Firefox.",
+    "pourquoi": "Pour un développeur web, c'est l'occasion de tester ses sites sur un moteur indépendant, avec WebDriver, et de signaler ce qui casse.",
+    "url": "https://ladybird.org/posts/alpha/",
+    "date": "2026-11-23T16:13:03+00:00",
+    "suite": false,
+    "hn": {
+      "url": "https://news.ycombinator.com/item?id=50614249",
+      "points": 1602,
+      "comments": 376
+    }
+  },
+  "items": [
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "CISA signale une faille critique de Cisco Expressway exploitée dans des attaques",
+      "resume": "La CISA américaine avertit les agences fédérales que des attaquants exploitent désormais une vulnérabilité critique d'exécution de code à distance dans Cisco Expressway, corrigée récemment.",
+      "pourquoi": "À patcher sans attendre si vous exploitez des Cisco Expressway, puisque l'exploitation est déjà observée.",
+      "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-critical-cisco-expressway-rce-flaw-as-actively-exploited/",
+      "date": "2026-11-23T07:44:19+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "Azure API Management : une faille exploitée pour voler des identifiants d'API stockés",
+      "resume": "Microsoft prévient ses clients qu'une faille dans les niveaux Classic d'Azure API Management (APIM) a été exploitée pour voler des identifiants d'API stockés. Les autorités norvégiennes relient la faille à des cyberattaques contre des entreprises du secteur de l'énergie.",
+      "pourquoi": "À vérifier si vous utilisez APIM Classic : les identifiants d'API qui y sont stockés peuvent avoir été exposés.",
+      "url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
+      "date": "2026-11-23T19:42:20+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "ScreenConnect : la faille CVE-2026-84869 (CVSS 9,9) exploitée contre des postes de techniciens de MSP",
+      "resume": "Des attaquants exploitent la faille CVE-2026-84869, déjà corrigée, dans ConnectWise ScreenConnect : un invité peut transférer et faire exécuter une charge malveillante sur le poste du technicien qui se connecte. Huntress a observé le 12 novembre 2026 un poste de technicien compromis en environ 9 secondes. Entre le 20 octobre et le 16 novembre, au moins 688 000 requêtes d'invités visant des fichiers update.bat ont touché 42 serveurs ScreenConnect depuis 29 adresses IP.",
+      "pourquoi": "À mettre à jour si vous gérez des serveurs ScreenConnect, surtout en tant que MSP.",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html",
+      "date": "2026-11-23T12:41:04+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "Idunno.AntiCsrf : une faille critique d'exécution de code (CVE-2026-131914) exploitée",
+      "resume": "Des chercheurs recommandent d'abandonner l'ancienne bibliothèque anti-CSRF ASP.NET Idunno.AntiCsrf après la découverte d'une faille critique (CVE-2026-131914, CVSS 9,3), déjà exploitée. Elle touche les versions 0.9.1.0 et 0.9.1 Beta et permet une exécution de code à distance sans authentification.",
+      "pourquoi": "À rechercher dans vos dépendances ASP.NET : la bibliothèque est à remplacer.",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
+      "date": "2026-11-23T09:11:56+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "binary-parser : injection de code JavaScript via des définitions de parseurs malveillantes (CVE-2026-134814)",
+      "resume": "Une faille critique (CVE-2026-134814, CVSS 9,2 / 8,1) touche la bibliothèque binary-parser avant la version 2.3.1. Un attaquant qui contrôle les définitions de parseur peut exécuter du code arbitraire.",
+      "pourquoi": "À mettre à jour en 2.3.1 ou plus si ce paquet npm figure dans vos projets.",
+      "url": "https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html",
+      "date": "2026-11-23T13:22:20+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "ActuIA",
+      "titre": "OpenRouter durcit son option Zero Data Retention après l'enquête de Dragos",
+      "resume": "OpenRouter a exclu le 22 novembre 2026 trois fournisseurs d'inférence, sans les nommer, et retiré 125 endpoints de l'éligibilité Zero Data Retention, après l'expérience de Dragos, qui a glissé des secrets traçables dans environ deux millions de prompts. Phala, Novita AI et Atlas Cloud demandent de révoquer ou de renouveler les clés d'API et autres secrets concernés.",
+      "pourquoi": "À vérifier si vous routez des requêtes via OpenRouter : pensez à renouveler les clés qui ont pu transiter.",
+      "url": "https://www.actuia.com/actualite/openrouter-durcit-son-option-zero-data-retention-apres-lenquete-de-dragos/",
+      "date": "2026-11-23T15:10:00+00:00",
+      "suite": true,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "Hacker News",
+      "titre": "GLM-5.4 : Z.ai présente son premier modèle à transformeur bouclé, orienté code",
+      "resume": "Z.ai publie GLM-5.4, son premier modèle à architecture de transformeur bouclé : un groupe de couches aux poids partagés s'exécute plusieurs fois pour affiner les états cachés, ce qui donne un réseau plus profond sans augmenter le nombre de paramètres. Simon Willison note que les poids ne sont pas disponibles pour l'instant et que le modèle passe par l'abonnement Coding Plan de Z.ai, via une API compatible OpenAI Responses.",
+      "pourquoi": "Utile pour suivre une nouvelle piste d'architecture pour les modèles de code, testable via l'API.",
+      "url": "https://z.ai/blog/glm-5.4",
+      "date": "2026-11-23T10:06:43+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50609685",
+        "points": 1087,
+        "comments": 353
+      }
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "GPT-6.2 Sol devient le modèle par défaut de ChatGPT",
+      "resume": "OpenAI déploie GPT-6.2 Sol comme modèle par défaut de l'onglet de discussion de ChatGPT, dans le monde entier. Dans les tests internes, la compréhension d'images passe de 47,4 à 71,7 %, et le modèle traite correctement les consignes difficiles dans 78,1 % des cas. Il respecte aussi plus régulièrement les règles de sécurité.",
+      "pourquoi": "Change le modèle que vous obtenez par défaut dans ChatGPT, notamment pour l'analyse d'images.",
+      "url": "https://the-decoder.com/openai-updates-chatgpt-to-handle-complex-everyday-questions-web-searches-and-images-more-reliably/",
+      "date": "2026-11-23T20:39:18+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "Numerama",
+      "titre": "Anthropic lance Claude Ship, des agents qui relisent, corrigent et approuvent du code avant mise en ligne",
+      "resume": "Anthropic dévoile Claude Ship, un ensemble d'agents capables de relire, corriger et même approuver du code avant sa mise en ligne.",
+      "pourquoi": "À suivre pour la revue de code automatisée dans vos pipelines CI/CD.",
+      "url": "https://www.numerama.com/tech/2382945-anthropic-lance-claude-ship-un-outil-qui-veut-valider-votre-code-a-la-place-de-vos-collegues.html",
+      "date": "2026-11-23T20:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "Hacker News",
+      "titre": "NariQ : Qwen3.8-27B quantifié à 3 bits ou moins, proche de la qualité BF16 pour un fichier de 10 Go",
+      "resume": "Nari Labs publie NariQ, des quantifications de Qwen3.8-27B à 3 bits ou moins, qui selon elle conservent une qualité proche du BF16 sur des tâches d'agents, de maths, de raisonnement multilingue et de compréhension d'images. Sur DeepSWE, le score est de 39,8 en BF16 contre 41,0 en 3 bits, 41,9 en 2,5 bits et 28,6 en 2 bits. Le modèle tient dans un fichier GGUF d'environ 10 Go.",
+      "pourquoi": "Intéressant pour faire tourner localement un modèle d'agent sur du matériel modeste.",
+      "url": "https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF",
+      "date": "2026-11-23T13:42:38+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50611402",
+        "points": 144,
+        "comments": 30
+      }
+    },
+    {
+      "rubrique": "ia",
+      "source": "ActuIA",
+      "titre": "OpenAI : les agents de code réussissent 79 % des tâches de surveillance d'entraînement, mais 25 % du code d'inférence",
+      "resume": "OpenAI a publié le 18 novembre 2026 un deuxième bilan de l'usage des agents de code dans sa recherche. Le taux de réussite sans intervention est de 79 % pour surveiller un entraînement, 43 % pour construire du code et des données et 25 % pour le code d'inférence. En octobre, le chercheur médian consommait l'équivalent de 2 400 dollars par jour au tarif public.",
+      "pourquoi": "Donne des ordres de grandeur réalistes sur ce que les agents de code font seuls.",
+      "url": "https://www.actuia.com/actualite/les-agents-dopenai-surveillent-mieux-les-entrainements-quils-ne-codent/",
+      "date": "2026-11-23T15:30:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "Frandroid",
+      "titre": "Mistral offre un mois de Vibe Pro, son assistant de programmation, aux résidents européens",
+      "resume": "Mistral AI offre un mois d'abonnement à Vibe Pro, son assistant de programmation par IA, à toute personne résidant en Europe, sans limite de places.",
+      "pourquoi": "Une occasion de tester gratuitement un assistant de code européen.",
+      "url": "https://www.frandroid.com/culture-tech/intelligence-artificielle/3335737_pour-une-fois-leurope-passe-avant-les-etats-unis-mistral-offre-son-ia-vibe-pro-pendant-un-mois-avec-ce-code",
+      "date": "2026-11-23T21:08:23+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "dev",
+      "source": "Docker",
+      "titre": "Docker dévoile sa nouvelle marque, centrée sur la confiance envers les agents IA",
+      "resume": "Docker lance sa nouvelle marque. L'entreprise affirme que les conteneurs « ne vont nulle part », mais que les agents sont des acteurs qui décident eux-mêmes de ce qu'ils exécutent, accèdent et modifient. Son prochain chapitre porte donc sur la sécurité, l'isolation et la gouvernance des agents.",
+      "pourquoi": "Indique la direction de Docker : isoler et encadrer les agents IA, pas seulement les charges de travail.",
+      "url": "https://www.docker.com/blog/meet-the-new-docker-built-to-run-on-trust/",
+      "date": "2026-11-23T03:34:29+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "dev",
+      "source": "Hacker News",
+      "titre": "Stalwart 1.2 devient un remplaçant direct de Microsoft Exchange",
+      "resume": "Stalwart 1.2.0 implémente les protocoles des clients Exchange : MAPI over HTTP, Exchange Web Services, Exchange ActiveSync et Autodiscover. Outlook, Apple Mail et les applications mobiles s'y connectent comme à un Exchange, avec courrier, calendriers, contacts, tâches et notes. La prise en charge d'Exchange fait partie de l'édition Community, open source sous licence AGPL.",
+      "pourquoi": "À regarder pour auto-héberger un serveur de messagerie compatible avec Outlook.",
+      "url": "https://stalw.art/blog/microsoft-exchange-replacement/",
+      "date": "2026-11-23T22:32:29+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50620349",
+        "points": 324,
+        "comments": 151
+      }
+    },
+    {
+      "rubrique": "dev",
+      "source": "Linuxiac",
+      "titre": "Qt Creator 21 active les agents IA par défaut et ajoute un profileur de performances",
+      "resume": "Qt Creator 21 active les agents IA par défaut, introduit un nouveau profileur de performances et améliore l'intégration Git et le débogage.",
+      "pourquoi": "Utile si vous développez avec Qt et voulez des agents IA dans l'IDE.",
+      "url": "https://linuxiac.com/qt-creator-21-ide-adds-ai-agent-integration-new-performance-profiler/",
+      "date": "2026-11-23T16:40:10+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Linuxiac",
+      "titre": "Kubernetes 1.38 (prévue le 16 décembre 2026) : ressources au niveau du Pod et changement de pilote cgroup",
+      "resume": "Le préaperçu de Kubernetes 1.38 annonce la disponibilité générale des ressources au niveau du Pod, les appareils partitionnables DRA stables et une API EvictionRequest en alpha. Le kubelet exigera que les runtimes déclarent leur pilote cgroup via le CRI : le champ cgroupDriver devient obsolète et l'ancien comportement demande le feature gate LegacyCgroupDriverFallback.",
+      "pourquoi": "À anticiper : des runtimes incompatibles pourraient empêcher des nœuds de rejoindre le cluster.",
+      "url": "https://linuxiac.com/kubernetes-1-38-set-to-improve-resource-management-and-pod-evictions/",
+      "date": "2026-11-23T18:49:44+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Linuxiac",
+      "titre": "Pangolin 1.27 : gestion centralisée des clients pour ce proxy inverse et VPN zero-trust auto-hébergeable",
+      "resume": "Pangolin 1.27 ajoute des réglages de clients gérés par rôle (DNS, nœud de sortie, MTU, routes), réservés aux offres Business et à l'édition Enterprise auto-hébergée. Les réglages par organisation sont disponibles pour tous, y compris l'édition Community, sur Linux, Windows, macOS, Android et iOS. Des journaux d'application intégrés arrivent sur macOS et iOS.",
+      "pourquoi": "Pour qui auto-héberge son accès distant : les réglages par organisation sont gratuits.",
+      "url": "https://linuxiac.com/pangolin-1-27-tunneled-reverse-proxy-adds-centralized-client-management/",
+      "date": "2026-11-23T11:15:04+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "OMG! Ubuntu",
+      "titre": "Firefox 161 : thèmes classiques et réglage du VPN par site",
+      "resume": "Firefox 161 propose des thèmes classiques, dont le thème Proton, un thème OLED et des couleurs unies. Le drapeau caché qui désactive Nova est retiré. Le VPN peut aussi être réglé site par site.",
+      "pourquoi": "Mise à jour mineure, utile si vous utilisez la fonction VPN de Firefox.",
+      "url": "https://www.omgubuntu.co.uk/2026/11/firefox-161-released-vpn-classic-themes",
+      "date": "2026-11-23T21:09:58+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Phoronix",
+      "titre": "Zstd 1.6 publiée, dix-huit mois après la 1.5.7",
+      "resume": "Zstandard 1.6.0 vient d'être publiée, un an et demi après la version 1.5.7, avec de nombreuses corrections et de nouvelles optimisations de performances.",
+      "pourquoi": "La compression Zstd est très répandue : surveillez son arrivée dans vos images et outils.",
+      "url": "https://www.phoronix.com/news/Zstandard-Zstd-1.6",
+      "date": "2026-11-23T23:00:32+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "The Verge",
+      "titre": "Kagi lance Kagi Mail en bêta publique, un service de messagerie sans publicité",
+      "resume": "Kagi lance une bêta publique de Kagi Mail, promettant « pas de surveillance, pas de publicité, standards ouverts, pas d'enfermement ». Le service donne une adresse @kagimail.com, des alias et des domaines illimités, 50 Go de stockage et un calendrier. Les contacts sont prévus au premier trimestre 2027 et les applications mobiles natives au troisième trimestre 2027. Un essai gratuit de 60 jours est proposé.",
+      "pourquoi": "Une alternative payante à Gmail pour qui veut gérer ses domaines et alias.",
+      "url": "https://www.theverge.com/tech/1041000/kagi-mail-email-google-gmail-alternative",
+      "date": "2026-11-24T00:02:52+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Korben",
+      "titre": "Windows 11 prépare le RDMA sur USB4 pour des clusters d'IA sur plusieurs PC reliés par câble",
+      "resume": "Microsoft prépare le RDMA sur USB4 dans Windows 11 pour faire tourner un gros modèle d'IA sur plusieurs PC reliés par câble. La préversion exige le mode test signing, Secure Boot désactivé et une réinstallation pour en sortir.",
+      "pourquoi": "À réserver à une machine de test : la préversion demande de désactiver Secure Boot.",
+      "url": "https://korben.info/rdma-usb4-windows-ia-locale.html?utm_source=rss&utm_medium=feed&utm_campaign=flux-principal",
+      "date": "2026-11-23T11:23:25+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Gematsu",
+      "titre": "GTA VI : plus de 39 millions de joueurs sur PS5",
+      "resume": "Plus de 39 millions d'utilisateurs uniques ont joué à Grand Theft Auto VI sur PlayStation 5.",
+      "pourquoi": "Donne l'ampleur du lancement de GTA VI sur console.",
+      "url": "https://www.gematsu.com/2026/11/grand-theft-auto-vi-for-ps5-tops-39-million-players",
+      "date": "2026-11-23T23:45:54+00:00",
+      "suite": true,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Gamekult",
+      "titre": "Unreal Engine 6 : Epic abandonne les blueprints au profit de solutions IA, des studios partent",
+      "resume": "Selon Gamekult, la prochaine version d'Unreal Engine va abandonner les blueprints, des outils très populaires, au profit de solutions IA qui ne font pas l'unanimité. Des studios quittent déjà le moteur.",
+      "pourquoi": "À suivre si vous développez sous Unreal : le flux de travail pourrait changer.",
+      "url": "https://www.gamekult.com/actualite/epic-games-impose-l-ia-dans-l-unreal-engine-6-au-detriment-d-autres-outils-des-studios-quittent-deja-le-navire-3050873142.html",
+      "date": "2026-11-23T18:01:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Rock Paper Shotgun",
+      "titre": "Thief Gold : le remaster de Nightdive guidera mieux le joueur dans la mission de la Guilde des voleurs",
+      "resume": "Le remaster de Thief de Nightdive rendra la mission de la Guilde des voleurs de Thief Gold, souvent jugée frustrante, moins pénible en pointant le joueur dans la bonne direction, selon Rock Paper Shotgun.",
+      "pourquoi": "Bonne nouvelle pour ceux que ce niveau a rebutés.",
+      "url": "https://www.rockpapershotgun.com/nightdives-thief-remaster-will-make-the-most-infamous-thief-gold-level-a-little-less-maddening-by-just-kind-of-pointing-the-player-in-the-right-direction",
+      "date": "2026-11-23T13:30:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Rock Paper Shotgun",
+      "titre": "Pilote Nvidia 621.24 : un correctif est sorti pour des écritures excessives sur SSD, mais le retour à la 621.01 reste conseillé",
+      "resume": "Le pilote GeForce 621.24 provoque des écritures excessives sur les SSD de certains utilisateurs. Nvidia a publié un correctif, mais Rock Paper Shotgun estime que revenir au pilote 621.01 reste sans doute la meilleure option.",
+      "pourquoi": "À vérifier si vous avez installé ce pilote : il peut user votre SSD.",
+      "url": "https://www.rockpapershotgun.com/nvidia-release-hotfix-for-latest-graphics-card-driver-battering-ssds-with-excessive-writes-but-it-looks-like-reverting-may-still-be-the-better-option",
+      "date": "2026-11-23T12:59:50+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Eurogamer",
+      "titre": "Deltarune chapitre 6 jouable « du début à la fin », selon Toby Fox",
+      "resume": "Toby Fox indique que le chapitre 6 de Deltarune est jouable du début à la fin, mais que le développement du chapitre 7 a seulement commencé.",
+      "pourquoi": "Point d'étape pour les fans de la suite d'Undertale.",
+      "url": "https://www.eurogamer.net/deltarune-chapter-6-playable-toby-fox",
+      "date": "2026-11-23T20:04:50+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "RetroRGB",
+      "titre": "Wii sur Wii U : le mode vWii enfin corrigé",
+      "resume": "Le développeur GaryOderNichts a découvert pourquoi les jeux Wii lancés via le mode de rétrocompatibilité vWii de la Wii U s'affichent mal : l'unité de microcontrôle d'affichage a des bogues qui recadrent mal l'image et provoquent des bavures de couleur.",
+      "pourquoi": "Bonne nouvelle pour jouer à la Wii sur Wii U avec une image correcte.",
+      "url": "https://retrorgb.com/wii-on-wii-u-finally-fixed.html",
+      "date": "2026-11-23T14:17:06+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "RetroRGB",
+      "titre": "Contra Force : un portage NES vers SNES à 60 images par seconde stables",
+      "resume": "Le développeur Infidelity publie son dernier portage NES vers SNES, pour Contra Force. Le scintillement et les ralentissements des sprites sont réduits ou supprimés, et le jeu tourne à 60 images par seconde stables, alors que l'original pouvait tomber à la moitié.",
+      "pourquoi": "Une version plus fluide de Contra Force, sur SNES.",
+      "url": "https://retrorgb.com/contra-force-nes-to-snes-60fps-conversion.html",
+      "date": "2026-11-23T15:20:29+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "RetroRGB",
+      "titre": "OSSC : un second firmware « HD CRT » convertit le 480p, 720p et 1080p en 1080i ou 540p",
+      "resume": "Le développeur manfredi90 publie un second firmware pour l'OSSC original, conçu pour les CRT HD. Il convertit le 480p, le 720p et le 1080p en 1080i ou 540p. L'OSSC doit être en matériel v1.8.",
+      "pourquoi": "Utile si vous reliez des consoles à un CRT HD.",
+      "url": "https://retrorgb.com/original-ossc-hd-crt-firmware.html",
+      "date": "2026-11-23T22:09:47+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Sciences et Avenir",
+      "titre": "BepiColombo réussit sa mise en orbite autour de Mercure",
+      "resume": "Après huit ans de voyage, la mission européo-japonaise BepiColombo est entrée dans l'orbite de Mercure. Les deux sondes doivent désormais se séparer pour étudier la planète et son champ magnétique.",
+      "pourquoi": "Seconde mission seulement à se mettre en orbite autour de Mercure.",
+      "url": "https://www.sciencesetavenir.fr/espace/exploration/la-mission-bepicolombo-est-entree-dans-l-orbite-de-mercure-apres-huit-ans-de-voyage_196351?xtor=RSS-9",
+      "date": "2026-11-23T09:10:05+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Space.com",
+      "titre": "Un rare système triple à 28 années-lumière : une naine rouge et deux naines blanches",
+      "resume": "Des astronomes ont découvert à 28 années-lumière un système triple composé d'une naine rouge et de deux naines blanches, alors qu'ils cherchaient des planètes. Il n'existe pas de système similaire dans un rayon d'au moins 100 années-lumière, et sa configuration semble impossible, selon les chercheurs.",
+      "pourquoi": "Un système sans explication claire, qui bouscule les modèles d'évolution stellaire.",
+      "url": "https://www.space.com/astronomy/stars/astronomers-discover-rare-triple-star-system-just-28-light-years-from-earth-and-they-have-no-idea-how-it-has-survived",
+      "date": "2026-11-23T11:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Space.com",
+      "titre": "Mars : des roches en « chips » et des formations blanches repérées par Curiosity et Perseverance",
+      "resume": "Les rovers Curiosity et Perseverance ont repéré des roches en forme de chips, des formations blanches fantomatiques et des motifs gravés dans la surface de Mars. Ces dépôts pourraient aider à reconstituer le passé aqueux de la planète.",
+      "pourquoi": "Des indices sur des environnements martiens potentiellement habitables.",
+      "url": "https://www.space.com/astronomy/mars/weird-potato-chips-and-ghostly-rocks-on-mars-spotted-by-nasa-rovers-curiosity-and-perseverance",
+      "date": "2026-11-23T17:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Hacker News",
+      "titre": "Declare : un langage d'interface pensé pour travailler avec une IA",
+      "resume": "Declare est un langage dédié aux interfaces, comparé à ce que SQL est aux requêtes. Ses exemples sont un calendrier de 568 lignes de code, un bureau de 3 529 lignes et un suivi de tickets gérant un million de lignes, sans code de virtualisation. Aucune ligne n'a été tapée à la main : le projet est conçu par un humain et construit avec l'IA.",
+      "pourquoi": "À essayer si vous générez des interfaces avec un LLM.",
+      "url": "https://davidtemkin.github.io/declarelang/",
+      "date": "2026-11-24T02:36:56+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50622854",
+        "points": 22,
+        "comments": 3
+      }
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Hacker News",
+      "titre": "Cobalt : écrire une API GraphQL en TypeScript sans écrire de GraphQL",
+      "resume": "Cobalt génère une API GraphQL à partir de fonctions TypeScript : résolveurs par fichier, schéma inféré, SDK sans configuration et sans dépendances. Il vise la vitesse d'itération de tRPC avec la flexibilité de GraphQL.",
+      "pourquoi": "Évite la double déclaration TypeScript et schéma GraphQL.",
+      "url": "https://cobalt27.dev/",
+      "date": "2026-11-24T00:03:59+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50621466",
+        "points": 28,
+        "comments": 16
+      }
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Hacker News",
+      "titre": "Debian : paquets iperf modernisés, serveur iperf3 en une commande et nouveau fireperf",
+      "resume": "Les paquets Debian d'iperf sont découpés en iperf-client et iperf-server, ce dernier avec un service systemd durci et une intégration ufw : sudo apt install -yU iperf-server suffit. L'outil fireperf est aussi ajouté à Debian.",
+      "pourquoi": "Pratique pour mesurer la bande passante entre vos serveurs.",
+      "url": "https://blog.daniel-baumann.ch/posts/20261122-1.html",
+      "date": "2026-11-22T22:37:51+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50604710",
+        "points": 24,
+        "comments": 1
+      }
+    }
+  ]
+}
