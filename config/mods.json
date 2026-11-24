@@ -1,5 +1,5 @@
 {
-  "_commentaire": "Le mod du jour. build.py choisit un module par édition, dans l'ordre de la liste, selon la date. Morceaux relevés dans les « Random chiptune mix » de la chaîne YouTube Krelez, retrouvés et vérifiés sur The Mod Archive. Le lecteur lit le fichier directement depuis api.modarchive.org.",
+  "_commentaire": "Le chiptune du jour. build.py choisit un module par édition, dans l'ordre de la liste, selon la date. Morceaux relevés dans les « Random chiptune mix » de la chaîne YouTube Krelez, retrouvés et vérifiés sur The Mod Archive. Le lecteur lit le fichier directement depuis api.modarchive.org.",
   "mods": [
     {"id": 168560, "artiste": "Necros", "titre": "Winter's Dream", "format": "IT", "ko": 166, "licence": "Mod Archive Distribution", "mix": 34},
     {"id": 179613, "artiste": "Zalza", "titre": "Magnolia Bakery", "format": "XM", "ko": 114, "licence": "Mod Archive Distribution", "mix": 27},

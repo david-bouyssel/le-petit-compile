@@ -27,7 +27,7 @@ Le site final est dans `docs/`, généré et ignoré par git. Ne modifie jamais 
 - Accède à `localStorage` seulement via `store()`, qui gère les erreurs. Préfixe toute nouvelle clé par `va-`.
 - Couleurs : définies comme variables CSS sur `:root`, redéfinies pour le mode sombre dans `@media (prefers-color-scheme: dark)` avec `:root:not([data-theme="light"])`, et dans `:root[data-theme="dark"]`. Toute nouvelle couleur suit ce schéma.
 - La page doit rester lisible sur mobile (largeur 375 px), sans défilement horizontal.
-- Aucune nouvelle dépendance externe : pas de bibliothèque JS, pas de CDN. Exceptions existantes : les polices Google Fonts, et le lecteur `chiptune3` du mod du jour, copié dans `vendor/` (pas de CDN) et chargé seulement au clic.
+- Aucune nouvelle dépendance externe : pas de bibliothèque JS, pas de CDN. Exceptions existantes : les polices Google Fonts, et le lecteur `chiptune3` du chiptune du jour, copié dans `vendor/` (pas de CDN) et chargé seulement au clic.
 - Les liens entre pages sont relatifs ; `index.html` est à la racine, les éditions dans `editions/`. Teste les deux.
 
 ## Prévisualiser

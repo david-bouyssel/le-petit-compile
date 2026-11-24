@@ -16,7 +16,7 @@ python scripts/build.py --check  # valide seulement, n'écrit rien
 5. écrit une page par édition dans `docs/editions/AAAA-MM-JJ.html` ;
 6. écrit la dernière édition dans `docs/index.html` ;
 7. crée `docs/.nojekyll` pour que GitHub Pages serve les fichiers tels quels ;
-8. valide `config/mods.json` et copie `vendor/` dans `docs/vendor/` (lecteur du mod du jour).
+8. valide `config/mods.json` et copie `vendor/` dans `docs/vendor/` (lecteur du chiptune du jour).
 
 Le site est regénéré entièrement à chaque build. `docs/` est ignoré par git : ne le commite jamais.
 
@@ -55,8 +55,7 @@ Le JSON est protégé pour l'intégration dans une balise `<script>` : `</` devi
   "mod": {
     "artiste": "…", "titre": "…", "format": "XM", "ko": 114, "licence": "…",
     "fichier": "https://api.modarchive.org/downloads.php?moduleid=…",
-    "page": "https://modarchive.org/index.php?request=view_by_moduleid&query=…",
-    "mix": {"nom": "Random chiptune mix 27", "url": "https://www.youtube.com/watch?v=…"}
+    "page": "https://modarchive.org/index.php?request=view_by_moduleid&query=…"
   },
   "lecteur": "./vendor/chiptune3/chiptune3.js",
   "archive": [
@@ -74,10 +73,10 @@ Le JSON est protégé pour l'intégration dans une balise `<script>` : `</` devi
 - `archive` contient les `archive_editions` éditions précédant celle affichée, de la plus récente à la plus ancienne.
 - Les liens sont relatifs. Depuis `index.html`, ils pointent vers `editions/…` ; depuis une page d'édition, vers le même dossier.
 - Sur `index.html`, `nav.accueil` et `nav.suivante` valent `null`.
-- `mod` vaut `null` si `config/mods.json` est absent ou vide. `mix` vaut `null` si le morceau n'a pas de mix associé.
+- `mod` vaut `null` si `config/mods.json` est absent ou vide.
 - `lecteur` est relatif à la page : `./vendor/…` depuis `index.html`, `../vendor/…` depuis une édition.
 
-### Le mod du jour
+### Le chiptune du jour
 
 `config/mods.json` liste des modules (MOD, XM, IT, S3M) de [The Mod Archive](https://modarchive.org/). Les morceaux viennent des « Random chiptune mix » de la chaîne YouTube Krelez ; chacun a été retrouvé et vérifié sur Mod Archive (artiste, format, licence).
 
@@ -88,7 +87,7 @@ Le JSON est protégé pour l'intégration dans une balise `<script>` : `</` devi
 | `format` | `MOD`, `XM`, `IT` ou `S3M` |
 | `ko` | Taille du fichier en Ko, affichée avant le chargement |
 | `licence` | Licence indiquée sur Mod Archive |
-| `mix` | Numéro du mix Krelez où le morceau apparaît, clé de l'objet `mixes` (facultatif) |
+| `mix` | Numéro du mix Krelez où le morceau apparaît, clé de l'objet `mixes` (facultatif, non affiché : sert à retrouver la provenance) |
 
 `mixes` associe un numéro de mix à l'identifiant de la vidéo YouTube.
 
@@ -110,7 +109,7 @@ Le script de la page lit `#data` et construit tout le contenu côté navigateur 
 - **Lien HN** : points et commentaires si `hn` est renseigné.
 - **Navigation** entre éditions et **archives** des éditions précédentes.
 - **Thème** clair ou sombre : suit le système, ou le choix du lecteur.
-- **Le mod du jour**, sous le titre : artiste, titre, format et taille, liens vers Mod Archive et le mix d'origine. Rien n'est chargé avant le clic sur « Écouter » : le lecteur `chiptune3` (libopenmpt en WebAssembly, dans un AudioWorklet) est alors importé, puis le module est téléchargé et joué en boucle. Le bouton bascule ensuite entre pause et lecture. Un curseur règle le volume.
+- **Le chiptune du jour**, sous le titre : artiste, titre, format et taille, lien vers la fiche Mod Archive (licence en infobulle). Rien n'est chargé avant le clic sur « Écouter » : le lecteur `chiptune3` (libopenmpt en WebAssembly, dans un AudioWorklet) est alors importé, puis le module est téléchargé et joué en boucle. Le bouton bascule ensuite entre pause et lecture. Un curseur règle le volume. En cas d'échec, le bandeau affiche la cause (« Lecteur introuvable », « Téléchargement impossible », « Navigateur non compatible »…) et la console donne le détail.
 
 ### Stockage local
 
@@ -122,7 +121,7 @@ La page garde les préférences du lecteur dans `localStorage`, toujours dans un
 | `va-read` | URL des articles lus (1 500 au plus, les plus anciennes sont retirées) |
 | `va-filter` | Filtre de rubrique sélectionné |
 | `va-hide` | `1` si les articles lus sont masqués |
-| `va-mod-vol` | Volume du mod du jour, de `0` à `1` |
+| `va-mod-vol` | Volume du chiptune du jour, de `0` à `1` |
 
 ### Sécurité du rendu
 
@@ -132,7 +131,7 @@ Tout texte issu des éditions passe par `esc()` avant insertion dans le HTML. Le
 
 Les polices Google Fonts (Newsreader et Instrument Sans) sont chargées depuis l'extérieur. Sans elles, la page retombe sur les polices système.
 
-Le mod du jour télécharge son module depuis `api.modarchive.org`, seulement au clic sur « Écouter ».
+Le chiptune du jour télécharge son module depuis `api.modarchive.org`, seulement au clic sur « Écouter ».
 
 Le lecteur `chiptune3` 0.8.10 (MIT, avec libopenmpt sous licence BSD) est copié dans `vendor/chiptune3/`, sans CDN. Pour le mettre à jour, remplace les fichiers `chiptune3.js`, `chiptune3.worklet.js`, `libopenmpt.worklet.js` et `LICENSE` par ceux du paquet npm `chiptune3`.
 
@@ -143,4 +142,4 @@ python scripts/build.py
 python -m http.server 8000 --directory docs
 ```
 
-Ouvre ensuite `http://localhost:8000/`. Tu peux aussi ouvrir `docs/index.html` directement dans le navigateur : la page s'affiche sans serveur, mais le mod du jour ne se lance pas en `file://`, car le navigateur refuse alors de charger le module JavaScript du lecteur.
+Ouvre ensuite `http://localhost:8000/`. Tu peux aussi ouvrir `docs/index.html` directement dans le navigateur : la page s'affiche sans serveur, mais le chiptune du jour ne se lance pas en `file://`, car le navigateur refuse alors de charger le module JavaScript du lecteur.

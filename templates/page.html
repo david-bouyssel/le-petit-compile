@@ -48,7 +48,7 @@
   .masthead h1 i { font-weight: 400; color: var(--accent); }
   .masthead p { margin: 10px 0 0; font: italic 400 17px/1.3 var(--serif); color: var(--soft); }
 
-  /* Le mod du jour */
+  /* Le chiptune du jour */
   .mod { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 14px;
          padding: 9px 0; border-bottom: 1px solid var(--rule); font: 500 12.5px/1.4 var(--sans); color: var(--muted); }
   .mod-label { font: 600 11px var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
@@ -192,12 +192,12 @@
     <h1>Le Petit <i>Compilé</i></h1>
     <p>La revue de presse tech du jour, en français</p>
   </header>
-  <section class="mod" id="mod" aria-label="Le mod du jour" hidden>
-    <span class="mod-label">Le mod du jour</span>
+  <section class="mod" id="mod" aria-label="Le chiptune du jour" hidden>
+    <span class="mod-label">Le chiptune du jour</span>
     <button type="button" class="mod-play" id="modPlay" aria-pressed="false">▶ Écouter</button>
     <span class="mod-info" id="modInfo"></span>
     <span class="mod-time" id="modTime" aria-live="polite"></span>
-    <input type="range" id="modVol" min="0" max="1" step="0.05" value="0.5" aria-label="Volume du mod du jour">
+    <input type="range" id="modVol" min="0" max="1" step="0.05" value="0.5" aria-label="Volume du chiptune du jour">
     <span id="modLinks"></span>
   </section>
 
@@ -401,7 +401,7 @@
       }).join("") + '</ul></details>';
   }).join("") : '<p class="empty">Première édition : les suivantes s\'archiveront ici.</p>';
 
-  // Le mod du jour : lecteur chiptune3 (libopenmpt), chargé seulement au premier clic
+  // Le chiptune du jour : lecteur chiptune3 (libopenmpt), chargé seulement au premier clic
   (function () {
     var M = D.mod; if (!M) return;
     var box = document.getElementById("mod"), btn = document.getElementById("modPlay");
@@ -409,8 +409,7 @@
     var taille = M.ko >= 1024 ? (M.ko / 1024).toFixed(1).replace(".", ",") + " Mo" : M.ko + " Ko";
     document.getElementById("modInfo").innerHTML = esc(M.artiste) + ' — <i>' + esc(M.titre) + '</i> · ' + esc(M.format) + ' · ' + esc(taille);
     document.getElementById("modLinks").innerHTML =
-      '<a href="' + safeUrl(M.page) + '" target="_blank" rel="noopener" title="Licence : ' + esc(M.licence) + '">Mod Archive</a>' +
-      (M.mix ? ' · entendu dans <a href="' + safeUrl(M.mix.url) + '" target="_blank" rel="noopener">' + esc(M.mix.nom) + '</a>' : "");
+      '<a href="' + safeUrl(M.page) + '" target="_blank" rel="noopener" title="Licence : ' + esc(M.licence) + '">Mod Archive</a>';
     var vol = parseFloat(store("va-mod-vol")); if (!(vol >= 0 && vol <= 1)) vol = 0.5;
     volEl.value = vol;
     box.hidden = false;
@@ -422,7 +421,10 @@
       btn.setAttribute("aria-pressed", s === "play" ? "true" : "false");
       btn.textContent = label || (s === "play" ? "❚❚ Pause" : "▶ Écouter");
     }
-    function fail() { setState("stop", "▶ Réessayer"); timeEl.textContent = "Lecture impossible"; player = null; }
+    function fail(why, err) {
+      setState("stop", "▶ Réessayer"); timeEl.textContent = why || "Lecture impossible"; player = null;
+      if (window.console) console.error("Chiptune du jour : " + (why || "erreur"), err || "");
+    }
     volEl.addEventListener("input", function () {
       vol = parseFloat(volEl.value); store("va-mod-vol", String(vol));
       if (player) player.setVol(vol);
@@ -432,8 +434,8 @@
       if (state === "pause") { ctx.resume(); setState("play"); return; }
       if (state === "load") return;
       var AC = window.AudioContext || window.webkitAudioContext;
-      if (!AC || !window.AudioWorkletNode) { fail(); timeEl.textContent = "Navigateur non compatible"; return; }
-      try { ctx = ctx || new AC(); ctx.resume(); } catch (e) { fail(); return; }
+      if (!AC || !window.AudioWorkletNode) { fail("Navigateur non compatible"); return; }
+      try { ctx = ctx || new AC(); ctx.resume(); } catch (e) { fail("Audio indisponible", e); return; }
       setState("load", "Chargement…"); timeEl.textContent = "";
       import(D.lecteur).then(function (lib) {
         player = new lib.ChiptuneJsPlayer({ context: ctx, repeatCount: -1 });
@@ -442,8 +444,10 @@
         player.onInitialized(function () { player.load(M.fichier); });
         player.onMetadata(function (meta) { dur = (meta && meta.dur) || 0; setState("play"); });
         player.onProgress(function (p) { timeEl.textContent = mmss(p.pos) + (dur ? " / " + mmss(dur) : ""); });
-        player.onError(fail);
-      }).catch(fail);
+        player.onError(function (e) {
+          fail(e && e.type === "Load" ? "Téléchargement impossible" : "Lecture impossible", e);
+        });
+      }).catch(function (e) { fail("Lecteur introuvable", e); });
     });
   })();
 })();

@@ -133,8 +133,6 @@ def mod_du_jour(mods_cfg: dict, day: str) -> dict | None:
     if not mods:
         return None
     m = mods[date.fromisoformat(day).toordinal() % len(mods)]
-    mix = m.get("mix")
-    video = mods_cfg.get("mixes", {}).get(str(mix)) if mix is not None else None
     return {
         "artiste": m["artiste"],
         "titre": m["titre"],
@@ -143,8 +141,6 @@ def mod_du_jour(mods_cfg: dict, day: str) -> dict | None:
         "licence": m["licence"],
         "fichier": f"https://api.modarchive.org/downloads.php?moduleid={m['id']}",
         "page": f"https://modarchive.org/index.php?request=view_by_moduleid&query={m['id']}",
-        "mix": {"nom": f"Random chiptune mix {mix}" if mix != 1 else "Random chiptune mix",
-                "url": f"https://www.youtube.com/watch?v={video}"} if video else None,
     }
 
 
@@ -207,7 +203,7 @@ def main() -> int:
           f"({len(last['items']) + 1} articles)")
     mod = mod_du_jour(mods_cfg, last["date"])
     if mod:
-        print(f"Mod du jour : {mod['artiste']} - {mod['titre']} ({len(mods_cfg['mods'])} morceaux dans la liste)")
+        print(f"Chiptune du jour : {mod['artiste']} - {mod['titre']} ({len(mods_cfg['mods'])} morceaux dans la liste)")
     if args.check:
         return 0
 
