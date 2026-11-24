@@ -54,8 +54,8 @@ Cela arrive après la suppression ou le renommage d'une rubrique dans `config/so
 
 1. Ouvre l'onglet Actions du dépôt et regarde la dernière exécution de « Publier la veille ».
 2. Job `merge` en échec : la branche `claude/*` est en conflit avec `main`, ou `main` refuse le push du bot. Fusionne à la main, ou ajuste la protection de branche.
-3. Job `publish` en échec à « Générer le site » : une édition est invalide. Lance `python scripts/build.py` en local pour voir l'erreur.
-4. Job `publish` en échec au déploiement : vérifie que Pages a bien la source « GitHub Actions ». Relance avec `gh workflow run publish.yml --ref main`.
+3. Job `build` en échec à « Générer le site » : une édition est invalide. Lance `python scripts/build.py` en local pour voir l'erreur.
+4. Job `deploy` en échec : vérifie que Pages a bien la source « GitHub Actions ». Relance seulement le job `deploy` (« Re-run failed jobs ») : il reprend l'artefact déjà envoyé. Ne relance pas `build` dans le même run, cela laisserait deux artefacts `github-pages` et `deploy` échouerait. En cas de doute, lance un nouveau run avec `gh workflow run publish.yml --ref main`.
 5. Aucune exécution : le commit ne touche aucun chemin surveillé, ou il a été poussé avec un jeton qui ne déclenche pas de workflow.
 
 ### Des branches `claude/*` s'accumulent

@@ -3,7 +3,7 @@ name: Publier la veille
 on:
   push:
     branches: [main, "claude/**"]
-    paths: ["data/editions/**", "scripts/**", "templates/**", "config/**", ".github/workflows/publish.yml"]
+    paths: ["data/editions/**", "scripts/**", "templates/**", "config/**", "vendor/**", ".github/workflows/publish.yml"]
   workflow_dispatch:
 
 concurrency:
@@ -37,16 +37,14 @@ jobs:
           git push origin --delete "$BRANCH"
           gh workflow run publish.yml --ref main
 
-  publish:
+  # Génération et déploiement dans deux jobs séparés, comme le recommande GitHub :
+  # dans un seul job, deploy-pages cherchait parfois l'artefact avant qu'il soit visible
+  # (« No artifacts named "github-pages" were found »).
+  build:
     if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - name: Générer le site
@@ -55,5 +53,16 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
       - id: deploy
         uses: actions/deploy-pages@v4

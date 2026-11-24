@@ -23,7 +23,7 @@ La routine se gère depuis claude.ai (Claude Code, routines) ou avec la commande
 
 Déclencheurs :
 
-- un push sur `main` ou `claude/**` qui touche `data/editions/`, `scripts/`, `templates/`, `config/` ou le workflow lui-même ;
+- un push sur `main` ou `claude/**` qui touche `data/editions/`, `scripts/`, `templates/`, `config/`, `vendor/` ou le workflow lui-même ;
 - un lancement manuel (`workflow_dispatch`).
 
 Les exécutions d'une même branche passent l'une après l'autre (`concurrency`, sans annulation).
@@ -39,10 +39,12 @@ La routine cloud peut n'avoir le droit de pousser que sur une branche `claude/*`
 
 La relance explicite est nécessaire : un push fait avec `GITHUB_TOKEN` ne déclenche pas d'autre workflow. De plus, l'environnement `github-pages` n'accepte que les déploiements depuis `main`.
 
-### Job `publish` (branche `main`)
+### Jobs `build` puis `deploy` (branche `main`)
 
-1. `python3 scripts/build.py` : validation et génération de `docs/`.
-2. `actions/configure-pages`, `actions/upload-pages-artifact` (dossier `docs`), puis `actions/deploy-pages`.
+1. `build` : `python3 scripts/build.py` (validation et génération de `docs/`), `actions/configure-pages`, puis `actions/upload-pages-artifact` (dossier `docs`).
+2. `deploy` : `actions/deploy-pages`, une fois `build` terminé.
+
+Les deux étapes sont dans deux jobs, comme le recommande GitHub. Dans un seul job, `deploy-pages` cherchait parfois l'artefact quelques dixièmes de seconde après son envoi, avant qu'il soit visible, et échouait avec « No artifacts named "github-pages" were found ».
 
 Si une édition est invalide, le build échoue et le site en ligne reste sur la version précédente.
 
