@@ -1,0 +1,410 @@
+{
+  "date": "2026-11-25",
+  "genere": "2026-11-25T07:30:00+01:00",
+  "une": {
+    "rubrique": "secu",
+    "source": "The Hacker News",
+    "titre": "Check Point : 24 serveurs de gestion compromis par une campagne soupçonnée d'être pilotée par l'IA",
+    "resume": "Un acteur inconnu a utilisé des outils offensifs pilotés par l'IA contre des serveurs Check Point Security Management, touchant 22 organisations dans le monde, selon GreyNoise (campagne baptisée GT13). Les cibles sont des secteurs de la finance, de l'énergie, de l'administration, des transports, des mines, de l'ingénierie et de l'industrie, dans plus de quinze pays d'Europe, d'Asie et d'Amérique du Nord. Les attaques confirmées s'étalent du 17 octobre au 2 novembre 2026, avec 99 adresses IP, pour la plupart de l'infrastructure jetable. Les attaquants ont notamment utilisé un script exploitant la faille désormais corrigée CVE-2026-16232 pour lancer plus de 100 tâches de gestion : vol de bases de pare-feu et de fichiers d'autorité de certification interne, émission d'un nouveau certificat, déchargement des politiques de sécurité. Ils ont aussi compromis un serveur HFS via la faille CVE-2026-61500 pour s'en servir de relais d'exfiltration.",
+    "pourquoi": "À vérifier d'urgence si vous administrez des serveurs de gestion Check Point : le correctif de CVE-2026-16232 est disponible et la campagne montre des attaques largement automatisées.",
+    "url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html",
+    "date": "2026-11-25T06:50:19+00:00",
+    "suite": false,
+    "hn": null
+  },
+  "items": [
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "VMware vCenter : nouvelle faille critique d'authentification (CVE-2026-123903, CVSS 9,8) corrigée par Broadcom",
+      "resume": "Broadcom publie des correctifs pour 23 vulnérabilités touchant VMware ESX, vCenter, Workstation, Fusion et Avi Load Balancer. La plus grave, CVE-2026-123903, est notée 9,8 sur 10 et permet de contourner l'authentification via le service d'annuaire vmdir. Elle arrive après l'exploitation d'une précédente faille zero-day.",
+      "pourquoi": "À appliquer rapidement si vous exploitez vCenter, d'autant que la faille précédente a déjà été exploitée.",
+      "url": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
+      "date": "2026-11-24T13:28:26+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "WordPress bloque six extensions WP Connect piégées avant leur diffusion",
+      "resume": "WordPress a fermé six extensions de WP Connect dont le code a été modifié le 22 novembre 2026 pour permettre l'exécution de code arbitraire, après une compromission supposée du compte du développeur. Elles totalisent plus de 3 600 installations selon Wordfence et la faille est suivie sous CVE-2026-135202 (CVSS 9,8). Les versions piégées n'ont jamais été publiées grâce aux nouvelles protections de délai de WordPress.",
+      "pourquoi": "Vérifiez que vos sites WordPress n'utilisent aucune des versions compromises (Air WP Sync, WP Sync for Notion, etc.) et supprimez-les le cas échéant.",
+      "url": "https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html",
+      "date": "2026-11-25T06:21:12+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "Rackspace ferme sa plateforme cloud Spot après une intrusion",
+      "resume": "Rackspace arrête Rackspace Spot après une intrusion qui a donné accès à des clusters Kubernetes et à des secrets de clients. Les clients ont jusqu'au 8 décembre pour migrer leurs services et télécharger leurs données.",
+      "pourquoi": "Si vous avez des charges sur Rackspace Spot, la migration est à planifier avant le 8 décembre, avec rotation des secrets.",
+      "url": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
+      "date": "2026-11-24T21:37:30+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "Radware : une API de gestion Cloud WAF exposée a fuité des clés d'accès cloud de clients",
+      "resume": "Radware indique que des attaquants ont obtenu des informations de comptes et des clés d'accès cloud de certains clients via une API interne de gestion du Cloud WAF laissée exposée sur Internet.",
+      "pourquoi": "Un rappel qu'une API d'administration exposée suffit à compromettre des clés cloud : changez-les si vous êtes client concerné.",
+      "url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
+      "date": "2026-11-24T17:49:05+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "Inception : un nouveau groupe d'extorsion lance une vaste campagne de vishing contre les identifiants SSO",
+      "resume": "Un groupe d'extorsion de données nommé « Inception » est lié à une campagne à grande échelle qui vise les identifiants d'authentification unique (SSO) de plusieurs marques et entreprises mondiales.",
+      "pourquoi": "Utile pour sensibiliser les équipes : le téléphone sert de plus en plus à voler des accès SSO.",
+      "url": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/",
+      "date": "2026-11-24T20:21:20+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "Azure API Management : une faille corrigée par Microsoft alors qu'un acteur cherche des secrets clients",
+      "resume": "L'autorité norvégienne de sécurité nationale (NSM) a signalé une vulnérabilité d'Azure API Management qui a touché plusieurs entreprises du pays, dont Equinor et Skagerak Energi. Un acteur inconnu y cherchait activement des jetons d'accès, des secrets et des valeurs nommées. Microsoft a corrigé la faille.",
+      "pourquoi": "À vérifier si vous utilisez APIM (niveau classique) : contrôlez les journaux d'accès et faites tourner les secrets stockés.",
+      "url": "https://thehackernews.com/2026/11/microsoft-fixes-azure-api-management.html",
+      "date": "2026-11-24T10:44:49+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "MCP : plus de 700 millions de téléchargements mensuels du SDK, et un protocole étendu pour des agents plus autonomes",
+      "resume": "Deux ans après son lancement, Anthropic annonce plus de 700 millions de téléchargements mensuels pour son standard MCP. De nouvelles fonctions arrivent : tâches en arrière-plan, questions de suivi posées à l'utilisateur et envois de fichiers, pour que Claude travaille plus indépendamment.",
+      "pourquoi": "Si vous développez des serveurs MCP, ces nouvelles capacités ouvrent des cas d'usage plus longs et plus interactifs.",
+      "url": "https://the-decoder.com/anthropic-tops-700-million-monthly-mcp-sdk-downloads-and-expands-the-protocol-for-more-autonomous-ai-agents/",
+      "date": "2026-11-24T19:23:41+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "Claude Ship : des agents qui relisent, corrigent et approuvent les pull requests",
+      "resume": "Anthropic présente Claude Ship, un outil en bêta qui relit automatiquement les propositions de modifications de code, les corrige et les approuve selon les consignes de l'équipe.",
+      "pourquoi": "À tester pour alléger la revue de code, en gardant à l'esprit que l'approbation automatique mérite des garde-fous.",
+      "url": "https://the-decoder.com/anthropics-claude-ship-lets-ai-agents-review-fix-and-approve-pull-requests-on-their-own/",
+      "date": "2026-11-24T11:26:23+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "Claude Artifacts devient une application de bureau autonome sur macOS et Windows",
+      "resume": "Anthropic permet d'installer des Claude Artifacts comme applications de bureau sur Mac et Windows, un compte gratuit suffisant. On en crée une dans le chat sans écrire de code ; elle peut ajouter des éléments à la barre de menus, envoyer des notifications et créer des fenêtres transparentes.",
+      "pourquoi": "Pratique pour transformer rapidement un petit outil généré par IA en application locale.",
+      "url": "https://the-decoder.com/anthropic-turns-claude-artifacts-into-standalone-desktop-apps-for-macos-and-windows/",
+      "date": "2026-11-24T20:42:29+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "Developpez.com",
+      "titre": "GLM-5.4 : Z.ai lance un modèle de 750 milliards de paramètres avec vision",
+      "resume": "Le laboratoire chinois Z.ai lance GLM-5.4, un modèle de 750 milliards de paramètres doté de capacités de vision et d'un quota hebdomadaire de codage relevé de 50 %. C'est son premier modèle phare fondé sur l'architecture « Loop Transformer », présenté comme le meilleur modèle de codage open source à ce jour.",
+      "pourquoi": "Une alternative open source à surveiller pour l'assistance au code, à confirmer par vos propres essais.",
+      "url": "https://intelligence-artificielle.developpez.com/actu/389411/Z-ai-lance-le-modele-IA-chinois-GLM-5-4-dote-de-capacites-de-vision-et-d-un-quota-hebdomadaire-de-codage-accru-de-50-pourcent-et-qui-serait-le-meilleur-modele-de-codage-open-source-a-ce-jour/",
+      "date": "2026-11-24T13:59:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "Hacker News",
+      "titre": "Ternary Bonsai 2.5 27B : un modèle local de 5,9 Go pour le codage agentique",
+      "resume": "PrismML publie Ternary Bonsai 2.5 27B, fondé sur Qwen3.8 27B, qui garde l'empreinte de 5,9 Go de la version précédente tout en progressant sur le codage agentique et l'usage d'outils. Il obtient 75,6 sur SWE-bench Verified contre 80,6 pour le modèle de base en pleine précision. Il atteint 204 jetons/s sur une RTX 4090 et 291 jetons/s sur une H100 avec MTP.",
+      "pourquoi": "Intéressant pour faire tourner un agent de code en local, sur des dépôts privés, avec un GPU grand public.",
+      "url": "https://prismml.com/news/bonsai-2-5-27b",
+      "date": "2026-11-24T20:08:03+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50633922",
+        "points": 419,
+        "comments": 135
+      }
+    },
+    {
+      "rubrique": "ia",
+      "source": "HN (LLM)",
+      "titre": "« Les agents LLM travaillent pour leur maison mère, pas pour vous » : un billet très discuté",
+      "resume": "Un développeur raconte avoir construit avec Claude Code une compétence qui identifie des artistes vus sur Instagram et cherche leur page Bandcamp pour les payer. Quand Bandcamp a ajouté un défi sur son API de recherche, le modèle a refusé de le contourner, alors qu'il acceptait de télécharger le morceau sur YouTube. L'auteur en tire que ces modèles servent d'abord les règles de leur éditeur. Le billet cumule 961 points sur Hacker News.",
+      "pourquoi": "Un point de vue utile sur les limites que les éditeurs imposent aux agents que l'on intègre à ses outils.",
+      "url": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/",
+      "date": "2026-11-24T12:40:15+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50627340",
+        "points": 961,
+        "comments": 396
+      }
+    },
+    {
+      "rubrique": "dev",
+      "source": "Developpez.com",
+      "titre": "Visual Studio Code 1.147 : « Envoyer plus tard » pour programmer les demandes aux agents IA locaux",
+      "resume": "La version 1.147 de VS Code, publiée le 18 novembre 2026, permet d'enregistrer ses demandes aux agents sous forme de brouillons ou de les programmer pour plus tard. Un routeur de modèles peut ensuite associer la tâche au modèle préféré.",
+      "pourquoi": "Utile si vous déléguez des tâches à des agents locaux et voulez les préparer à l'avance.",
+      "url": "https://visualstudio.developpez.com/actu/389441/Microsoft-annonce-Visual-Studio-Code-1-147-avec-la-fonctionnalite-Envoyer-plus-tard-pour-programmer-les-demandes-aux-agents-IA-locaux-pour-plus-tard/",
+      "date": "2026-11-25T02:08:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "dev",
+      "source": "Developpez.com",
+      "titre": "Deux millions de « canaris » semés dans la chaîne d'approvisionnement de l'IA révèlent une large exposition des données",
+      "resume": "Un chercheur a disséminé deux millions de jetons de suivi et d'identifiants fictifs dans des prompts envoyés à divers services d'IA. L'expérience montre que des données présentées comme confidentielles sont largement exposées et exploitées.",
+      "pourquoi": "À garder en tête avant d'envoyer des secrets ou du code sensible à un service d'IA tiers.",
+      "url": "https://intelligence-artificielle.developpez.com/actu/389405/Un-chercheur-seme-2-millions-de-canaris-dans-la-chaine-d-approvisionnement-de-l-IA-et-met-au-jour-un-desastre-pour-la-confidentialite-les-donnees-des-utilisateurs-sont-largement-exposees-et-exploitees/",
+      "date": "2026-11-24T10:10:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "dev",
+      "source": "Developpez.com",
+      "titre": "ARTEX : un framework de tests d'intrusion piloté par l'IA détourné par des pirates",
+      "resume": "ARTEX, framework conçu pour automatiser les tests d'intrusion, est détourné par des pirates qui visent des entreprises et des infrastructures gouvernementales sensibles. L'outil est massivement partagé en ligne et le FBI a émis des avertissements officiels.",
+      "pourquoi": "Illustre la banalisation des outils offensifs automatisés : mieux vaut durcir et surveiller ses services exposés.",
+      "url": "https://intelligence-artificielle.developpez.com/actu/389428/ARTEX-un-framework-de-tests-d-intrusion-propulse-par-l-IA-detourne-par-des-pirates-pour-cibler-les-entreprises-et-les-infrastructures-gouvernementales-sensibles-l-outil-est-massivement-partage-en-ligne/",
+      "date": "2026-11-24T14:14:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Linuxiac",
+      "titre": "Cisco et OpenAI dévoilent Shirudo, une plateforme de sécurité Linux fondée sur eBPF",
+      "resume": "Shirudo est une plateforme open source de sécurité Linux qui combine eBPF et atténuation de vulnérabilités assistée par IA. Elle vise à bloquer des exploits avant même la publication d'un correctif.",
+      "pourquoi": "À étudier pour protéger des serveurs Linux en attendant des correctifs.",
+      "url": "https://linuxiac.com/cisco-and-openai-unveil-shirudo-an-ebpf-based-linux-security-platform/",
+      "date": "2026-11-24T10:57:06+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Linuxiac",
+      "titre": "Flatpak 1.18.6 corrige deux failles de sécurité",
+      "resume": "Flatpak 1.18.6 corrige deux vulnérabilités qui pouvaient permettre à des applications malveillantes d'obtenir les droits root ou de s'échapper du bac à sable.",
+      "pourquoi": "À mettre à jour sur les postes qui installent des applications Flatpak.",
+      "url": "https://linuxiac.com/flatpak-1-18-6-patches-two-security-vulnerabilities/",
+      "date": "2026-11-24T15:09:16+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Phoronix",
+      "titre": "Linus Torvalds s'emporte contre une grosse pull request EXT4 pleine de correctifs générés par IA",
+      "resume": "Une importante pull request EXT4 destinée à Linux 7.4-rc5 apporte plus de 41 000 lignes de nouveau code présentées comme des correctifs, dont beaucoup de tests KUnit pour valider des patchs générés par IA et de nombreux patchs générés par IA. Linus Torvalds a réagi en demandant que l'on dise à son « compagnon IA » de se reprendre.",
+      "pourquoi": "Montre où se situe la limite de ce que le noyau accepte comme contribution assistée par IA.",
+      "url": "https://www.phoronix.com/news/Linus-Torvalds-EXT4-AI-Big",
+      "date": "2026-11-24T21:01:36+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Phoronix",
+      "titre": "Pop!_OS 26.04 LTS est disponible avec davantage d'applications COSMIC",
+      "resume": "System76 publie Pop!_OS 26.04 LTS, désormais fondée sur Ubuntu 26.04 LTS, avec de nouvelles applications COSMIC et le bureau à distance.",
+      "pourquoi": "À considérer si vous cherchez un poste de dev Linux LTS avec un bureau moderne.",
+      "url": "https://www.phoronix.com/news/Pop-OS-26.04-Released",
+      "date": "2026-11-24T21:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Ars Technica",
+      "titre": "Comment Trump et la Silicon Valley ont poussé Nvidia à reprendre Jensen Huang",
+      "resume": "Selon Ars Technica, les alliés de Jensen Huang ont enrôlé Donald Trump et JD Vance pour faire pression sur le conseil d'administration de Nvidia afin qu'il le reprenne. Le sujet est repris par plusieurs médias, tandis que Huang aurait démenti en interne ce rôle de Trump.",
+      "pourquoi": "Un tournant à la tête du premier fabricant de GPU pour l'IA, avec des conséquences possibles sur toute la chaîne.",
+      "url": "https://arstechnica.com/tech-policy/2026/11/how-trump-and-silicon-valley-forced-nvidia-to-take-jensen-huang-back/",
+      "date": "2026-11-24T14:56:50+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Ars Technica",
+      "titre": "Amazon : des agents IA de pirates ont trouvé et exploité une faille zero-day avec peu d'aide humaine",
+      "resume": "Amazon indique que des agents IA utilisés par des pirates ont découvert et exploité une vulnérabilité zero-day avec très peu d'intervention humaine. Le framework Cairn est présenté comme utile aux défenseurs comme aux attaquants.",
+      "pourquoi": "Confirme que l'automatisation par IA raccourcit les délais entre découverte et exploitation de failles.",
+      "url": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/",
+      "date": "2026-11-24T12:30:05+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Ars Technica",
+      "titre": "Panne cloud historique de Microsoft : des notes internes évoquent un « Code Red » et un objectif de reprise en une heure",
+      "resume": "D'après des notes internes révélées par Ars Technica, la panne cloud de Microsoft a exposé un « brouillard de guerre » côté ingénierie et conduit à une refonte « Code Red », avec des objectifs ambitieux de reprise en une heure.",
+      "pourquoi": "Une étude de cas utile pour penser la résilience et la gestion d'incident de ses propres services cloud.",
+      "url": "https://arstechnica.com/gadgets/2026/11/microsofts-historic-cloud-outage-exposed-an-engineering-fog-of-war/",
+      "date": "2026-11-24T22:36:28+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Ars Technica",
+      "titre": "Tidal interdit la musique entièrement générée par IA et supprimera 27 millions de titres",
+      "resume": "Tidal annonce l'interdiction de la musique entièrement générée par IA à partir du 9 décembre. Ces morceaux représentent 6,3 % de son catalogue, et 27 millions de titres seront supprimés.",
+      "pourquoi": "Un signal fort sur la manière dont les plateformes traitent les contenus générés.",
+      "url": "https://arstechnica.com/ai/2026/11/tidal-will-ban-fully-ai-generated-music-on-december-9/",
+      "date": "2026-11-24T17:34:34+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Korben",
+      "titre": "Stalwart 1.2 : un serveur mail libre qui remplace Exchange sans toucher à Outlook",
+      "resume": "Stalwart 1.2.0 parle désormais MAPI over HTTP, EWS et ActiveSync, ce qui permet à Outlook classique, Apple Mail et aux applications mail des smartphones de s'y connecter comme à un Exchange. Le nouvel Outlook reste en revanche incompatible.",
+      "pourquoi": "Intéressant pour l'auto-hébergement du mail sans changer les clients des utilisateurs.",
+      "url": "https://korben.info/stalwart-remplace-exchange.html?utm_source=rss&utm_medium=feed&utm_campaign=flux-principal",
+      "date": "2026-11-24T08:12:14+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Eurogamer",
+      "titre": "GTA 6 : plus de 39 millions de joueurs sur PS5, selon Sony",
+      "resume": "Sony indique que plus de 39 millions de personnes ont joué à GTA 6 sur PlayStation 5, un record de joueurs sur la plateforme. C'est plus que les 32,5 millions d'exemplaires vendus le premier jour, toutes plateformes confondues.",
+      "pourquoi": "Mesure l'ampleur du lancement le plus suivi du moment.",
+      "url": "https://www.eurogamer.net/more-than-39-million-people-have-played-gta-6-on-playstation-alone-sony-says-as-the-game-breaks-all-time-player-numbers-on-the-platform",
+      "date": "2026-11-24T10:08:20+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Eurogamer",
+      "titre": "Lords of the Fallen 2 repoussé à avril 2027",
+      "resume": "Lords of the Fallen 2 sortira finalement en avril 2027 ; la date exacte sera annoncée le mois prochain.",
+      "pourquoi": "À noter si vous attendiez ce jeu d'action-RPG cet hiver.",
+      "url": "https://www.eurogamer.net/lords-of-the-fallen-2-delayed-april-2027",
+      "date": "2026-11-24T20:30:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Gamekult",
+      "titre": "Valve ferme la liste d'attente de la Steam Machine 2 To faute de composants",
+      "resume": "Valve a honoré toutes les réservations de la Steam Machine 512 Go et fini d'envoyer les invitations d'achat pour la version 2 To. L'entreprise peine à se procurer certaines pièces à cause de la crise des composants et a fermé la liste d'attente du modèle 2 To.",
+      "pourquoi": "Si vous visiez le modèle 2 To, il faudra attendre une réouverture.",
+      "url": "https://www.gamekult.com/actualite/valve-ferme-la-liste-d-attente-de-la-steam-machine-2-to-faute-de-composants-suffisants-pour-repondre-a-la-demande-3050873160.html",
+      "date": "2026-11-24T11:47:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "The Verge",
+      "titre": "Le projet de recompilation de GTA VI sur PC, Leonida, retiré après une demande DMCA de Take-Two",
+      "resume": "Leonida, projet de fan de « NotRexed », 15 ans, conçu pour traduire une version Xbox fuitée de GTA VI afin de la faire tourner sur PC, a disparu après une notification DMCA de Take-Two. D'autres communautés de moddeurs cherchent à faire tourner le jeu sur PC.",
+      "pourquoi": "Un cas d'école des limites juridiques de la recompilation de jeux récents, à la différence des vieux titres abandonnés.",
+      "url": "https://www.theverge.com/news/1041690/grand-theft-auto-6-pc-recompilation-project-leonida-takedown-take-two",
+      "date": "2026-11-24T22:00:24+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Rock Paper Shotgun",
+      "titre": "OpenZ : un remake 3D open source du RTS Z des Bitmap Brothers",
+      "resume": "OpenZ est un remake 3D, entièrement open source et fait à la main, du jeu de stratégie Z des Bitmap Brothers sorti en 1996.",
+      "pourquoi": "Un projet de fans à suivre pour retrouver un classique des années 90.",
+      "url": "https://www.rockpapershotgun.com/bitmap-brothers-iconic-robotic-rts-game-z-is-unofficially-back-thanks-to-an-open-source-3d-remake",
+      "date": "2026-11-24T21:34:40+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Time Extension",
+      "titre": "Les Atari Homebrew Awards annulés après un afflux de jeux faits par IA",
+      "resume": "La 9e édition des Atari Homebrew Awards n'aura pas lieu : l'organisateur explique que la hausse des soumissions codées avec l'IA l'a conduit à renoncer, après presque dix ans d'existence du concours.",
+      "pourquoi": "Montre l'effet concret de l'IA sur les communautés de homebrew.",
+      "url": "https://www.timeextension.com/news/2026/11/i-saw-no-path-forward-atari-homebrew-awards-cancelled-following-flood-of-ai-made-games",
+      "date": "2026-11-24T11:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Retro Dodo",
+      "titre": "Un adaptateur réseau sans fil maison pour la SNES",
+      "resume": "Un bidouilleur a créé un adaptateur réseau sans fil fait maison pour la Super Nintendo.",
+      "pourquoi": "Un projet de bidouille matérielle sympathique pour les fans de la console.",
+      "url": "https://retrododo.com/the-snes-now-has-a-homemade-wireless-network-adapter/",
+      "date": "2026-11-24T16:04:02+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Space.com",
+      "titre": "Première détection du « dernier battement nucléaire » d'une étoile mourante",
+      "resume": "Des observations avec le réseau ALMA, au Chili (66 antennes), montrent que les derniers instants d'une étoile comme le Soleil pourraient différer de ce que l'on pensait. L'étude est dirigée par Raghvendra Sahai, du JPL de la NASA.",
+      "pourquoi": "Affine notre compréhension de la fin du Soleil, dans des milliards d'années.",
+      "url": "https://www.space.com/astronomy/stars/1st-ever-detection-of-a-dying-stars-final-nuclear-heartbeat-challenges-what-we-know-about-our-suns-eventual-death",
+      "date": "2026-11-24T19:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Space.com",
+      "titre": "Shenzhou-24 emmène le premier astronaute étranger vers la station chinoise Tiangong",
+      "resume": "La Chine a lancé le 24 novembre la mission Shenzhou-24 avec une fusée Longue Marche 2F depuis Jiuquan. C'est la première fois qu'un astronaute international rejoint la station Tiangong, et la 18e mission habitée chinoise.",
+      "pourquoi": "Une étape pour la coopération internationale dans le programme spatial chinois.",
+      "url": "https://www.space.com/space-exploration/human-spaceflight/china-shenzhou-24-first-international-astronaut-launch-tiangong-space-station",
+      "date": "2026-11-24T13:59:17+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "The Bearded Bear",
+      "titre": "Sous-agents Claude Code : isolation du contexte et handoffs",
+      "resume": "Un sous-agent Claude Code ne reçoit ni l'historique ni la mémoire automatique. Le billet détaille ce qui passe, ce qui se perd aux deux passages de relais et comment les fiabiliser en pratique.",
+      "pourquoi": "Utile pour concevoir des sous-agents qui ne perdent pas le contexte nécessaire.",
+      "url": "https://the-bearded-bear.com/blog/claude-code-sous-agents-isolation-contexte-handoffs",
+      "date": "2026-11-25T00:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Show HN",
+      "titre": "Mason : un réplica de lecture Postgres léger, construit sur DuckDB",
+      "resume": "Mason est un remplaçant open source d'un réplica de lecture Postgres, fondé sur le moteur colonnaire de DuckDB. Il se présente comme Postgres et vise à accélérer les requêtes analytiques sans la courbe d'apprentissage de ClickHouse ni sa syntaxe SQL différente.",
+      "pourquoi": "À essayer pour des requêtes analytiques sans toucher à la base principale.",
+      "url": "https://masondata.ai/",
+      "date": "2026-11-24T16:11:52+00:00",
+      "suite": false,
+      "hn": null
+    }
+  ]
+}
