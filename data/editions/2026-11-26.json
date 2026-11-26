@@ -1,0 +1,388 @@
+{
+  "date": "2026-11-26",
+  "genere": "2026-11-26T08:08:44+01:00",
+  "une": {
+    "rubrique": "secu",
+    "source": "Lobsters",
+    "titre": "1Password : un compte GitHub d'employé piraté, des données clients copiées mais pas les coffres",
+    "resume": "1Password a lancé une enquête le 19 novembre 2026 après des signes de compromission du compte GitHub d'entreprise d'un employé. L'attaquant a copié du code source de dépôts privés, accédé au système CI/CD et poussé du code malveillant dans des services backend, qui ont téléchargé des données d'administration sur un sous-ensemble de clients : noms, adresses e-mail, identifiants de compte, dates de création et de dernière connexion, clés publiques, paramètres du protocole SRP et jetons présents dans certains liens d'invitation ou de récupération de compte. Selon l'entreprise, les coffres, leur contenu et les clés qui les protègent n'ont jamais été accédés. Les jetons ne suffisent pas seuls : il faut aussi une connexion SSO ou un code envoyé par e-mail, désormais passé de six chiffres à dix caractères alphanumériques. 1Password a désactivé le compte, révoqué le jeton volé, restauré des versions saines des services, fait pivoter les identifiants exposés et fait appel à des experts indépendants. Aucun changement de mot de passe n'est demandé, mais l'entreprise recommande la prudence face au hameçonnage.",
+    "pourquoi": "Pas de mot de passe à changer, mais les listes de noms et d'e-mails exposées servent de base à des phishing qui se réclament de 1Password : ne cliquez pas sur les liens d'invitation ou de récupération que vous n'avez pas demandés.",
+    "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
+    "date": "2026-11-25T17:43:13+00:00",
+    "suite": false,
+    "hn": {
+      "url": "https://news.ycombinator.com/item?id=50644817",
+      "points": 1334,
+      "comments": 562
+    }
+  },
+  "items": [
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "Hex.pm : une faille RCE de CVSS 10.0 exploitée sur six serveurs du registre Elixir/Erlang",
+      "resume": "Un attaquant a exécuté des commandes système lundi sur six serveurs de production de Hex.pm. La faille (CVE-2026-129514, CVSS 10.0) se trouvait dans le code depuis février 2016 et la maintenance a corrigé tous les serveurs en une quinzaine de minutes. Les vérifications n'ont révélé aucune modification de paquet, mais l'accès aux e-mails, hachages de mots de passe et secrets 2FA ne peut pas être exclu. Tous les comptes ont été déconnectés et les clés de signature des sessions et jetons remplacées.",
+      "pourquoi": "Si vous avez un compte hex.pm, changez le mot de passe, réinitialisez la 2FA et reconnectez le client ; en attendant la prochaine version de Hex, n'utilisez que repo.hex.pm.",
+      "url": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
+      "date": "2026-11-25T09:06:59+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "Drupal : la faille Fail2Install (CVE-2026-132165, CVSS 9.8) est activement exploitée",
+      "resume": "La CISA a ajouté cette faille d'exécution de code à distance à son catalogue KEV, avec une échéance au 27 novembre 2026 pour les agences fédérales. Un attaquant non authentifié peut passer par install.php pour réinstaller Drupal, en épuisant des ressources serveur pour faire croire que le site n'est pas installé. Selon Searchlight Cyber, les versions 8.9, 9, 10 et 11 sont touchées avec Apache ou PHP-FPM, sur MySQL ou PostgreSQL.",
+      "pourquoi": "À corriger sans attendre si vous hébergez un site Drupal, car l'exploitation est déjà en cours.",
+      "url": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
+      "date": "2026-11-25T11:23:26+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "Drupal : l'équipe de sécurité confirme l'exploitation de la faille critique depuis jeudi",
+      "resume": "L'équipe de sécurité de Drupal confirme qu'une faille critique permettant de détourner des sites non corrigés est exploitée activement depuis au moins jeudi.",
+      "pourquoi": "Confirme que le risque est réel pour les sites Drupal non mis à jour.",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/",
+      "date": "2026-11-25T10:10:20+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "13 paquets NuGet malveillants se font passer pour de faux tests techniques destinés aux développeurs .NET",
+      "resume": "Des chercheurs ont découvert 13 paquets NuGet malveillants ciblant les développeurs .NET Windows sous couvert d'un faux test d'embauche. La plupart se présentent comme des contrôles de boutons WinUI 3 et WPF, selon le chercheur de Socket Kush Pandya.",
+      "pourquoi": "Méfiez-vous des projets de « test technique » reçus d'un recruteur : ne compilez rien d'inconnu sur votre poste de travail.",
+      "url": "https://thehackernews.com/2026/11/13-malicious-nuget-packages-turn-fake.html",
+      "date": "2026-11-26T03:48:52+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "Palo Alto Networks : les failles PHP2Shell et Fragnesia enchaînées contre PAN-OS",
+      "resume": "Des attaquants enchaînent les failles PHP2Shell et Fragnesia pour cibler des équipements Palo Alto Networks dont l'interface de gestion est exposée sur Internet.",
+      "pourquoi": "À vérifier si vous administrez du PAN-OS : l'interface de gestion ne devrait pas être exposée.",
+      "url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/",
+      "date": "2026-11-25T22:05:09+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "Le FinCEN américain met des systèmes hors ligne après une intrusion",
+      "resume": "Le Financial Crimes Enforcement Network du Trésor américain a subi un incident de cybersécurité entraînant un « accès non autorisé à un sous-ensemble limité de ses systèmes ». Par précaution, certains systèmes ont été mis hors ligne. Le bureau collecte les déclarations d'activité suspecte et autres dépôts liés au Bank Secrecy Act.",
+      "pourquoi": "Une intrusion de plus dans une agence américaine, après celle d'un système de la CIA.",
+      "url": "https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html",
+      "date": "2026-11-25T12:30:08+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "Un système d'analyse de la CIA aurait été piraté",
+      "resume": "Des attaquants inconnus auraient compromis un système d'analyse en sources ouvertes de la CIA. D'après le New York Times cité par Numerama, deux autres agences de renseignement américaines auraient aussi été touchées.",
+      "pourquoi": "Alimente la série d'intrusions récentes dans des agences américaines.",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/",
+      "date": "2026-11-25T07:45:03+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "PrismML ramène un modèle de 54 Go à 5,9 Go avec des poids à trois valeurs",
+      "resume": "La start-up PrismML a publié Ternary Bonsai 2.5 27B, version mise à jour de son modèle de langage très compressé. Chaque poids n'a plus que trois valeurs possibles, ce qui ramène le modèle de 54 Go à 5,9 Go. Il s'agit d'un modèle de 27 milliards de paramètres orienté codage agentique.",
+      "pourquoi": "Utile pour bidouiller des modèles locaux sur du matériel modeste.",
+      "url": "https://the-decoder.com/prismml-squeezes-an-agent-based-coding-model-with-27-billion-parameters-into-5-9-gb/",
+      "date": "2026-11-25T11:51:49+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "Des agents IA pilotent une partie des expériences de Deepmind sur Gemini",
+      "resume": "Google Deepmind confie à des agents IA l'exécution d'expériences pour de futurs modèles Gemini. Le directeur de la recherche Koray Kavukcuoglu estime que le laboratoire reste loin de l'auto-amélioration récursive. Pour la supervision, les chaînes de pensée internes des agents ne sont volontairement pas entraînées afin de pouvoir être relues.",
+      "pourquoi": "Montre jusqu'où les grands labos délèguent déjà la recherche à des agents.",
+      "url": "https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/",
+      "date": "2026-11-25T13:23:36+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "OpenAI teste « Private Inference » pour les données sensibles des entreprises",
+      "resume": "OpenAI teste une fonctionnalité appelée « Private Inference » qui permet aux entreprises d'interroger ses modèles les plus puissants sans qu'OpenAI puisse accéder aux données.",
+      "pourquoi": "Peut lever un frein à l'usage des LLM sur des données confidentielles.",
+      "url": "https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/",
+      "date": "2026-11-25T18:22:02+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "OMG! Ubuntu",
+      "titre": "Claude : les artifacts s'installent maintenant comme applications de bureau",
+      "resume": "Les artifacts de Claude peuvent être installés via « Install as app » et tournent dans leur propre fenêtre avec leur icône. Ils peuvent envoyer des notifications, enregistrer des raccourcis clavier et ajouter des applets au panneau. Des permissions système complètes, dont lire, modifier et supprimer des fichiers, peuvent être accordées. La fonction est en bêta sur tous les forfaits, dans les applications Windows et macOS à jour au 24 novembre 2026, mais pas sous Linux.",
+      "pourquoi": "Transforme un petit outil généré par Claude en application de bureau, avec des droits à accorder en connaissance de cause.",
+      "url": "https://www.omgubuntu.co.uk/2026/11/claude-artifact-apps-not-on-linux-yet",
+      "date": "2026-11-25T18:35:40+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "Anthropic : près d'un déploiement d'IA sur cinq ne produit aucune valeur",
+      "resume": "Anthropic a étudié près de 300 déploiements d'IA dans 58 entreprises américaines. Près d'un sur cinq ne livre aucune valeur, freiné par la charge de relecture, des goulets internes et la résistance des employés. Les chercheurs attribuent les principaux obstacles à des structures d'entreprise dépassées.",
+      "pourquoi": "Rappelle que la difficulté d'un projet IA est souvent organisationnelle plutôt que technique.",
+      "url": "https://the-decoder.com/anthropic-study-shows-the-hardest-part-of-adopting-ai-at-work-has-little-to-do-with-learning-the-tools/",
+      "date": "2026-11-25T13:14:27+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "dev",
+      "source": "Developpez.com",
+      "titre": "CrowdStrike rachète Zscaler pour environ 43,9 milliards de dollars en actions",
+      "resume": "CrowdStrike annonce son intention d'acquérir Zscaler, spécialiste de la sécurité cloud, pour environ 43,9 milliards de dollars, entièrement en actions. En cas de réussite, ce serait la plus grande acquisition du secteur de la cybersécurité, devant le rachat de Wiz par Google.",
+      "pourquoi": "Une consolidation majeure du marché de la sécurité cloud qui peut toucher vos fournisseurs.",
+      "url": "https://securite.developpez.com/actu/389450/CrowdStrike-conclut-un-accord-pour-racheter-Zscaler-dans-une-transaction-entierement-en-actions-de-44-milliards-la-derniere-consolidation-dans-la-cybersecurite-face-aux-piratages-et-pannes-lies-a-l-IA/",
+      "date": "2026-11-25T12:59:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "dev",
+      "source": "Developpez.com",
+      "titre": "Visual Studio 2026 : la mise à jour de novembre accélère les grosses solutions",
+      "resume": "Microsoft publie la mise à jour de novembre de Visual Studio 2026. Elle accélère le chargement des solutions volumineuses, permet de restaurer les dépendances MSBuild sans ouvrir de solution et active par défaut une version améliorée de Copilot Chat pour les comptes éligibles. La gestion des révisions de pull requests est aussi plus structurée.",
+      "pourquoi": "Utile si vous travaillez sur de gros projets .NET.",
+      "url": "https://visualstudio.developpez.com/actu/389454/Microsoft-publie-la-mise-a-jour-de-novembre-de-Visual-Studio-2026-qui-offre-des-flux-de-travail-plus-rapides-une-gestion-plus-structuree-des-revisions-des-pull-requests-et-un-Copilot-Chat-ameliore/",
+      "date": "2026-11-25T13:06:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Hacker News",
+      "titre": "nfs2root : une faille d'exécution de commandes root à distance, vieille de 12 ans, dans le serveur NFS du noyau Linux",
+      "resume": "Un billet publié par opensec.in décrit nfs2root (CVE-2026-99362), une faille root distante sans authentification préalable dans le serveur NFS du noyau Linux, présente depuis 12 ans.",
+      "pourquoi": "À regarder si vous exposez un serveur NFS du noyau ; consultez le billet pour les versions concernées.",
+      "url": "https://opensec.in/blog/nfs2root-cve-2026-99362",
+      "date": "2026-11-25T20:35:50+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50647161",
+        "points": 121,
+        "comments": 44
+      }
+    },
+    {
+      "rubrique": "linux",
+      "source": "OMG! Ubuntu",
+      "titre": "Ubuntu prévoit un lanceur à IA pour remplacer la grille d'applications",
+      "resume": "Canonical détaille son projet de lanceur à IA, un point d'entrée unique pour ouvrir des applications, chercher des fichiers et accéder à des fonctions IA à la demande. Il prévoit des modèles locaux respectueux de la vie privée et la saisie texte et voix, selon l'ingénieur Didier Roche.",
+      "pourquoi": "Annonce la direction du bureau Ubuntu : une IA locale, activée explicitement.",
+      "url": "https://www.omgubuntu.co.uk/2026/11/ubuntu-ai-launcher-details",
+      "date": "2026-11-25T04:37:45+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Linuxiac",
+      "titre": "Proxmox VE 9.3 : gestion SAN centralisée et snapshots LVM stables",
+      "resume": "Proxmox VE 9.3 apporte la gestion centralisée du SAN, des snapshots LVM stables, la configuration de plugins de stockage tiers et une meilleure journalisation.",
+      "pourquoi": "Utile si vous hébergez vos propres machines virtuelles.",
+      "url": "https://linuxiac.com/proxmox-ve-9-3-adds-centralized-san-management-lvm-snapshots/",
+      "date": "2026-11-25T17:19:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Ars Technica",
+      "titre": "Backblaze s'explique sur le partage d'informations clients avec des annonceurs",
+      "resume": "Backblaze explique à Ars Technica pourquoi elle partage des informations clients avec des annonceurs, et affirme qu'elle ne partagera pas les fichiers de sauvegarde ou de stockage des utilisateurs.",
+      "pourquoi": "À savoir si vous stockez des sauvegardes chez ce fournisseur.",
+      "url": "https://arstechnica.com/information-technology/2026/11/backblaze-explains-why-its-sharing-customer-information-with-advertisers/",
+      "date": "2026-11-25T18:38:29+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Developpez.com",
+      "titre": "Nvidia : le groupe de ransomware The Gentlemen menace de divulguer des données",
+      "resume": "Nvidia figure sur le site de divulgation du groupe The Gentlemen, qui donne dix jours, jusqu'au 28 novembre, avant de publier des données prétendument volées. Le groupe n'a fourni aucune preuve de ses allégations.",
+      "pourquoi": "À suivre : aucune compromission n'est prouvée à ce stade.",
+      "url": "https://securite.developpez.com/actu/389453/Des-pirates-informatiques-donnent-jusqu-au-28-novembre-a-Nvidia-alors-qu-un-groupe-de-ransomware-menace-de-divulguer-des-donnees-mais-le-groupe-n-a-fourni-aucune-preuve-de-ses-allegations/",
+      "date": "2026-11-25T12:58:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Gamekult",
+      "titre": "The Witcher 4 : PlayStation et CD Projekt s'allient pour le marketing",
+      "resume": "CD Projekt Red a signé un partenariat marketing avec Sony pour The Witcher 4, selon Gamekult.",
+      "pourquoi": "Donne un signe de plus de l'ampleur de la sortie attendue.",
+      "url": "https://www.gamekult.com/actualite/the-witcher-4-sony-et-cd-projekt-main-dans-la-main-pour-le-marketing-3050873173.html",
+      "date": "2026-11-25T07:45:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Gamekult",
+      "titre": "skate. supprime ses saisons et son skate.Pass dès le 1er décembre",
+      "resume": "Un an après son lancement, Electronic Arts et Full Circle abandonnent le système de saisons et le skate.Pass de skate. dès le 1er décembre. Cette bascule vers un déploiement plus souple commence avec la mise à jour 0.33, centrée sur le social et le retour d'un mode emblématique.",
+      "pourquoi": "Rare retour en arrière sur le modèle de jeu-service.",
+      "url": "https://www.gamekult.com/actualite/skate-e-a-fait-machine-arriere-et-supprime-definitivement-ses-saisons-et-son-battle-pass-des-le-1er-decembre-3050873189.html",
+      "date": "2026-11-25T18:41:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Rock Paper Shotgun",
+      "titre": "Exoprimal : Capcom arrête les serveurs fin septembre 2027",
+      "resume": "Les services en ligne d'Exoprimal, jeu de tir en équipe de Capcom sorti en 2023, s'arrêteront fin septembre 2027, ce qui le rendra injouable. Le jeu sera retiré des boutiques en mars.",
+      "pourquoi": "À acheter ou finir avant la date si vous y tenez.",
+      "url": "https://www.rockpapershotgun.com/capcom-dinosaur-shooter-exoprimals-servers-will-go-extinct-next-year-as-shutdown-meteor-looms",
+      "date": "2026-11-25T12:30:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Eurogamer",
+      "titre": "Hollow Knight: Silksong : présentation du DLC Sea of Sorrows le 27 novembre",
+      "resume": "Team Cherry organise le 27 novembre une présentation « Cherry Time » sur le premier grand DLC, Sea of Sorrows. La mise à jour gratuite aura un thème nautique, avec de nouveaux boss et de nouvelles zones.",
+      "pourquoi": "Rendez-vous pour les détails si vous suivez le jeu.",
+      "url": "https://www.eurogamer.net/hollow-knight-silksong-dlc-livestream-sea-of-sorrows-update",
+      "date": "2026-11-25T15:32:40+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Developpez.com",
+      "titre": "GTA 6 sur PC : Take-Two fait supprimer plus de 3 000 dépôts GitHub par DMCA",
+      "resume": "Plusieurs équipes portent et émulent une version divulguée de GTA 6 sur PC et Mac, avec des résultats encore basiques. Take-Two a répliqué par un avis DMCA qui a contraint GitHub à retirer plus de 3 000 dépôts, ce qui a suscité la colère de joueurs.",
+      "pourquoi": "Illustre les risques juridiques des portages non officiels hébergés sur GitHub.",
+      "url": "https://jeux.developpez.com/actu/389495/Des-portages-non-officiels-font-tourner-GTA-6-sur-Windows-11-Take-Two-a-riposte-avec-un-avis-DMCA-qui-a-contraint-GitHub-a-supprimer-plus-de-3-000-depots-GTA-6-pour-PC-suscitant-la-colere-des-joueurs/",
+      "date": "2026-11-25T19:47:00+00:00",
+      "suite": true,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Time Extension",
+      "titre": "Optical Feed : un FPS en raycasting pour la Sega Master System",
+      "resume": "Le studio CrispyCathode a publié une démo d'Optical Feed, un jeu de tir à la première personne en 3D à tonalité horrifique pour la Master System. Le projet est en cours et la démo sert de preuve de concept.",
+      "pourquoi": "Une prouesse technique sur un matériel 8 bits.",
+      "url": "https://www.timeextension.com/news/2026/11/optical-feed-is-a-new-raycasted-first-person-shooter-for-sega-master-system",
+      "date": "2026-11-25T14:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "RetroRGB",
+      "titre": "SD2SNES+ : un firmware alternatif pour le FXPak Pro",
+      "resume": "Luan Freitas développe un firmware alternatif pour le FXPak Pro d'Ikari, appelé SD2SNES+. Il ajoute de nombreuses fonctions, dont des options réseau sans fil avec un ESP32-S3 (N16R8) branché au port USB.",
+      "pourquoi": "Utile si vous possédez ce flash-cart SNES.",
+      "url": "https://retrorgb.com/sd2snes-alternate-fxpak-pro-firmware.html",
+      "date": "2026-11-25T17:12:40+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Retro Dodo",
+      "titre": "Pokémon Rouge Feu jouable dans Microsoft Excel",
+      "resume": "Un projet permet de jouer à Pokémon Rouge Feu dans Microsoft Excel, après des jeux plus légers comme Doom.",
+      "pourquoi": "Une bidouille amusante.",
+      "url": "https://retrododo.com/you-can-now-play-pokemon-fire-red-inside-microsoft-excel/",
+      "date": "2026-11-25T10:11:49+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Space.com",
+      "titre": "Hera livre les premières images rapprochées du cratère de DART sur Dimorphos",
+      "resume": "La sonde Hera a donné le premier regard rapproché sur le trou de la taille d'un stade creusé dans l'astéroïde Dimorphos par la mission DART de la NASA, le 26 septembre 2022. L'impact avait allongé de 33 minutes l'orbite du système autour du Soleil.",
+      "pourquoi": "Donne des données de terrain sur la défense planétaire.",
+      "url": "https://www.space.com/astronomy/asteroids/hera-spacecraft-gets-1st-up-close-look-at-stadium-sized-hole-punched-in-asteroid-by-nasa-dart-mission",
+      "date": "2026-11-25T17:30:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Space.com",
+      "titre": "Euclid repère le quasar le plus lointain et le plus ancien connu",
+      "resume": "Le télescope spatial Euclid a détecté le quasar le plus lointain connu, alimenté par un trou noir supermassif de 360 millions de masses solaires, tel qu'il était 630 millions d'années après le Big Bang, soit 40 millions d'années avant le précédent record. Cela interroge la croissance rapide de tels trous noirs.",
+      "pourquoi": "Un nouveau record qui complique les modèles de croissance des trous noirs.",
+      "url": "https://www.space.com/astronomy/black-holes/dark-universe-detective-telescope-discovers-most-distant-and-ancient-supermassive-black-hole-powered-quasar",
+      "date": "2026-11-25T13:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Ars Technica",
+      "titre": "La FCC autorise SpaceX à déployer 1 million de satellites",
+      "resume": "La FCC a autorisé SpaceX à déployer une constellation de 1 million de satellites, ce qui multiplierait environ par 50 le nombre de satellites en orbite.",
+      "pourquoi": "Un changement d'échelle pour l'orbite basse et l'astronomie.",
+      "url": "https://arstechnica.com/space/2026/11/the-fcc-has-authorized-spacex-to-deploy-1-million-satellites/",
+      "date": "2026-11-25T18:22:38+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Show HN",
+      "titre": "Anciennes démos techniques Nvidia et ATI rejouées dans le navigateur",
+      "resume": "Une galerie en ligne fait tourner dans le navigateur d'anciennes démos techniques de Nvidia et d'ATI.",
+      "pourquoi": "À explorer pour revoir d'anciennes démos graphiques directement dans le navigateur.",
+      "url": "https://gpu-demo-gallery.pages.dev/",
+      "date": "2026-11-25T04:31:48+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "The Bearded Bear",
+      "titre": "RTK et Symfony sous Docker : ce que Composer et PHPStan y gagnent",
+      "resume": "L'article montre que RTK ne réécrit pas docker compose exec, donne le réglage testé sous Docker et détaille le gain réel pour Composer et PHPStan, ainsi que la perte pour PHPUnit.",
+      "pourquoi": "Utile pour optimiser un flux Symfony sous Docker.",
+      "url": "https://the-bearded-bear.com/blog/rtk-symfony-docker-gain-reel",
+      "date": "2026-11-26T00:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Korben",
+      "titre": "LinuxPDF : un Linux RISC-V qui démarre dans un PDF ouvert dans Chrome",
+      "resume": "LinuxPDF fait démarrer un vrai Linux RISC-V dans un fichier PDF ouvert dans Chrome, grâce au JavaScript prévu par la norme PDF. Le démarrage prend une bonne quarantaine de secondes.",
+      "pourquoi": "Une bidouille instructive sur les capacités des PDF.",
+      "url": "https://korben.info/linuxpdf-linux-dans-un-pdf.html?utm_source=rss&utm_medium=feed&utm_campaign=flux-principal",
+      "date": "2026-11-25T09:25:14+00:00",
+      "suite": false,
+      "hn": null
+    }
+  ]
+}
