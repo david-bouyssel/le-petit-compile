@@ -1,0 +1,386 @@
+{
+  "date": "2026-11-27",
+  "genere": "2026-11-27T08:08:50+01:00",
+  "une": {
+    "rubrique": "ia",
+    "source": "The Decoder",
+    "titre": "OpenAI corrige un bug de facturation : les quotas GPT-6.2 fondent jusqu'à 40 % plus vite",
+    "resume": "OpenAI explique qu'un bug de facturation accordait des remises incorrectes sur l'usage de GPT-6.2. Une fois le bug corrigé, les utilisateurs de GPT-6.2 Astra atteignent leurs limites 40 % plus vite que la semaine précédente, et ceux de Sol 25 % plus vite. En compensation, les abonnés reçoivent une réinitialisation supplémentaire de leurs quotas et les utilisateurs professionnels profitent du Fast Mode gratuit jusqu'à la fin de l'année. Selon Numerama, l'annonce tombe deux jours après celle d'un quota unique pour ChatGPT et Codex. OpenAI teste aussi une fusion des modes Chat et Work.",
+    "pourquoi": "À prendre en compte si vous pilotez des agents de code ou des workflows sur GPT-6.2 : les limites d'usage réelles sont désormais plus basses que celles observées la semaine dernière.",
+    "url": "https://the-decoder.com/gpt-6-2-astra-users-now-hit-limits-40-faster-after-openai-patched-a-pricing-error/",
+    "date": "2026-11-26T17:28:56+00:00",
+    "suite": false,
+    "hn": null
+  },
+  "items": [
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "La Suisse confirme des cyberattaques assistées par IA contre des opérateurs d'infrastructures critiques",
+      "resume": "Selon le Centre national de cybersécurité suisse, des attaquants utilisant des agents IA ont pénétré les systèmes d'organisations suisses dans quatre des cinq attaques confirmées, une première dans le pays. Trois attaques visaient des opérateurs d'infrastructures critiques, et deux d'entre elles ont réussi, sans perturbation majeure signalée. Les victimes ne sont pas nommées et les auteurs sont inconnus. L'agence indique que ces agents scannent souvent des failles connues non corrigées et adaptent leurs méthodes quand les défenses réagissent, et que le nombre d'outils d'attaque IA accessibles en ligne a presque doublé depuis octobre.",
+      "pourquoi": "Rappelle l'urgence de corriger vite les failles connues : des agents automatisés les exploitent en parallèle et laissent moins de temps pour réagir.",
+      "url": "https://thehackernews.com/2026/11/switzerland-confirms-ai-assisted.html",
+      "date": "2026-11-27T06:04:20+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "Cacti : une faille zero-day non corrigée permet une exécution de code à distance en quatre requêtes HTTP",
+      "resume": "Un chercheur a publié une preuve de concept, baptisée 4HTTP2SHELL et 4HTTP2ROOT, qui touche Cacti Core 1.2.31, la dernière version, lorsque le compte invité est activé. L'attaque abuse d'un paramètre non validé pour réaliser une injection SQL de second ordre, puis atteint la fonction popen() de PHP via le point d'entrée graph_realtime.php. Aucun identifiant CVE n'est encore attribué et aucun correctif n'est mentionné.",
+      "pourquoi": "À vérifier si vous exposez un Cacti : désactivez le compte invité en attendant un correctif.",
+      "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html",
+      "date": "2026-11-27T05:48:20+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "PolinRider : plus de 7 600 dépôts GitHub empoisonnés par un groupe lié à la Corée du Nord",
+      "resume": "D'après SafeDep, un chargeur Python caché dans un petit paquet utils ou dans conftest.py lit la dernière transaction d'un portefeuille Ethereum, la décode en JavaScript et l'exécute avec Node.js. L'éditeur l'a repéré dans 375 dépôts publics appartenant à 260 comptes, sans preuve de diffusion via PyPI ou npm. La campagne cible aussi les outils de développement installés (GitHub Desktop, Cursor, VS Code, Google Antigravity) pour livrer un infostealer, et pourrait remonter à février 2025.",
+      "pourquoi": "Méfiez-vous des projets reçus pour un « test technique » et relisez conftest.py et les petits paquets utils avant de lancer du code récupéré.",
+      "url": "https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html",
+      "date": "2026-11-26T15:13:41+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "« GoodGuys » : de fausses invitations à des interviews d'experts rémunérées volent des identifiants Google et Okta",
+      "resume": "Une campagne de phishing en cours se fait passer pour de grandes marques, dont Google, Nvidia, Accenture et SpaceX. Elle envoie de fausses invitations à des interviews d'experts rémunérées et à des webinaires pour dérober des identifiants Google et Okta d'entreprise.",
+      "pourquoi": "À signaler à vos équipes : une invitation inattendue à une interview payée peut servir à voler un compte SSO.",
+      "url": "https://www.bleepingcomputer.com/news/apple/fake-paid-expert-interviews-impersonate-brands-to-steal-google-logins/",
+      "date": "2026-11-26T17:15:27+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "Z.AI et Moonshot AI retardent leurs prochains modèles et cherchent de nouvelles données d'entraînement",
+      "resume": "Les entreprises chinoises Z.AI et Moonshot AI doivent repousser leurs prochains modèles phares. Après la fermeture de l'accès à leurs données par OpenAI et Anthropic, l'un des développeurs se tourne vers Google et Meta pour trouver de nouvelles sources d'entraînement.",
+      "pourquoi": "Signale une tension sur l'accès aux données qui pourrait ralentir les prochains modèles chinois ouverts.",
+      "url": "https://the-decoder.com/after-openai-and-anthropic-shut-the-door-on-their-data-a-chinese-ai-developer-is-turning-to-google-and-meta-instead/",
+      "date": "2026-11-26T15:45:08+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "Nvidia suspend ses livraisons de serveurs vers la Malaisie, Singapour, la Thaïlande et l'Indonésie",
+      "resume": "Nvidia a demandé à des partenaires comme Dell et Supermicro d'arrêter d'expédier des serveurs vers ces quatre pays, après de nouveaux contrôles américains à l'exportation visant l'accès des Chinois au cloud. Des revendeurs cherchent déjà preneur pour des milliers de puces B300, et un dirigeant du cloud parle de « chaos ». Des prêts et de grands contrats pour les centres de données d'Asie du Sud-Est sont en jeu.",
+      "pourquoi": "Peut peser sur la disponibilité et le prix des capacités GPU dans le cloud de cette région.",
+      "url": "https://the-decoder.com/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-after-tighter-us-export-controls/",
+      "date": "2026-11-26T11:21:16+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "Hugging Face Blog",
+      "titre": "llama.cpp : un tableau de bord de benchmarks pour les puces AMD Ryzen et Radeon",
+      "resume": "Le tableau de bord llama.cpp × AMD est disponible sur Hugging Face. Il suit le traitement du prompt (PP512) et la génération de texte (TG128) selon les builds, modèles et quantifications, sur Radeon 8060S (gfx1151) et Radeon AI Pro R9700S (gfx1201). Le workflow de benchmark et les résultats sont publics.",
+      "pourquoi": "Utile pour choisir une quantification et suivre l'évolution des performances de l'inférence locale sur matériel AMD.",
+      "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+      "date": "2026-11-26T11:37:17+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "HN (MCP)",
+      "titre": "Google impose ses serveurs MCP aux agents IA dès le 1er février 2027, mais celui de Gmail ne peut pas envoyer de mail",
+      "resume": "Le 24 novembre, Google a rendu disponibles ses huit serveurs MCP Workspace et publié une clause : à partir du 1er février 2027, tout outil « piloté par un agent IA » doit passer par eux pour accéder à Gmail, Drive ou Agenda. Le serveur Gmail peut chercher, lire des fils, créer un brouillon et classer par libellés, mais pas envoyer, répondre, transférer ni modifier un brouillon. Ces outils existent mais, selon la page de quotas de Google, exigent un accès partenaire.",
+      "pourquoi": "Si votre assistant mail passe par l'API Gmail, il vous reste environ deux mois pour vérifier s'il tombe sous la règle.",
+      "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+      "date": "2026-11-26T09:44:23+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50653477",
+        "points": 314,
+        "comments": 268
+      }
+    },
+    {
+      "rubrique": "dev",
+      "source": "Hacker News",
+      "titre": "Google Play rendra publics téléphone et adresse des développeurs indépendants qui se déclarent « traders »",
+      "resume": "Les développeurs ont jusqu'au 1er février 2027 pour déclarer leur statut de « trader », exigé pour le passage de Google Play à un modèle de place de marché dans l'EEE et au Royaume-Uni au 1er mars 2027. D'après The Verge, les coordonnées d'un développeur déclaré trader seront publiées dès le 1er mars, avec téléphone et adresse, dans le monde entier. Google n'accepte pas les boîtes postales, et ne pas déclarer son statut peut entraîner des blocages de mise à jour ou un retrait du Play Store. Apple n'affichera les adresses que dans les pays européens concernés.",
+      "pourquoi": "À anticiper si vous publiez des applications Android : choisir entre exposer son adresse perso ou passer par un service de domiciliation.",
+      "url": "https://support.google.com/googleplay/android-developer/answer/17594752?hl=en",
+      "date": "2026-11-27T03:11:41+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50662322",
+        "points": 112,
+        "comments": 65
+      }
+    },
+    {
+      "rubrique": "dev",
+      "source": "Lobsters",
+      "titre": "« L'IA a rendu l'auto-hébergement à nouveau amusant » : un billet très discuté",
+      "resume": "L'auteur, qui auto-héberge depuis des années, explique que sa configuration (Docker Compose, scripts) vit dans des dépôts Git, ce qui lui permet de confier des changements d'infrastructure à des agents de code comme à un projet logiciel ordinaire. Il dit essayer plus facilement de nouveaux services et des technologies qu'il trouvait intéressantes mais qu'il maîtrisait mal, comme NixOS.",
+      "pourquoi": "Un retour d'expérience concret sur l'usage d'agents de code pour l'infra, pertinent pour tout homelab versionné dans Git.",
+      "url": "https://janlukas.blog/posts/ai-self-hosting",
+      "date": "2026-11-27T01:50:42+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50660180",
+        "points": 556,
+        "comments": 286
+      }
+    },
+    {
+      "rubrique": "dev",
+      "source": "Hacker News",
+      "titre": "Nextcloud Office Desktop : une suite bureautique libre, basée sur Euro-Office, pour Windows, macOS et Linux",
+      "resume": "Nextcloud propose en téléchargement l'application de bureau Nextcloud Office, propulsée par Euro-Office. Elle comprend des éditeurs de texte, tableur, présentations et PDF, une grande compatibilité avec DOCX, XLSX et PPTX ainsi qu'avec les formats ouverts, le travail hors ligne et la co-édition avec Nextcloud Hub.",
+      "pourquoi": "Une alternative libre et auto-hébergeable à Office pour ceux qui utilisent déjà Nextcloud.",
+      "url": "https://nextcloud.com/blog/euro-office-comes-to-your-desktop-with-the-nextcloud-office-desktop-app/",
+      "date": "2026-11-26T11:50:49+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50654289",
+        "points": 420,
+        "comments": 214
+      }
+    },
+    {
+      "rubrique": "dev",
+      "source": "Lobsters",
+      "titre": "Garage 2.6.0 ajoute une interface d'administration web, et la branche 1.x arrive en fin de vie",
+      "resume": "Le serveur de stockage S3 auto-hébergé Garage publie la version 2.6.0 avec une interface web d'administration, financée par NLnet. L'équipe annonce aussi un dépôt de charts Helm, la fin de vie de la branche 1.x, la première bêta de Garage 3.0.0 et des travaux à venir sur le versioning S3.",
+      "pourquoi": "À noter si vous utilisez Garage comme stockage S3 maison : la branche 1.x ne sera plus maintenue.",
+      "url": "https://garagehq.deuxfleurs.fr/blog/2026-11-webadmin-release/",
+      "date": "2026-11-26T12:40:23+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "dev",
+      "source": "Hacker News",
+      "titre": "Moat : un abonnement à 5 $ par mois présenté comme alternative à OpenRouter",
+      "resume": "Moat se présente comme « le Costco de l'IA » : pour 5 $ par mois, ses membres accèdent à des modèles au prix de gros, avec la promesse d'aucune limite sur 5 heures, semaine ou mois. Le service met en avant le pooling des usages de ses membres pour négocier ses prix.",
+      "pourquoi": "À comparer à OpenRouter si vous consommez beaucoup de tokens, en vérifiant les conditions réelles derrière la promesse « sans limite ».",
+      "url": "https://commandcode.ai/moat",
+      "date": "2026-11-26T06:32:48+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50652184",
+        "points": 276,
+        "comments": 151
+      }
+    },
+    {
+      "rubrique": "linux",
+      "source": "Phoronix",
+      "titre": "Des « skills » d'agents IA pourraient entrer dans Linux 7.5 comme documentation du noyau",
+      "resume": "Selon Phoronix, des skills d'agents IA devraient être soumises pour la fenêtre de fusion de Linux 7.5, fin décembre. Elles serviraient de documentation intégrée au noyau pour guider les agents IA dans différents processus du noyau.",
+      "pourquoi": "Montre comment le noyau s'adapte aux contributions assistées par IA.",
+      "url": "https://www.phoronix.com/news/Linux-AI-Agent-Skills-Ready",
+      "date": "2026-11-26T20:55:02+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Linuxiac",
+      "titre": "MariaDB 13.1 devient stable avec l'instruction DENY et le partitionnement automatique",
+      "resume": "La MariaDB Foundation annonce la disponibilité générale de MariaDB 13.1, avec la première version candidate de la 13.2. DENY permet d'interdire explicitement des privilèges, les opérateurs JSON -> et ->> facilitent la migration depuis MySQL, et une clause INTERVAL crée les partitions au fil des données. InnoDB gagne aussi un contrôle plus fin de l'index de hachage adaptatif.",
+      "pourquoi": "Utile si vous migrez depuis MySQL ou gérez des droits complexes.",
+      "url": "https://linuxiac.com/mariadb-13-1-goes-stable-with-new-database-management-features/",
+      "date": "2026-11-26T10:16:38+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Linuxiac",
+      "titre": "DXVK 3.2 améliore la cadence d'images sous Wayland",
+      "resume": "DXVK 3.2 apporte la prise en charge du timing de présentation Vulkan, une réduction des saccades en Direct3D 11 et une meilleure gestion de la mémoire graphique.",
+      "pourquoi": "À installer si vous jouez à des titres Windows via Proton ou Wine sous Wayland.",
+      "url": "https://linuxiac.com/dxvk-3-2-released-with-improved-frame-pacing-on-wayland/",
+      "date": "2026-11-26T16:10:32+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Korben",
+      "titre": "Il greffe un contrôleur de vol de drone sur une tondeuse radiocommandée",
+      "resume": "Jakkuh a remplacé le récepteur d'une tondeuse radiocommandée par un contrôleur de vol sous ArduPilot, avec un GPS RTK et une application de tonte écrite en « vibe coding ».",
+      "pourquoi": "Une idée de bidouille à reproduire avec du matériel de drone.",
+      "url": "https://korben.info/tondeuse-autonome-pixhawk.html?utm_source=rss&utm_medium=feed&utm_campaign=flux-principal",
+      "date": "2026-11-27T06:15:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Numerama",
+      "titre": "La Fifa confirme une cyberattaque ; le groupe Handsome Boy Hacking Club revendique 12 Go de fichiers volés",
+      "resume": "La Fifa a confirmé jeudi 26 novembre avoir subi une cyberattaque exposant des informations personnelles et professionnelles. Le groupe Handsome Boy Hacking Club revendique le vol de plus de 12 Go de fichiers.",
+      "pourquoi": "Un incident de plus à suivre pour ses suites.",
+      "url": "https://www.numerama.com/cyberguerre/2385419-infantino-peut-souffler-des-hackers-ont-pirate-la-fifa-mais-epargne-son-projet-le-plus-sensible.html",
+      "date": "2026-11-26T14:11:54+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Frandroid",
+      "titre": "GitHub fait la promotion d'AnyPS5 et des portages pirates de GTA 6, puis supprime son message",
+      "resume": "Dans la nuit du 26 au 27 novembre, le compte X de GitHub a félicité le projet AnyPS5, qui transforme un jeu PS5 en exécutable PC, en citant des portages pirates de GTA 6. Le post a été supprimé quelques heures plus tard.",
+      "pourquoi": "Illustre la tension autour des outils de portage et des demandes DMCA de Rockstar.",
+      "url": "https://www.frandroid.com/marques/microsoft/3341873_microsoft-fait-la-pub-de-portages-pirates-de-gta-6-avant-de-supprimer-son-message-en-catastrophe",
+      "date": "2026-11-27T06:54:21+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Eurogamer",
+      "titre": "Les employés de Rockstar rejettent la reconnaissance du syndicat RGWU à 75 %",
+      "resume": "Avec 93,2 % de participation, 75 % des employés de Rockstar ont voté contre la reconnaissance officielle du Rockstar Game Workers Union, 25 % pour. Rockstar n'a donc pas à reconnaître le syndicat comme organe représentatif. Le syndicat, qui continuera d'exister et d'organiser, indique que les employés poursuivront leur mobilisation.",
+      "pourquoi": "Fin d'un épisode social majeur dans l'industrie, au lendemain du lancement de GTA 6.",
+      "url": "https://www.eurogamer.net/rockstar-games-employees-vote-against-union-recognition",
+      "date": "2026-11-26T15:29:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Eurogamer",
+      "titre": "Ubisoft exigerait de justifier l'absence d'IA générative dans chaque pitch de jeu",
+      "resume": "D'après un rapport de Vertical Slice cité par Eurogamer, qui s'appuie sur des sources anonymes, les équipes qui présentent un projet chez Ubisoft doivent expliquer comment l'IA générative aidera au développement, ou justifier en détail pourquoi elles s'en passent. Un pitch sans IA ou sans cette explication ne serait pas validé.",
+      "pourquoi": "Indique l'ampleur de l'adoption de l'IA générative dans un grand studio.",
+      "url": "https://www.eurogamer.net/ubisoft-reportedly-goes-all-in-on-company-wide-generative-ai-use-and-if-developers-dont-want-to-use-it-they-have-to-explain-why-in-detail",
+      "date": "2026-11-26T12:15:40+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Eurogamer",
+      "titre": "The Witcher 3 Remastered : un patch ajoute 40 mods multiplateformes et corrige de nombreux bugs",
+      "resume": "CD Projekt Red publie un patch sur toutes les plateformes pour The Witcher 3: Wild Hunt - Remastered. Il corrige des dizaines de bugs et des problèmes d'éclairage, et ajoute 40 mods multiplateformes, d'autres devant suivre.",
+      "pourquoi": "Bonne occasion de relancer le jeu avec les mods sur console.",
+      "url": "https://www.eurogamer.net/the-witcher-3-patch-40-mods-bugs",
+      "date": "2026-11-26T19:20:50+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Rock Paper Shotgun",
+      "titre": "Fable : le patron de Playground assure que la « vision originale » reste intacte malgré un développement long",
+      "resume": "Le directeur général de Fable chez Playground Games reconnaît que « tout ne s'est pas bien passé » pendant la longue création du jeu. Il affirme que la vision originale n'a pas changé malgré les inspirations prises hors de la série. La sortie du reboot est prévue début de l'année prochaine.",
+      "pourquoi": "À suivre pour la sortie du reboot début 2027.",
+      "url": "https://www.rockpapershotgun.com/clearly-not-everything-has-gone-well-during-fables-lengthy-creation-says-playground-boss-but-the-original-vision-remains-intact-despite-taking-cues-from-other-rpgs",
+      "date": "2026-11-26T12:07:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Retro Dodo",
+      "titre": "Un nouvel émulateur Nintendo DS arrive sur Google Play, signé des créateurs de Pizza Boy",
+      "resume": "Les créateurs de Pizza Boy, l'émulateur Game Boy Advance téléchargé plus d'un million de fois sur Google Play, publient un émulateur DS sur la boutique.",
+      "pourquoi": "Une option de plus pour émuler la DS sur Android.",
+      "url": "https://retrododo.com/a-new-nds-emulator-is-here-on-the-google-play-store-from-the-makers-of-pizza-boy/",
+      "date": "2026-11-26T15:12:55+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Time Extension",
+      "titre": "Un « Hi Mom » caché découvert dans Cybermorph sur Atari Jaguar après 33 ans",
+      "resume": "Budfolk a trouvé le message en éloignant la caméra de son axe et en regardant la planète « Griz Madre » du secteur 1 depuis le dessus : les lacs forment les mots « Hi Mom ».",
+      "pourquoi": "Une preuve que la fouille de vieux jeux révèle encore des surprises.",
+      "url": "https://www.timeextension.com/news/2026/11/hi-mom-curious-easter-egg-found-in-atari-jaguar-cybermorph-over-30-years-later",
+      "date": "2026-11-26T15:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Time Extension",
+      "titre": "Tim Stamper, cofondateur de Rare, relance sa chaîne YouTube avec un épisode sur Conker",
+      "resume": "Tim Stamper relance la chaîne « In Tim's World » avec un teaser du premier épisode consacré à Conker, pour ouvrir ses archives. Aucun projet Conker inédit n'est annoncé.",
+      "pourquoi": "À suivre pour les archives de Rare.",
+      "url": "https://www.timeextension.com/news/2026/11/rare-co-founder-tim-stamper-resurrects-youtube-channel-with-conker-debut-episode",
+      "date": "2026-11-26T19:05:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Futura",
+      "titre": "Mira Ceti : Alma observe une éruption géante de matière autour de l'étoile « merveilleuse »",
+      "resume": "Le radiotélescope Alma a surpris Mira Ceti, première étoile variable pulsante observée, projeter une structure de matière à une distance comparable à celle entre le Soleil et Saturne. Cette étoile varie sur un cycle d'environ 333 jours et le phénomène remet en cause ce que l'on pensait de sa fin de vie.",
+      "pourquoi": "Éclaire la fin de vie des géantes rouges.",
+      "url": "https://www.futura-sciences.com/sciences/actualites/etoile-1662-ils-ont-appelee-merveilleuse-364-ans-plus-tard-cette-etoile-revele-phenomene-quils-nauraient-jamais-imagine-139668/#xtor%3DRSS-8",
+      "date": "2026-11-26T17:27:51+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Futura",
+      "titre": "Manche : 35 ans de prélèvements montrent une réorganisation de toute la chaîne alimentaire",
+      "resume": "Le laboratoire marin de Plymouth a comparé des analyses au microscope sur des dizaines d'années à l'ADN environnemental. Il en ressort que la chaîne alimentaire se réorganise : des crustacés comme les copépodes diminuent, tandis que des larves d'animaux du fond comme les polychètes, bryozoaires et échinodermes deviennent plus abondantes.",
+      "pourquoi": "Un exemple de ce que l'ADN environnemental permet de mesurer.",
+      "url": "https://www.futura-sciences.com/planete/actualites/mer-depuis-35-ans-scientifiques-prelevent-eau-manche-ils-decouvrent-bouleversement-invisible-139644/#xtor%3DRSS-8",
+      "date": "2026-11-26T13:06:41+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Simon Willison",
+      "titre": "sqlite3_rsync : copier un instantané de base SQLite sans doubler l'espace disque",
+      "resume": "Selon Simon Willison, sqlite3_rsync, ajouté en « expérimental » dans SQLite 3.47.0 (octobre 2024), évite l'espace disque supplémentaire que demandent l'API de sauvegarde ou VACUUM INTO. Il peut copier un instantané via SSH.",
+      "pourquoi": "Pratique pour sauvegarder une base SQLite sur une petite instance presque pleine.",
+      "url": "https://simonwillison.net/2026/Nov/26/sqlite3-rsync/",
+      "date": "2026-11-26T06:08:25+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Show HN",
+      "titre": "Learning to Play Vim : un manuel complet écrit en quatre ans",
+      "resume": "Le livre Learning to Play Vim enseigne Vim pas à pas, des bases aux fonctions avancées. L'auteur dit y avoir passé plus de quatre ans et 2 987 pomodoros.",
+      "pourquoi": "Une alternative plus douce à vimtutor.",
+      "url": "http://themouseless.dev/vim/",
+      "date": "2026-11-26T14:44:22+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50655868",
+        "points": 128,
+        "comments": 41
+      }
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Show HN",
+      "titre": "Trois machines virtuelles Linux dans un onglet de navigateur, chacune avec un navigateur différent",
+      "resume": "Un projet Show HN fait tourner trois VM Linux dans une seule page web, chacune exécutant un navigateur différent, pour les comparer côte à côte.",
+      "pourquoi": "Pratique pour tester un site dans plusieurs navigateurs sans rien installer.",
+      "url": "https://michidk.github.io/sidebyside/",
+      "date": "2026-11-26T15:00:06+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50656036",
+        "points": 135,
+        "comments": 29
+      }
+    }
+  ]
+}
