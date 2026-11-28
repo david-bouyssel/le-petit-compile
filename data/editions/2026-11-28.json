@@ -1,0 +1,389 @@
+{
+  "date": "2026-11-28",
+  "genere": "2026-11-28T08:09:25+01:00",
+  "une": {
+    "rubrique": "secu",
+    "source": "BleepingComputer",
+    "titre": "La plateforme cloud Cloud One de l'US Air Force aurait été piratée, dans une série d'attaques contre des agences fédérales américaines",
+    "resume": "Selon Reuters, cité par BleepingComputer, des pirates auraient pénétré Cloud One, la plateforme cloud de l'US Air Force lancée en 2017, qui héberge des applications du Département de la Défense liées aux opérations, au personnel, à la logistique et à la maintenance. L'intrusion aurait été découverte au cours du dernier mois pendant une mise à niveau, et aurait perturbé des migrations d'applications et des mises à jour logicielles. D'après Numerama, les attaquants seraient parvenus jusqu'à la couche d'administration. Une source de Reuters évoque l'exploitation d'une vulnérabilité logicielle non identifiée, et l'US Cyber Command aurait été mobilisé. L'Air Force refuse de commenter, et on ignore qui sont les attaquants, l'ampleur de l'intrusion et si des données ont été volées. BleepingComputer rappelle des incidents récents au FBI (base NCIC), à la CIA et au Trésor (FinCEN), sans que l'on sache s'ils sont liés.",
+    "pourquoi": "Un nouvel exemple de compromission d'une plateforme cloud d'administration à grande échelle, à suivre pour tout ce qui touche à la sécurité des couches d'administration cloud.",
+    "url": "https://www.bleepingcomputer.com/news/security/us-air-force-cloud-platform-reportedly-hacked-in-latest-federal-breach/",
+    "date": "2026-11-27T15:09:40+00:00",
+    "suite": false,
+    "hn": null
+  },
+  "items": [
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "Drupal : une seconde faille de prise de contrôle, CVE-2026-136716, est déjà exploitée",
+      "resume": "Drupal indique qu'une deuxième faille critique, CVE-2026-136716, est exploitée dans la nature. Elle couvre des vecteurs restés non corrigés après Fail2Install (CVE-2026-132165) et concerne les sites dans des états d'installation inhabituels ou incomplets. Les versions 10.6.23, 11.3.23 et 11.4.14 sont citées pour la mise à niveau. À défaut, il faut bloquer l'accès à /core/install.php. Drupal recommande aussi de vérifier l'adresse e-mail du compte utilisateur 1 et d'examiner les journaux.",
+      "pourquoi": "À faire sans attendre si vous hébergez du Drupal : mettre à niveau, ou bloquer /core/install.php en attendant.",
+      "url": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-new-access-bypass-flaw-exploited-in-attacks/",
+      "date": "2026-11-27T10:10:15+00:00",
+      "suite": true,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "SAP confirme un incident de sécurité après une activité suspecte sur GitHub",
+      "resume": "SAP a dit à BleepingComputer avoir pris des mesures urgentes après avoir détecté une activité suspecte dans son environnement informatique, et n'avoir trouvé à ce stade aucune preuve d'accès non autorisé aux données commerciales des clients. Der Spiegel, citant une note interne, parle d'une attaque baptisée « Project Granite » : des attaquants auraient volé des jetons d'employés pour copier et modifier du code source sur GitHub. SAP ne confirme pas ces détails et n'a pas précisé les environnements concernés.",
+      "pourquoi": "Un cas de plus de jetons de développeurs détournés pour atteindre du code source : un rappel de limiter la portée et la durée de vie des jetons GitHub.",
+      "url": "https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/",
+      "date": "2026-11-27T09:56:36+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "BleepingComputer",
+      "titre": "pCloud confirme une attaque contre son gestionnaire de mots de passe pCloud Pass",
+      "resume": "pCloud indique que pCloud Pass a subi une cyberattaque rapidement contenue : une petite partie des adresses e-mail a été exposée et des tentatives de connexion ont eu lieu. Des utilisateurs ont reçu des alertes de nouvel appareil alors que la 2FA était activée. L'entreprise affirme que le stockage cloud n'est pas touché et que les coffres restent chiffrés, mais n'a pas dit si des coffres chiffrés ont été consultés. Elle n'a pas précisé la méthode d'attaque ni le nombre de comptes concernés.",
+      "pourquoi": "Si vous utilisez pCloud Pass, restez vigilant face au phishing : pCloud ne demande jamais le mot de passe maître.",
+      "url": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/",
+      "date": "2026-11-27T19:26:04+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "Des installeurs officiels de Q-Dir et DesktopOK piégés avec un RAT en Python",
+      "resume": "D'après AhnLab, des fichiers malveillants étaient distribués depuis le site officiel de SoftwareOK, y compris lors des mises à jour : Q-Dir 12.83.0.0 à 12.85.0.0 et DesktopOK 12.82.0.0 et 12.85.0.0. Ils installent un RAT en Python, avec une tâche planifiée se faisant passer pour Microsoft Edge, qui exécute des commandes, transfère des fichiers et fait des captures d'écran. Le mécanisme de la compromission du site reste inconnu et aucune attribution n'est faite. Désinstaller puis réinstaller ne suffit pas, car le RAT peut persister.",
+      "pourquoi": "À vérifier si vous avez ces utilitaires : empreintes SHA-256, tâches planifiées suspectes et analyse complète du poste.",
+      "url": "https://thehackernews.com/2026/11/hackers-trojanize-official-q-dir-and.html",
+      "date": "2026-11-27T09:29:30+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "secu",
+      "source": "Hacker News",
+      "titre": "Un skimmer de cartes bancaires utilise WebRTC pour s'exfiltrer sur cinq boutiques en ligne",
+      "resume": "Des chercheurs décrivent un skimmer qui se charge et exfiltre les données via WebRTC, par le relais TURN de Cloudflare, ce qui échappe à la règle CSP connect-src pour le canal de données. Cinq sites sont touchés (Lascana, Samsonite, American Tourister, Revolve, FWRD), via un pixel marketing, une bannière cookies et un fichier du CDN modifiés. Le code a été retiré entre le 24 et le 25 novembre. Il ne s'active que sur écrans petits ou tactiles, sur les pages de paiement. Les auteurs ignorent combien de clients sont touchés.",
+      "pourquoi": "Utile pour un dev e-commerce : définir une règle connect-src stricte sur les pages de paiement et auditer les scripts tiers.",
+      "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
+      "date": "2026-11-27T15:40:31+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50668145",
+        "points": 491,
+        "comments": 259
+      }
+    },
+    {
+      "rubrique": "secu",
+      "source": "The Hacker News",
+      "titre": "Une application du Microsoft Store livre le RAT Vinci",
+      "resume": "Selon eSentire, une intrusion part d'une redirection vers un faux site d'outil de capture d'écran, d'où est téléchargé un installeur signé Microsoft nommé « Snipping-Tool.exe », qui livre le cheval de Troie Vinci RAT, capable de prendre le contrôle à distance du système.",
+      "pourquoi": "Rappelle qu'une signature ou un magasin officiel ne garantit pas l'innocuité d'un installeur téléchargé après une redirection.",
+      "url": "https://thehackernews.com/2026/11/microsoft-store-app-found-delivering.html",
+      "date": "2026-11-27T11:49:34+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "OpenAI contre-attaque Apple en justice pour vol de secrets industriels",
+      "resume": "OpenAI poursuit Apple devant un tribunal californien, l'accusant de vol de secrets commerciaux et de pression sur des fournisseurs communs. Il s'agit d'une réponse à la plainte déposée par Apple cet été. Les deux entreprises s'étaient associées il y a deux ans pour intégrer ChatGPT à l'iPhone, et OpenAI développe désormais ses propres appareils.",
+      "pourquoi": "Signale la rupture entre deux partenaires clés de l'IA grand public, avec un possible impact sur l'intégration de ChatGPT à l'iPhone.",
+      "url": "https://the-decoder.com/openai-countersues-apple-over-trade-secret-theft-and-alleged-coercion-of-shared-suppliers/",
+      "date": "2026-11-27T19:38:37+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "Trois études Meta et AMI Labs défendent les modèles du monde JEPA de Yann LeCun",
+      "resume": "Yann LeCun poursuit son alternative aux modèles de langage via sa startup AMI Labs. L'architecture JEPA vise à doter les machines d'un modèle interne du monde qui capte les relations de cause à effet. Trois nouvelles études montrent des progrès en planification robotique, en entraînement plus efficace et en correction d'erreurs, mais les briques doivent encore être assemblées.",
+      "pourquoi": "À suivre pour qui s'intéresse aux alternatives aux LLM : ce sont des résultats de recherche, pas encore un produit.",
+      "url": "https://the-decoder.com/three-studies-from-meta-and-ami-labs-back-yann-lecuns-bet-on-jepa-world-models-over-large-language-models/",
+      "date": "2026-11-27T16:58:56+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "OpenAI prépare « Athena », une couche sémantique de données pour ses agents",
+      "resume": "L'agent de données de ChatGPT Work n'est pas encore assez précis. Sous le nom de code « Athena », OpenAI construit une couche sémantique qui donne aux agents des définitions standardisées des indicateurs métier. L'outil pourrait aussi concurrencer directement Snowflake et Databricks.",
+      "pourquoi": "Montre que la fiabilité des agents passe par des définitions de données partagées, un chantier utile à anticiper dans vos propres agents.",
+      "url": "https://the-decoder.com/openai-is-building-athena-data-platform-to-cut-down-on-ai-agent-guesswork/",
+      "date": "2026-11-27T16:05:23+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "The Decoder",
+      "titre": "SAP prévoit de supprimer au moins 10 000 postes dans un virage vers l'IA",
+      "resume": "Selon Bloomberg, citant des personnes au fait du dossier, SAP prépare la suppression d'au moins 10 000 postes dans le cadre d'une restructuration autour de l'IA.",
+      "pourquoi": "Un signal de plus de l'impact de l'IA sur l'organisation des grands éditeurs logiciels.",
+      "url": "https://the-decoder.com/sap-plans-to-cut-at-least-10000-jobs-as-it-pivots-to-ai/",
+      "date": "2026-11-27T14:57:25+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "ia",
+      "source": "Hacker News",
+      "titre": "Les skills Convex envoient l'idée de projet de l'utilisateur à un serveur distant, selon un signalement",
+      "resume": "Un signalement sur le dépôt convex-backend-skill indique que le skill quickstart envoie la description du projet à un hôte convex.site sans en informer l'utilisateur, que le skill add télécharge des scripts distants envoyés directement à bash, et que labs-quickstart sépare téléchargement et exécution pour éviter les classificateurs de sécurité. Les scripts ne sont ni épinglés ni vérifiés par hash. Le signalement, ouvert depuis le 26 octobre, n'avait reçu aucune réponse des mainteneurs.",
+      "pourquoi": "À lire avant d'installer des skills d'agents : ils peuvent exécuter du code distant non vérifié.",
+      "url": "https://github.com/convex/convex-backend-skill/issues/64",
+      "date": "2026-11-27T18:02:45+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50669765",
+        "points": 274,
+        "comments": 88
+      }
+    },
+    {
+      "rubrique": "ia",
+      "source": "Hacker News",
+      "titre": "Google : DeepCrossAttention atteint la qualité d'un transformer standard avec jusqu'à 5 fois moins d'étapes d'entraînement",
+      "resume": "DeepCrossAttention remplace l'addition résiduelle par un routage dynamique et une attention en profondeur sur les couches précédentes. Sur C4 et LM1B, il atteint les performances d'un transformer standard en jusqu'à 5 fois moins d'étapes. Sur LM1B, 30 couches suffisent contre 42, pour moins de 0,2 % de paramètres en plus. Il peut aussi être ajouté à un transformer pré-entraîné.",
+      "pourquoi": "Piste d'optimisation de l'entraînement des modèles, à surveiller si vous entraînez ou adaptez des transformers.",
+      "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+      "date": "2026-11-27T23:06:29+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50672565",
+        "points": 298,
+        "comments": 121
+      }
+    },
+    {
+      "rubrique": "dev",
+      "source": "Linuxiac",
+      "titre": "Woodpecker CI 3.21 renforce la sécurité et l'intégration aux forges Git",
+      "resume": "Woodpecker 3.21 utilise des jetons de déploiement en lecture seule pour cloner depuis Gitea et GitLab, durcit l'authentification des agents et la vérification des signatures de webhooks, et journalise les échecs d'authentification pour Fail2Ban. Les axes de matrice passent de 10 à 64 valeurs, et la prise en charge des pull requests en brouillon de Forgejo arrive. Une SBOM est générée pour les versions.",
+      "pourquoi": "Intéressant si vous auto-hébergez votre CI : plus de durcissement et de souplesse pour les pipelines.",
+      "url": "https://linuxiac.com/woodpecker-ci-3-21-enhances-security-and-git-forge-integration/",
+      "date": "2026-11-27T13:13:09+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "dev",
+      "source": "Hacker News",
+      "titre": "Tabernetes : un cluster Kubernetes dont les nœuds sont des onglets de navigateur",
+      "resume": "Ouvrir la page fait de l'appareil un nœud, téléphone compris : un petit Linux compilé en WebAssembly (environ 5 Mo à télécharger) y exécute le pod. Fermer l'onglet retire le nœud et Kubernetes relance le pod ailleurs. Un pod demande un onglet avec runtimeClassName: tab. Le projet est signé Farid Zakaria, sous licence MIT.",
+      "pourquoi": "Une démonstration de bidouille pour comprendre le fonctionnement de Kubernetes et de Linux en WebAssembly.",
+      "url": "https://tabernet.es/",
+      "date": "2026-11-27T23:00:30+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50672521",
+        "points": 85,
+        "comments": 30
+      }
+    },
+    {
+      "rubrique": "linux",
+      "source": "Phoronix",
+      "titre": "Wine 11.23 : support d'ARM64 macOS et d'AVX en émulation 32 bits sur ARM64",
+      "resume": "La version de développement bimensuelle Wine 11.23 ajoute la prise en charge d'ARM64 sous macOS et d'AVX dans l'émulation 32 bits sur ARM64. Phoronix précise que la phase de release candidate de Wine 12.0 approche.",
+      "pourquoi": "Utile si vous faites tourner des applications Windows sur Mac ARM ou sur ARM64.",
+      "url": "https://www.phoronix.com/news/Wine-11.23-Released",
+      "date": "2026-11-28T01:31:43+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Phoronix",
+      "titre": "systemd 263-rc1 : premier code Rust et nouveau courtier de pseudo-TTY",
+      "resume": "La première version candidate de systemd 263 apporte la prise en charge initiale de Rust pour créer de nouveaux programmes, un service de courtier de pseudo-TTY, un outil de manifeste et un nouveau service de trousseau de clés.",
+      "pourquoi": "À suivre pour les admins : des nouveautés de fond arrivent dans systemd.",
+      "url": "https://www.phoronix.com/news/systemd-263-rc1",
+      "date": "2026-11-27T11:42:12+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "linux",
+      "source": "Phoronix",
+      "titre": "Linux Mint 27 en bêta, avec Wayland complet",
+      "resume": "La bêta de Linux Mint 27 est disponible, avec de nouvelles applications et la prise en charge complète de Wayland. La version finale est attendue vers Noël. Linuxiac précise qu'elle repose sur Ubuntu 26.04 LTS.",
+      "pourquoi": "Une bêta à tester si vous utilisez Mint sur poste de dev.",
+      "url": "https://www.phoronix.com/news/Linux-Mint-27-Beta",
+      "date": "2026-11-27T15:37:29+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Korben",
+      "titre": "Microsoft lie ouvertement les économies de mémoire de Windows 11 au prix de la RAM",
+      "resume": "À Ignite, Microsoft a présenté des gains de mémoire : 360 Mo de moins pour Office et plus d'un demi-gigaoctet pour Defender, Purview et OneDrive. Korben détaille ce que gagne un PC de 8 Go et comment l'obtenir.",
+      "pourquoi": "Utile si vous gérez des parcs ou des machines à 8 Go de RAM.",
+      "url": "https://korben.info/windows-11-moins-de-ram.html?utm_source=rss&utm_medium=feed&utm_campaign=flux-principal",
+      "date": "2026-11-27T08:27:26+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Ars Technica",
+      "titre": "Intel face à Trump : 10 % du capital pour débloquer des milliards de subventions",
+      "resume": "Selon Ars Technica, Intel faisait face à des pressions pour céder une participation de 10 % afin de débloquer des milliards de dollars de subventions promises.",
+      "pourquoi": "Éclaire les conditions politiques qui entourent les subventions à l'industrie des puces.",
+      "url": "https://arstechnica.com/tech-policy/2026/11/intel-faced-a-choice-give-trump-10-or-face-the-consequences/",
+      "date": "2026-11-27T12:05:01+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "decouvertes",
+      "source": "Hacker News",
+      "titre": "Des États américains poursuivent SpaceX pour empêcher Grok de générer des images d'exploitation d'enfants et de revanche pornographique",
+      "resume": "Des procureurs généraux d'États américains, dont celui de Virginie, ont déposé plainte contre SpaceX, maison mère de X, xAI et Grok, au sujet de la création et de la promotion d'images d'exploitation d'enfants et d'images intimes non consenties sur la plateforme.",
+      "pourquoi": "Un précédent juridique à suivre pour la responsabilité des fournisseurs de modèles génératifs.",
+      "url": "https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform",
+      "date": "2026-11-27T19:42:25+00:00",
+      "suite": false,
+      "hn": {
+        "url": "https://news.ycombinator.com/item?id=50670855",
+        "points": 356,
+        "comments": 201
+      }
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Eurogamer",
+      "titre": "Hollow Knight: Silksong : l'extension gratuite Sea of Sorrow sortira le 11 décembre",
+      "resume": "Team Cherry a présenté l'extension lors d'une diffusion spéciale le 27 novembre. Selon Gematsu, Sea of Sorrow, gratuite, sortira le 11 décembre. Eurogamer évoque un mini-jeu de pêche. La même présentation a servi à annoncer plusieurs jeux indépendants.",
+      "pourquoi": "Date à noter si vous attendez ce premier gros ajout au jeu.",
+      "url": "https://www.eurogamer.net/hollow-knight-silksongs-first-big-expansion-sea-of-sorrows-comes-out-in-two-weeks-and-seems-to-include-a-fishing-minigame",
+      "date": "2026-11-27T15:16:10+00:00",
+      "suite": true,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Eurogamer",
+      "titre": "Le remake rumeur de The Simpsons: Hit & Run semble compromis",
+      "resume": "Un développeur déclare que le remake rumeur de The Simpsons: Hit & Run, très attendu, pourrait être en difficulté, selon Eurogamer. Retro Dodo et Time Extension parlent d'une annulation, mais il s'agit de rumeurs non confirmées.",
+      "pourquoi": "À prendre avec prudence : aucune annonce officielle n'a eu lieu.",
+      "url": "https://www.eurogamer.net/simpsons-hit-and-run-remake-rumored-cancelled",
+      "date": "2026-11-27T18:08:20+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "jeux",
+      "source": "Gamekult",
+      "titre": "The Witcher 3 Remastered : la mise à jour 5.02 apporte de nombreux correctifs",
+      "resume": "Deux mois après le lancement de The Witcher 3 Remastered, CD Projekt publie la mise à jour 5.02, qui apporte correctifs et ajustements.",
+      "pourquoi": "Utile si vous jouez au remaster.",
+      "url": "https://www.gamekult.com/actualite/the-witcher-3-remastered-fait-le-plein-de-correctifs-et-d-ajustements-dans-la-mise-a-jour-5-02-3050873235.html",
+      "date": "2026-11-27T13:48:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Time Extension",
+      "titre": "Double Slice : un nouvel émulateur Nintendo DS sur Android, des créateurs de Pizza Boy",
+      "resume": "Double Slice est un émulateur Nintendo DS pour Android, disponible sur le Google Play Store. Il a été conçu de zéro par PizzaBoy, auteur de l'émulateur Game Boy Advance du même nom.",
+      "pourquoi": "À essayer si vous jouez à vos jeux DS sur Android.",
+      "url": "https://www.timeextension.com/news/2026/11/double-slice-is-a-new-nintendo-ds-emulator-for-android-from-the-makers-of-pizza-boy",
+      "date": "2026-11-27T14:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Time Extension",
+      "titre": "You Are Empty: Absolute Edition retirée de Steam après une plainte DMCA de l'un des créateurs d'origine",
+      "resume": "La réédition par ZOOM du jeu ukrainien de 2006 a été retirée de Steam après une plainte DMCA de Denis Volchenko, propriétaire du studio d'origine Mandel ArtPlains, qui réclame une distribution gratuite pour les fans.",
+      "pourquoi": "Un nouvel exemple de conflit de droits autour des rééditions de vieux jeux.",
+      "url": "https://www.timeextension.com/news/2026/11/the-soviet-fps-you-are-empty-absolute-edition-is-back-on-steam-after-a-dmca-claim-from-its-original-creator",
+      "date": "2026-11-27T10:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Retro Dodo",
+      "titre": "Une PSP-1000 utilisable comme manette ou VMU pour la Dreamcast",
+      "resume": "La communauté rétro propose un moyen d'utiliser une PSP-1000 comme manette ou VMU de la Dreamcast, selon Retro Dodo.",
+      "pourquoi": "De la bidouille matérielle accessible pour les fans de Dreamcast.",
+      "url": "https://retrododo.com/you-can-now-use-a-psp-1000-as-a-dreamcast-controller-or-vmu/",
+      "date": "2026-11-27T14:04:20+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "retro",
+      "source": "Lobsters",
+      "titre": "Tiny Hat : une distribution Linux dédiée au développement de jeux rétro",
+      "resume": "Tiny Hat n'utilise qu'environ 100 Mo de RAM après démarrage et démarre depuis une clé de 1 Go minimum. Elle inclut quelques jeux, un moyen d'en installer d'autres et des exemples de programmation, avec dwl / Wayland, SDL3 et GTK4.",
+      "pourquoi": "Une base légère pour initier à la programmation graphique rétro.",
+      "url": "https://roboticoverlords.org/tinyhat",
+      "date": "2026-11-27T09:11:13+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Space.com",
+      "titre": "Des astronomes observent une géante rouge avaler son étoile compagne",
+      "resume": "L'événement, désigné AT2025abao, concerne une géante rouge 350 fois plus grande que le Soleil, surnommée « Big Bao », qui a dévoré sa compagne « Little Bao » avant une éruption.",
+      "pourquoi": "Une observation rare d'une fusion stellaire en direct.",
+      "url": "https://www.space.com/astronomy/stars/astronomers-watch-a-red-giant-star-greedily-devour-a-stellar-bao-bun-before-erupting-we-couldnt-quite-believe-our-luck",
+      "date": "2026-11-27T11:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "science",
+      "source": "Space.com",
+      "titre": "Les astronautes d'Artemis III rencontrent leur vaisseau Orion",
+      "resume": "L'équipage de quatre astronautes d'Artemis III a posé devant le vaisseau Orion qu'il utilisera, en levant trois doigts pour symboliser la mission, lors d'une pause de leur entraînement.",
+      "pourquoi": "Un jalon visuel de la préparation de la mission.",
+      "url": "https://www.space.com/space-exploration/artemis/artemis-iii-astronauts-meet-their-moonship-space-photo-of-the-day-for-nov-27-2026",
+      "date": "2026-11-27T15:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "The Bearded Bear",
+      "titre": "Dimensionner PHP-FPM : calculer pm.max_children pour Symfony",
+      "resume": "Le guide donne la formule pm.max_children = (RAM du pool − marge) ÷ mémoire moyenne d'un worker sous charge, en mesurant la PSS plutôt que la RSS. Exemple : 3 584 Mo pour FPM et 80 Mo par worker donnent environ 44 workers, 40 retenus. Dans un conteneur, il faut se baser sur la limite du cgroup, et vérifier max_connections de la base.",
+      "pourquoi": "Directement applicable pour régler PHP-FPM sans swap ni saturation de la base.",
+      "url": "https://the-bearded-bear.com/blog/dimensionner-php-fpm-pm-max-children-symfony",
+      "date": "2026-11-28T00:00:00+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Korben",
+      "titre": "Obsidian Skills : laisser un agent IA ranger vos notes",
+      "resume": "Les skills de Steph Ango deviennent un plugin officiel d'Obsidian pour Claude, ChatGPT ou Cursor. L'agent apprend wikiliens, Bases et Canvas et pilote l'application via la CLI depuis un agent local.",
+      "pourquoi": "Utile pour automatiser le rangement d'un coffre Obsidian avec un agent.",
+      "url": "https://korben.info/obsidian-skills-agents-ia.html?utm_source=rss&utm_medium=feed&utm_campaign=flux-principal",
+      "date": "2026-11-27T12:45:15+00:00",
+      "suite": false,
+      "hn": null
+    },
+    {
+      "rubrique": "tutos",
+      "source": "Korben",
+      "titre": "AliasVault : des alias e-mail gérés dans le coffre-fort de mots de passe",
+      "resume": "AliasVault est un gestionnaire de mots de passe open source qui donne une adresse e-mail à chaque compte et garde le courrier chiffré dans le coffre, sans rien transférer vers la vraie boîte. Il existe en cloud gratuit ou en serveur maison.",
+      "pourquoi": "À tester pour du self-hosting orienté vie privée.",
+      "url": "https://korben.info/aliasvault-mots-de-passe-alias-email.html?utm_source=rss&utm_medium=feed&utm_campaign=flux-principal",
+      "date": "2026-11-27T11:54:38+00:00",
+      "suite": false,
+      "hn": null
+    }
+  ]
+}
